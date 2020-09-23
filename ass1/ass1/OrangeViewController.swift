@@ -9,10 +9,13 @@
 import Foundation
 import UIKit
 
-class orangeView: UIViewController {
-    
+class OrangeViewController: UIViewController {
+    // attributes
+    var views = Views()
     override func viewDidLoad() {
-        views.load += 1
+        var numLoads = views.getLoad()
+        numLoads += 1
+        views.setLoad(numLoads)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

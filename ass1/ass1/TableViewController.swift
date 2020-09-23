@@ -9,10 +9,13 @@
 import Foundation
 import UIKit
 
-class tableView: UITableViewController {
-    
+class TableViewController: UITableViewController {
+    // attributes
+    var views = Views()
     override func viewDidLoad() {
-        views.load += 1
+        var numLoads = views.getLoad()
+        numLoads += 1
+        views.setLoad(numLoads)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

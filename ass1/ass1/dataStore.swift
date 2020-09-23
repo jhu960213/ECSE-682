@@ -12,10 +12,10 @@ import Foundation
 struct Views {
     
     // attributes
-    private var load: Int
-    private var appear: Int
-    private var willDisappear: Int
-    private var didDisappear : Int
+    private  var load: Int
+    private  var appear: Int
+    private  var willDisappear: Int
+    private  var didDisappear : Int
     
     // constructor 1 - for when we want to initialize with unique parameters
     init(_ loadNum: Int, _ appearNum: Int, _ willDisappearNum: Int, _ didDisappearNum: Int) {

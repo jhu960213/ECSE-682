@@ -7,15 +7,15 @@
 //
 
 import Foundation
-
+import UIKit
 // views class
 struct Views {
     
     // attributes
-    private  var load: Int
-    private  var appear: Int
-    private  var willDisappear: Int
-    private  var didDisappear : Int
+      var load: Int
+      var appear: Int
+      var willDisappear: Int
+      var didDisappear : Int
     
     // constructor 1 - for when we want to initialize with unique parameters
     init(_ loadNum: Int, _ appearNum: Int, _ willDisappearNum: Int, _ didDisappearNum: Int) {

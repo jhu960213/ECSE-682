@@ -10,7 +10,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Home View Controller" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ass1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="a" title="Home View Controller" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ass1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
         <!--Table View Controller-->
         <scene sceneID="xp7-sV-xuI">
             <objects>
-                <tableViewController id="NWu-or-aB0" customClass="TableViewController" customModule="ass1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="c" id="NWu-or-aB0" customClass="TableViewController" customModule="ass1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v9p-Nb-4sg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
         <!--Orange View Controller-->
         <scene sceneID="tcJ-I1-vpw">
             <objects>
-                <viewController id="BUu-tt-YAL" customClass="OrangeViewController" customModule="ass1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="b" id="BUu-tt-YAL" customClass="OrangeViewController" customModule="ass1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HZD-dt-g3z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

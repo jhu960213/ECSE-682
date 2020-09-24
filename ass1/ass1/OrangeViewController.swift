@@ -7,91 +7,97 @@
 //
 
 import UIKit
-var OrangeDidLoad = 0
-var OrangeWillAppear = 0
-var OrangeDidAppear = 0
-var OrangeWillDisappear = 0
-var OrangeDidDisappear = 0
+// view struct object to keep track of this view's controller life cycle method calls
+var orangeViews = Views()
+
 
 class OrangeViewController: UIViewController {
     
-    // attributes
-    //var Orangeviews = Views()
+    // We use super in order to invoke the superclass, i.e. in this instance UIView, this ensures consistency between seperate Orangeviews (i.e. OrangeView, OrangeView) since they are all invoking the systems UIView.
     
+    // function to print the life cycle stats of this controller
+    func showLifeCycleStatus() {
+        print("\n\n\nOrange View Controller Life Cycle Stats:")
+        print("loadView Count: " + String(orangeViews.getLoadView()))
+        print("viewDidLoad Count: " + String(orangeViews.getViewDidLoad()))
+        print("viewWillAppear Count: " + String(orangeViews.getViewWillAppear()))
+        print("viewDidAppear Count: " + String(orangeViews.getViewDidAppear()))
+        print("viewWillDisappear Count: " + String(orangeViews.getViewWillDisappear()))
+        print("viewDidDisappear Count: " + String(orangeViews.getViewDidDisappear()) + "\n\n\n")
+    }
+    
+    // connected the button of life cycle stats to display the life cycle status of orange view controller
+    @IBAction func orangeViewLifeCycleButton(_ sender: UIButton) {
+        sender.alpha = 0.5
+        showLifeCycleStatus()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4 ) {
+                sender.alpha = 1.0
+            }
+    }
     
     //
     // life cycle functions below for this controller
     //
-    //We use super in order to invoke the superclass, i.e. in this instance UIView, this ensures consistency between seperate Orangeviews (i.e. OrangeView, OrangeView) since they are all invoking the systems UIView.
+    
     // 1st cycle function called
     override func loadView() {
         super.loadView()
-        //        print ("OrangeView loadView")
-        //        print("Creates the view that OrangeViewController manages. OrangeViewController is loading the view!" + "\n")
+        orangeViews.setLoadView(orangeViews.getLoadView() + 1)
+        print("Creates the view that OVC manages. OVC is loading the view!")
+        print("OV loadView Count: " + String(orangeViews.getLoadView()) + "\n\n")
     }
     
     // 2nd cycle function called
     override func viewDidLoad() {
-        
-        OrangeDidLoad += 1
-        print("OG DidLode \(OrangeDidLoad)")
         super.viewDidLoad()
+        orangeViews.setViewDidLoad(orangeViews.getViewDidLoad() + 1)
         //        showToast(message: "OrangeView viewDidLoad", seconds: 2.0)
-        //  print("Do additional view setups after view creation and transfering to main memory. OrangeViewController has loaded the view!" + "\n")
-        // Do any additional setup after loading the view.
+        print("Do additional view setups after view creation and transfering to main memory. OVC has loaded the view!")
+        print("OV viewDidLoad Count: \(orangeViews.getViewDidLoad())" + "\n\n")
     }
     
     // 3rd life cycle function called
     override func viewWillAppear(_ animated: Bool) {
-        OrangeWillAppear += 1
-        print("OG WillApp \(OrangeWillAppear)")
-        self.view.backgroundColor = UIColor.red
         super.viewWillAppear(animated)
+        orangeViews.setViewWillAppear(orangeViews.getViewWillAppear() + 1)
         //        showToast(message: "OrangeView viewWillAppear", seconds: 2.0)
-        //        print ("OrangeView viewWillAppear")
-        //        print("Notifies OrangeViewController that it's view is about to be added to a view hiearchy!" + "\n" )
+        print("Notifies OVC that it's view is about to be added to a view hiearchy!")
+        print("OV viewWillAppear Count: \(orangeViews.getViewWillAppear())" + "\n\n")
     }
     
     
     // 4th life cycle function called
     override func viewDidAppear(_ animated: Bool) {
-        
         self.view.backgroundColor = UIColor.orange
-        OrangeDidAppear += 1
-        print("OG DidApp \(OrangeDidAppear)")
+        super.viewDidAppear(animated)
+        orangeViews.setViewDidAppear(orangeViews.getViewDidAppear() + 1)
+//        // viewDidAppear is called every time the main view is loaded, hence the navigation bar will be hidden in this instance
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         //        showToast(message: "OrangeView viewDidAppear", seconds: 2.0)
+        print("Notifies OVC that it's view had been added to a view hiearchy. OVC shows view on screen!")
+        print("OV viewDidAppear Count: \(orangeViews.getViewDidAppear())" + "\n\n")
         
-        //viewdidAppear is called every time the main view is loaded, hence the navigation bar will be hidden in this instance
-        //        print("Notifies OrangeViewController that it's view had been added to a view hiearchy. OrangeViewCOntroller shows view on screen!" + "\n" )
     }
     
     // 5th life cycle function called
     override func viewWillDisappear(_ animated: Bool) {
-        OrangeWillDisappear += 1
-        print("OG WillDiss \(OrangeWillDisappear)")
         super.viewWillDisappear(animated)
-        self.view.backgroundColor = UIColor.blue
-        //        showToast(message: "OrangeView viewWillDisappear", seconds: 2.0)
-        
+        orangeViews.setViewWillDisappear(orangeViews.getViewWillDisappear() + 1)
         //viewWillDisappear is called every time the main view is left, hence the navigation bar will be shown in this instance when we leave the view.
-        //        print("Notifies OrangeViewController that it's view is about to be removed from a view hiearchy!")
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        //        showToast(message: "OrangeView viewWillDisappear", seconds: 2.0)
+        print("Notifies OVC that it's view is about to be removed from a view hiearchy!")
+        print("OV viewWillDisappear Count: \(orangeViews.getViewWillDisappear())" + "\n\n")
     }
     
     // 6th life cycle function called
     override func viewDidDisappear(_ animated: Bool) {
-        OrangeDidDisappear += 1
-        print("OG DidDiss \(OrangeDidDisappear)")
         super.viewDidDisappear(animated)
-        self.view.backgroundColor = UIColor.green
+        orangeViews.setViewDidDisappear(orangeViews.getViewDidDisappear() + 1)
         //        showToast(message: "OrangeView viewDidDisappear", seconds: 2.0)
-        
-        //        print("OrangeView diDisappears \(Orangeviews.getDidDisappear())")
-        //        print("Notifies OrangeViewController that it's view had been removed from the hiearchy! OrangeViewController took the current view off!" + "\n")
+        print("Notifies OVC that it's view had been removed from the hiearchy! OVC took the current view off!")
+        print("OV viewDidDisappear Count: \(orangeViews.getViewDidDisappear())" + "\n\n")
     }
-    
-    
-    
-    
 }
 
 

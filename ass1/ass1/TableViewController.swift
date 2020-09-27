@@ -66,7 +66,7 @@ class TableViewController: UITableViewController {
     
     // 2nd cycle function called
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.gray
+        //self.view.backgroundColor = UIColor.gray
         super.viewDidLoad()
         unpackStruct()
         tableViews.setViewDidLoad(tableViews.getViewDidLoad() + 1)
@@ -123,7 +123,6 @@ protocol Loopable {
 extension Loopable {
     func allProperties() /*throws*/ -> [tableobj] {
         
-        //var result: [String: Any] = [:]
         var tableObjs = [tableobj]()
         
         let mirror = Mirror(reflecting: self)
@@ -139,7 +138,6 @@ extension Loopable {
             }
             tableObjs.append(tableobj(LifeCycle(rawValue: property) ?? LifeCycle.nul, value as! Int))
             print(tableObjs)
-            //result[property] = value
         }
         
         return tableObjs

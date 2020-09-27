@@ -20,14 +20,6 @@ class OrangeViewController: UIViewController {
         viewsUsed.setView(orangeViews)
     }
     
-//    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "table"{
-//            if let vc = segue.destination as? TableViewController{ vc.tabInfo = (label: "OrangeView", view: orangeViews)}
-//        }
-//    }
-    
-    
-    
     // We use super in order to invoke the superclass, i.e. in this instance UIView, this ensures consistency between seperate Orangeviews (i.e. OrangeView, OrangeView) since they are all invoking the systems UIView.
     
     // function to print the life cycle stats of this controller

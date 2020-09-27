@@ -13,10 +13,28 @@ var homeViews = Views()
 
 class HomeViewController: UIViewController {
     
-    @IBAction func touchBut(_ sender: Any) {
+    @IBAction func touchBut(_ sender: UIButton) {
         self.performSegue(withIdentifier: "hometable", sender: self)
-        viewsUsed.setLabel("Home View")
-        viewsUsed.setView(homeViews)
+        
+        switch sender.tag {
+        case 1:
+            viewsUsed.setLabel("Table View")
+            viewsUsed.setView(tableViews)
+            break;
+        case 2:
+            viewsUsed.setLabel("Orange View")
+            viewsUsed.setView(orangeViews)
+            //button2
+            break;
+        case 3:
+            viewsUsed.setLabel("Home View")
+            viewsUsed.setView(homeViews)
+            //button3
+            break;
+        default: ()
+        break;
+        }
+        
     }
     
     
@@ -44,8 +62,8 @@ class HomeViewController: UIViewController {
         sender.alpha = 0.5
         showLifeCycleStatus()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4 ) {
-                sender.alpha = 1.0
-            }
+            sender.alpha = 1.0
+        }
     }
     
     // 1st cycle function called

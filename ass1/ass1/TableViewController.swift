@@ -9,8 +9,45 @@
 import UIKit
 // view struct object to keep track of this view's controller life cycle method calls
 var tableViews = Views()
+var viewsUsed = tableviews()
+//var tabInfo: (label: String, view: Views)
+
+
 
 class TableViewController: UITableViewController {
+    var tableObjs = [tableobj]()
+    
+
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableObjs.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "CounterTableViewCell"
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CounterTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of CounterTableViewCell.")
+        }
+
+        // Fetches the appropriate meal for the data source layout.
+        let counter = tableObjs[indexPath.row]
+        print("Label is \(viewsUsed.getLabel())!!!!")
+        cell.counterLabel.text = "\(viewsUsed.getLabel()) \(counter.getSectionName()) calls: \(counter.getSectionObjects())"
+
+        return cell
+    }
+
+
+    private func unpackStruct(){
+        tableObjs = (viewsUsed.getView().allProperties())
+    }
     
     //We use super in order to invoke the superclass, i.e. in this instance UIView, this ensures consistency between seperate Tableviews (i.e. TableView, TableView) since they are all invoking the systems UIView.
     
@@ -19,6 +56,7 @@ class TableViewController: UITableViewController {
     //
     
     // 1st cycle function called
+    
     override func loadView() {
         super.loadView()
         tableViews.setLoadView(tableViews.getLoadView() + 1)
@@ -30,6 +68,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.gray
         super.viewDidLoad()
+        unpackStruct()
         tableViews.setViewDidLoad(tableViews.getViewDidLoad() + 1)
         //        showToast(message: "TableView viewDidLoad", seconds: 2.0)
         print("Do additional view setups after view creation and transfering to main memory. TVC has loaded the view!")
@@ -74,6 +113,36 @@ class TableViewController: UITableViewController {
         //        showToast(message: "TableView viewDidDisappear", seconds: 2.0)
         print("Notifies TVC that it's view had been removed from the hiearchy! TVC took the current view off!")
         print("TV viewDidDisappear Count: \(tableViews.getViewDidDisappear())" + "\n\n")
+    }
+}
+
+protocol Loopable {
+    func allProperties() /*throws*/ -> [tableobj]
+}
+
+extension Loopable {
+    func allProperties() /*throws*/ -> [tableobj] {
+        
+        //var result: [String: Any] = [:]
+        var tableObjs = [tableobj]()
+        
+        let mirror = Mirror(reflecting: self)
+        
+                // Optional check to make sure we're iterating over a struct or class
+//                guard let style = mirror.displayStyle, style == .struct || style == .class else {
+//                    throw NSError()
+//                }
+        
+        for (property, value) in mirror.children {
+            guard let property = property else {
+                continue
+            }
+            tableObjs.append(tableobj(LifeCycle(rawValue: property) ?? LifeCycle.nul, value as! Int))
+            print(tableObjs)
+            //result[property] = value
+        }
+        
+        return tableObjs
     }
 }
 

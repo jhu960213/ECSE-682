@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 // views class
-struct Views {
+struct Views: Loopable {
     
     // attributes
     private var loadView: Int
@@ -94,3 +94,62 @@ struct Views {
         self.viewDidDisappear = inViewDidDisappear
     }
 }
+struct tableobj {
+    
+    private var sectionName : LifeCycle
+    private var sectionObjects : Int
+    
+    public func getSectionObjects() -> Int {
+        return self.sectionObjects    // constructor 1 - for when we want to initialize with unique parameters
+    }
+    
+    public mutating func setSectionObjects(_ sectionObjects: Int) {
+        self.sectionObjects = sectionObjects
+    }
+    public func getSectionName() -> LifeCycle {
+        return self.sectionName    // constructor 1 - for when we want to initialize with unique parameters
+    }
+    
+    public mutating func setSectionName(_ sectionName: LifeCycle) {
+        self.sectionName = sectionName
+    }
+    // constructor 1 - for when we want to initialize with unique parameters
+    init(_ sectionName:LifeCycle, _ sectionObjects:Int) {
+        self.sectionName = sectionName
+        self.sectionObjects = sectionObjects
+    }
+    
+    // constructor 2 - for when we just want to initialize with null parameters
+    init() {
+        self.sectionName = LifeCycle.nul//LifeCycle.nul
+        self.sectionObjects = 0
+    }
+}
+enum LifeCycle: String {
+    case loadView = "loadView"
+    case viewDidLoad = "viewDidLoad"
+    case viewWillAppear = "viewWillAppear"
+    case viewDidAppear = "viewDidAppear"
+    case viewWillDisappear = "viewWillDisappear"
+    case viewDidDisappear = "viewDidDisappear"
+    case nul = ""
+}
+
+struct tableviews {
+    private var view: Views
+    private var label: String
+    init() {
+        self.view = tableViews
+        self.label = "Table View"
+    }
+    init ( _ view: Views, _ label: String){
+        self.label = label
+        self.view = view
+    }
+    public func getView() -> Views {self.view}
+    public mutating func setView(_ view: Views) {self.view = view}
+    public func getLabel() -> String {self.label}
+    public mutating func setLabel(_ label: String) {self.label = label}
+}
+
+

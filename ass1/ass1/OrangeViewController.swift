@@ -12,6 +12,21 @@ var orangeViews = Views()
 
 
 class OrangeViewController: UIViewController {
+    var tableInfo: (label: String, view: Views)!
+    
+    @IBAction func touchBut(_ sender: Any) {
+        self.performSegue(withIdentifier: "table", sender: self)
+        viewsUsed.setLabel("Orange View")
+        viewsUsed.setView(orangeViews)
+    }
+    
+//    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "table"{
+//            if let vc = segue.destination as? TableViewController{ vc.tabInfo = (label: "OrangeView", view: orangeViews)}
+//        }
+//    }
+    
+    
     
     // We use super in order to invoke the superclass, i.e. in this instance UIView, this ensures consistency between seperate Orangeviews (i.e. OrangeView, OrangeView) since they are all invoking the systems UIView.
     
@@ -31,8 +46,8 @@ class OrangeViewController: UIViewController {
         sender.alpha = 0.5
         showLifeCycleStatus()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4 ) {
-                sender.alpha = 1.0
-            }
+            sender.alpha = 1.0
+        }
     }
     
     //
@@ -71,7 +86,7 @@ class OrangeViewController: UIViewController {
         self.view.backgroundColor = UIColor.orange
         super.viewDidAppear(animated)
         orangeViews.setViewDidAppear(orangeViews.getViewDidAppear() + 1)
-//        // viewDidAppear is called every time the main view is loaded, hence the navigation bar will be hidden in this instance
+        //        // viewDidAppear is called every time the main view is loaded, hence the navigation bar will be hidden in this instance
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         //        showToast(message: "OrangeView viewDidAppear", seconds: 2.0)
         print("Notifies OVC that it's view had been added to a view hiearchy. OVC shows view on screen!")
@@ -98,6 +113,8 @@ class OrangeViewController: UIViewController {
         print("Notifies OVC that it's view had been removed from the hiearchy! OVC took the current view off!")
         print("OV viewDidDisappear Count: \(orangeViews.getViewDidDisappear())" + "\n\n")
     }
+    
+    
 }
 
 

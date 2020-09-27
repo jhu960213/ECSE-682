@@ -13,6 +13,14 @@ var homeViews = Views()
 
 class HomeViewController: UIViewController {
     
+    @IBAction func touchBut(_ sender: Any) {
+        self.performSegue(withIdentifier: "hometable", sender: self)
+        viewsUsed.setLabel("Home View")
+        viewsUsed.setView(homeViews)
+    }
+    
+    
+    
     // We use super in order to invoke the superclass, i.e. in this instance UIView, this ensures consistency between seperate views (i.e. HomeView, OrangeView) since they are all invoking the systems UIView.
     
     //
@@ -20,6 +28,7 @@ class HomeViewController: UIViewController {
     //
     
     // shows the life cycle stats of this controller
+    
     func showLifeCycleStatus() {
         print("\n\n\nHome View Controller Life Cycle Stats:")
         print("loadView Count: " + String(orangeViews.getLoadView()))

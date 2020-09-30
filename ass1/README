@@ -1,0 +1,17 @@
+Ass1 is an iOS application coded in SWIFT.
+
+The point is to show functionality of the LifeCycle methods.
+In the App we have 3 ViewControllers:
+  1) HomeView Controller- This is a command center where we can access the other 2 ViewControllers, and LifeCycle stats for each ViewController.
+  2) OrangeView Controller- This is used to help the user understand the interaction between LifeCycle Methods
+  3) TableView Controller- This is used to display the stats. i.e How many time each lifecycle method were called for a specific view.
+
+All of these are embedded in a NavigationController, as such when we navigate between views, it is similar to a "Parent Process" creating a "Child Process"
+so when we press "back" to return to the Parent process, the Child process (i.e. the navigated view) is killed.
+Hence, viewDidLoad & LoadView, which are supposed to called only once per view are actually called every time we create a "new Child" process.
+
+We have also implemented an ShowToast method, inspired by toast in Android. It sends the user notifications on which LifeCycles have appeared/disappeared.
+Due to conscious design and UI in mind, we only display viewDidDisappear, and viewDidAppear messages. 
+
+Also to note when we Navigate from Child-> Parent Views, viewDidDisappear is not called in Toast. 
+The process is most likely killed before it can send the notification.

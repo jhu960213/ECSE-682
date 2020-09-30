@@ -7,12 +7,11 @@
 //
 
 import UIKit
+
 // view struct object to keep track of this view's controller life cycle method calls
 var tableViews = Views()
 var viewsUsed = tableviews()
 //var tabInfo: (label: String, view: Views)
-
-
 
 class TableViewController: UITableViewController {
     var tableObjs = [tableobj]()
@@ -124,7 +123,6 @@ extension Loopable {
     func allProperties() /*throws*/ -> [tableobj] {
         
         var tableObjs = [tableobj]()
-        
         let mirror = Mirror(reflecting: self)
         
                 // Optional check to make sure we're iterating over a struct or class

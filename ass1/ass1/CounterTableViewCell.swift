@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 //TODO:Pass specific view to Var.
 class CounterTableViewCell: UITableViewCell {
     //MARK: Properties

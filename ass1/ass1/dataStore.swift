@@ -94,6 +94,7 @@ struct Views: Loopable {
         self.viewDidDisappear = inViewDidDisappear
     }
 }
+
 struct tableobj {
     
     private var sectionName : LifeCycle
@@ -106,6 +107,7 @@ struct tableobj {
     public mutating func setSectionObjects(_ sectionObjects: Int) {
         self.sectionObjects = sectionObjects
     }
+    
     public func getSectionName() -> LifeCycle {
         return self.sectionName    // constructor 1 - for when we want to initialize with unique parameters
     }
@@ -113,6 +115,7 @@ struct tableobj {
     public mutating func setSectionName(_ sectionName: LifeCycle) {
         self.sectionName = sectionName
     }
+    
     // constructor 1 - for when we want to initialize with unique parameters
     init(_ sectionName:LifeCycle, _ sectionObjects:Int) {
         self.sectionName = sectionName
@@ -125,6 +128,7 @@ struct tableobj {
         self.sectionObjects = 0
     }
 }
+
 enum LifeCycle: String {
     case loadView = "loadView"
     case viewDidLoad = "viewDidLoad"

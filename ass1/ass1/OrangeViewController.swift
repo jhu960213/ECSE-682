@@ -12,6 +12,7 @@ var orangeViews = Views()
 
 
 class OrangeViewController: UIViewController {
+    
     var tableInfo: (label: String, view: Views)!
     
     @IBAction func touchBut(_ sender: Any) {

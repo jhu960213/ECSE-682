@@ -95,7 +95,7 @@ struct Views: Loopable {
     }
 }
 
-struct tableobj {
+struct tableobj {//this struct records how many LifeCycle method calls there are for each specific view. Data is taken from Views struct, this is used in the Loopable Protocol.
     
     private var sectionName : LifeCycle
     private var sectionObjects : Int
@@ -129,7 +129,7 @@ struct tableobj {
     }
 }
 
-enum LifeCycle: String {
+enum LifeCycle: String {//enum used to classify Lifecycle Methods in tableObj struct.
     case loadView = "loadView"
     case viewDidLoad = "viewDidLoad"
     case viewWillAppear = "viewWillAppear"
@@ -139,7 +139,7 @@ enum LifeCycle: String {
     case nul = ""
 }
 
-struct tableviews {
+struct tableviews { //struct keeps track of which button/view called the tableview.
     private var view: Views
     private var label: String
     init() {

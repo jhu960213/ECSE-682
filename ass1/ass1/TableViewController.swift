@@ -10,14 +10,14 @@ import UIKit
 
 // view struct object to keep track of this view's controller life cycle method calls
 var tableViews = Views()
-var viewsUsed = tableviews()
+var viewsUsed = tableviews() //keep track of which view we display on TableView.
 //var tabInfo: (label: String, view: Views)
 
 class TableViewController: UITableViewController {
-    var tableObjs = [tableobj]()
+    var tableObjs = [tableobj]()//Array of tableObj we use to display LifeCycle Methods on tableview
     
 
-
+//functions for TableView display
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -44,7 +44,7 @@ class TableViewController: UITableViewController {
     }
 
 
-    private func unpackStruct(){
+    private func unpackStruct(){ //Call loopable function, set tableObjs to number of lifecycle calls.
         tableObjs = (viewsUsed.getView().allProperties())
     }
     
@@ -68,7 +68,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         //self.view.backgroundColor = UIColor.gray
         super.viewDidLoad()
-        unpackStruct()
+        unpackStruct() //Call function that sets the value of the struct.
         tableViews.setViewDidLoad(tableViews.getViewDidLoad() + 1)
         //        showToast(message: "TableView viewDidLoad", seconds: 2.0)
         print("Do additional view setups after view creation and transfering to main memory. TVC has loaded the view!")
@@ -122,7 +122,7 @@ class TableViewController: UITableViewController {
     }
 }
 
-protocol Loopable {
+protocol Loopable { //protocl for allProperties function.
     func allProperties() /*throws*/ -> [tableobj]
 }
 
@@ -130,7 +130,7 @@ extension Loopable {
     func allProperties() /*throws*/ -> [tableobj] {
         
         var tableObjs = [tableobj]()
-        let mirror = Mirror(reflecting: self)
+        let mirror = Mirror(reflecting: self) //Mirror: see Swift docs. It returns Variable name & variable i.e. in                                      this case: LifeCycle name, Number of Calls (Int)
         
                 // Optional check to make sure we're iterating over a struct or class
 //                guard let style = mirror.displayStyle, style == .struct || style == .class else {
@@ -139,9 +139,9 @@ extension Loopable {
         
         for (property, value) in mirror.children {
             guard let property = property else {
-                continue
+                continue                //Property is variable name, value is number of calls.
             }
-            tableObjs.append(tableobj(LifeCycle(rawValue: property) ?? LifeCycle.nul, value as! Int))
+            tableObjs.append(tableobj(LifeCycle(rawValue: property) ?? LifeCycle.nul, value as! Int))//Append to                                                                                        tableObj array
             print(tableObjs)
         }
         

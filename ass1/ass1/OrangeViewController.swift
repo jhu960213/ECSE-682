@@ -15,9 +15,9 @@ class OrangeViewController: UIViewController {
     
     var tableInfo: (label: String, view: Views)!
     
-    @IBAction func touchBut(_ sender: Any) {
+    @IBAction func touchBut(_ sender: Any) {//Function for both buttons in OrangeView.
         self.performSegue(withIdentifier: "table", sender: self)
-        viewsUsed.setLabel("Orange View")
+        viewsUsed.setLabel("Orange View")//set the viewsused to orange view i.e Tell us which view initiated call.
         viewsUsed.setView(orangeViews)
     }
     

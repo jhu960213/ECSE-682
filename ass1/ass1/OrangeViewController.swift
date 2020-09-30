@@ -12,6 +12,7 @@ var orangeViews = Views()
 
 
 class OrangeViewController: UIViewController {
+    
     var tableInfo: (label: String, view: Views)!
     
     @IBAction func touchBut(_ sender: Any) {
@@ -37,7 +38,7 @@ class OrangeViewController: UIViewController {
     @IBAction func orangeViewLifeCycleButton(_ sender: UIButton) {
         sender.alpha = 0.5
         showLifeCycleStatus()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4 ) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             sender.alpha = 1.0
         }
     }
@@ -52,24 +53,26 @@ class OrangeViewController: UIViewController {
         orangeViews.setLoadView(orangeViews.getLoadView() + 1)
         print("Creates the view that OVC manages. OVC is loading the view!")
         print("OV loadView Count: " + String(orangeViews.getLoadView()) + "\n\n")
+//        showToast(message: "OrangeView loadView", seconds: 1.0)
+        
     }
     
     // 2nd cycle function called
     override func viewDidLoad() {
         super.viewDidLoad()
         orangeViews.setViewDidLoad(orangeViews.getViewDidLoad() + 1)
-        showToast(message: "OrangeView viewDidLoad", seconds: 2.0)
         print("Do additional view setups after view creation and transfering to main memory. OVC has loaded the view!")
         print("OV viewDidLoad Count: \(orangeViews.getViewDidLoad())" + "\n\n")
+//        showToast(message: "OrangeView viewDidLoad", seconds: 1.0)
     }
     
     // 3rd life cycle function called
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         orangeViews.setViewWillAppear(orangeViews.getViewWillAppear() + 1)
-        showToast(message: "OrangeView viewWillAppear", seconds: 2.0)
         print("Notifies OVC that it's view is about to be added to a view hiearchy!")
         print("OV viewWillAppear Count: \(orangeViews.getViewWillAppear())" + "\n\n")
+//        showToast(message: "OrangeView viewWillAppear", seconds: 1.0)
     }
     
     
@@ -80,10 +83,11 @@ class OrangeViewController: UIViewController {
         orangeViews.setViewDidAppear(orangeViews.getViewDidAppear() + 1)
         //        // viewDidAppear is called every time the main view is loaded, hence the navigation bar will be hidden in this instance
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        showToast(message: "OrangeView viewDidAppear", seconds: 2.0)
         print("Notifies OVC that it's view had been added to a view hiearchy. OVC shows view on screen!")
         print("OV viewDidAppear Count: \(orangeViews.getViewDidAppear())" + "\n\n")
-        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0) {
+            self.showToast(message: "OrangeView viewDidAppear", seconds: 3.0)
+        }
     }
     
     // 5th life cycle function called
@@ -92,21 +96,19 @@ class OrangeViewController: UIViewController {
         orangeViews.setViewWillDisappear(orangeViews.getViewWillDisappear() + 1)
         //viewWillDisappear is called every time the main view is left, hence the navigation bar will be shown in this instance when we leave the view.
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        showToast(message: "OrangeView viewWillDisappear", seconds: 2.0)
         print("Notifies OVC that it's view is about to be removed from a view hiearchy!")
         print("OV viewWillDisappear Count: \(orangeViews.getViewWillDisappear())" + "\n\n")
+//        showToast(message: "OrangeView viewWillDisappear", seconds: 1.0)
     }
     
     // 6th life cycle function called
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         orangeViews.setViewDidDisappear(orangeViews.getViewDidDisappear() + 1)
-        showToast(message: "OrangeView viewDidDisappear", seconds: 2.0)
         print("Notifies OVC that it's view had been removed from the hiearchy! OVC took the current view off!")
         print("OV viewDidDisappear Count: \(orangeViews.getViewDidDisappear())" + "\n\n")
+        showToast(message: "OrangeView viewDidDisappear", seconds: 3.0)
     }
-    
-    
 }
 
 

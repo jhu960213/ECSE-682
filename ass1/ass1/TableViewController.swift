@@ -61,6 +61,7 @@ class TableViewController: UITableViewController {
         tableViews.setLoadView(tableViews.getLoadView() + 1)
         print("Creates the view that TVC manages. TVC is loading the view!")
         print("TV loadView Count: " + String(tableViews.getLoadView()) + "\n\n")
+//        showToast(message: "TableView loadView", seconds: 1.0)
     }
     
     // 2nd cycle function called
@@ -72,6 +73,7 @@ class TableViewController: UITableViewController {
         //        showToast(message: "TableView viewDidLoad", seconds: 2.0)
         print("Do additional view setups after view creation and transfering to main memory. TVC has loaded the view!")
         print("TV viewDidLoad Count: \(tableViews.getViewDidLoad())" + "\n\n")
+//        showToast(message: "TableView viewDidLoad", seconds: 1.0)
     }
     
     // 3rd life cycle function called
@@ -81,6 +83,7 @@ class TableViewController: UITableViewController {
         //        showToast(message: "TableView viewWillAppear", seconds: 2.0)
         print("Notifies TVC that it's view is about to be added to a view hiearchy!")
         print("TV viewWillAppear Count: \(tableViews.getViewWillAppear())" + "\n\n")
+//        showToast(message: "TableView viewWillAppear", seconds: 1.0)
     }
     
     // 4th life cycle function called
@@ -91,6 +94,9 @@ class TableViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         print("Notifies TVC that it's view had been added to a view hiearchy. TVC shows view on screen!")
         print("TV viewDidAppear Count: \(tableViews.getViewDidAppear())" + "\n\n")
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0) {
+            self.showToast(message: "TableView viewDidAppear", seconds: 3.0)
+        }
     }
     
     // 5th life cycle function called
@@ -103,15 +109,16 @@ class TableViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
         print("Notifies TVC that it's view is about to be removed from a view hiearchy!")
         print("TV viewWillDisappear Count: \(tableViews.getViewWillDisappear())" + "\n\n")
+//        showToast(message: "TableView viewWillDisappear", seconds: 1.0)
     }
     
     // 6th life cycle function called
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         tableViews.setViewDidDisappear(tableViews.getViewDidDisappear() + 1)
-        //        showToast(message: "TableView viewDidDisappear", seconds: 2.0)
         print("Notifies TVC that it's view had been removed from the hiearchy! TVC took the current view off!")
         print("TV viewDidDisappear Count: \(tableViews.getViewDidDisappear())" + "\n\n")
+        showToast(message: "TableView viewDidDisappear", seconds: 3.0)
     }
 }
 

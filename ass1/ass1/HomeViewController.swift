@@ -10,6 +10,7 @@
 import UIKit
 // view struct object to keep track of this view's controller life cycle method calls
 var homeViews = Views()
+var toastCount: Int = 0
 
 class HomeViewController: UIViewController {
     
@@ -82,15 +83,16 @@ class HomeViewController: UIViewController {
         print("HV viewDidLoad Count: \(homeViews.getViewDidLoad())" + "\n\n")
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.black
+        self.showToast(message: "HomeViewController viewDidLoad", seconds: 2.0)
     }
     
     // 3rd life cycle function called
     override func viewWillAppear(_ animated: Bool) {
-        // self.showToast(message: "HomeViewController viewWillAppear", seconds: 2.0)
         super.viewWillAppear(animated)
         homeViews.setViewWillAppear(homeViews.getViewWillAppear() + 1)
         print("Notifies HVC that it's view is about to be added to a view hiearchy!")
         print("HV viewWillAppear Count: \(homeViews.getViewWillAppear())" + "\n\n")
+        self.showToast(message: "HomeViewController viewWillAppear", seconds: 2.0)
     }
     
     
@@ -102,6 +104,7 @@ class HomeViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         print("Notifies HVC that it's view had been added to a view hiearchy. HVC shows view on screen!")
         print("HV viewDidAppear Count: \(homeViews.getViewDidAppear())" + "\n\n")
+        self.showToast(message: "HomeViewController viewDidAppear", seconds: 2.0)
     }
     
     // 5th life cycle function called
@@ -112,26 +115,27 @@ class HomeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
         print("Notifies HVC that it's view is about to be removed from a view hiearchy!")
         print("HV viewWillDisappear Count: \(homeViews.getViewWillDisappear())" + "\n\n")
-        //self.showToast(message: "HomewViewController viewWillDisappear", seconds: 1.0)
+        self.showToast(message: "HomewViewController viewWillDisappear", seconds: 1.0)
     }
     
     // 6th life cycle function called
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         homeViews.setViewDidDisappear(homeViews.getViewDidDisappear() + 1)
-        //self.showToast(message: "HomewViewController viewDidDisappear", seconds: 2.0)
         print("Notifies HVC that it's view had been removed from the hiearchy! HVC took the current view off!")
         print("HV viewDidDisappear Count: \(homeViews.getViewDidDisappear())" + "\n\n")
+        self.showToast(message: "HomewViewController viewDidDisappear", seconds: 2.0)
     }
     
     
     
 }
-//Borrowed method that is similar to toast in Android. Credit: Sazzad Hissain Khan, @StackOverFlow
+//Method similar to toast in Android. Credit: Sazzad Hissain Khan, @StackOverFlow
 extension UIViewController {
     func showToast(message: String, seconds: Double) {
+        toastCount += 1
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.view.backgroundColor = UIColor.black
+        alert.view.backgroundColor = UIColor.brown
         alert.view.alpha = 0.6
         alert.view.layer.cornerRadius = 15
         
@@ -140,6 +144,10 @@ extension UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
             alert.dismiss(animated: true)
         }
+        
+        alert.dismiss(animated: true)
+        
     }
 }
+
 

@@ -94,25 +94,12 @@ struct Views: Loopable {
         self.viewDidDisappear = inViewDidDisappear
     }
 }
-struct tableobj {
+struct tableobj {//TableObj is used to keep track of how many calls we have from each LifeCycle Function,
+//                  This is used in the Loopable protocol, See Loopable Protocol for more info.
     
     private var sectionName : LifeCycle
     private var sectionObjects : Int
     
-    public func getSectionObjects() -> Int {
-        return self.sectionObjects    // constructor 1 - for when we want to initialize with unique parameters
-    }
-    
-    public mutating func setSectionObjects(_ sectionObjects: Int) {
-        self.sectionObjects = sectionObjects
-    }
-    public func getSectionName() -> LifeCycle {
-        return self.sectionName    // constructor 1 - for when we want to initialize with unique parameters
-    }
-    
-    public mutating func setSectionName(_ sectionName: LifeCycle) {
-        self.sectionName = sectionName
-    }
     // constructor 1 - for when we want to initialize with unique parameters
     init(_ sectionName:LifeCycle, _ sectionObjects:Int) {
         self.sectionName = sectionName
@@ -124,8 +111,25 @@ struct tableobj {
         self.sectionName = LifeCycle.nul//LifeCycle.nul
         self.sectionObjects = 0
     }
+    // setters and getters
+    public func getSectionObjects() -> Int {
+        return self.sectionObjects
+    }
+    
+    public mutating func setSectionObjects(_ sectionObjects: Int) {
+        self.sectionObjects = sectionObjects
+    }
+    
+    // setters and getters
+    public func getSectionName() -> LifeCycle {
+        return self.sectionName
+    }
+    
+    public mutating func setSectionName(_ sectionName: LifeCycle) {
+        self.sectionName = sectionName
+    }
 }
-enum LifeCycle: String {
+enum LifeCycle: String { //Enum datatype we use to classify calls that we display on TableViewController
     case loadView = "loadView"
     case viewDidLoad = "viewDidLoad"
     case viewWillAppear = "viewWillAppear"
@@ -135,7 +139,8 @@ enum LifeCycle: String {
     case nul = ""
 }
 
-struct tableviews {
+struct tableviews { //TableView Struct that tells which tableview we are on this is used to tell us
+//                    which View we click the button from, in order to display those stats on Table.
     private var view: Views
     private var label: String
     init() {

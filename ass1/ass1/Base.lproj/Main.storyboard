@@ -149,7 +149,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zuJ-21-NPY"/>
                     <connections>
-                        <segue destination="NWu-or-aB0" kind="presentation" identifier="table" id="HuD-mb-kbM"/>
+                        <segue destination="NWu-or-aB0" kind="show" identifier="table" id="HuD-mb-kbM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr5-N2-ITi" sceneMemberID="firstResponder"/>
@@ -177,6 +177,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ssb-dg-pfV"/>
+        <segue reference="HuD-mb-kbM"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -143,12 +143,23 @@
                                     <action selector="touchBut:" destination="BUu-tt-YAL" eventType="touchUpInside" id="uLe-Ma-Z60"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-Te-r4v">
+                                <rect key="frame" x="143" y="267" width="128" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="halloween"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <connections>
+                                    <action selector="animationBut:" destination="BUu-tt-YAL" eventType="touchUpInside" id="F1t-QW-xNm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gga-0s-QSt"/>
                     </view>
                     <navigationItem key="navigationItem" id="zuJ-21-NPY"/>
                     <connections>
+                        <outlet property="animateBut" destination="0Oy-Te-r4v" id="o7K-UZ-i7Y"/>
                         <segue destination="NWu-or-aB0" kind="show" identifier="table" id="HuD-mb-kbM"/>
                     </connections>
                 </viewController>

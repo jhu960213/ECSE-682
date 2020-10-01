@@ -14,7 +14,23 @@ var orangeViews = Views()
 class OrangeViewController: UIViewController {
     
     var tableInfo: (label: String, view: Views)!
+    @IBOutlet weak var animateBut: UIButton!
     
+    @IBAction func animationBut(_ sender: UIButton) {
+        animate(picture: "👻🎃", button: sender)
+        print("Click me, Boo!")
+    }
+    func animate( picture: String,  button: UIButton ){
+        switch button.currentTitle{
+        case picture:
+            button.setTitle("", for: .normal)
+            button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        default:
+            button.setTitle(picture, for: .normal)
+            button.backgroundColor = #colorLiteral(red: 0.2499715686, green: 0.767567575, blue: 0.1330890656, alpha: 1)
+        }
+        
+    }
     @IBAction func touchBut(_ sender: Any) {//Function for both buttons in OrangeView.
         self.performSegue(withIdentifier: "table", sender: self)
         viewsUsed.setLabel("Orange View")//set the viewsused to orange view i.e Tell us which view initiated call.
@@ -60,6 +76,7 @@ class OrangeViewController: UIViewController {
     // 2nd cycle function called
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.orange
         orangeViews.setViewDidLoad(orangeViews.getViewDidLoad() + 1)
         print("Do additional view setups after view creation and transfering to main memory. OVC has loaded the view!")
         print("OV viewDidLoad Count: \(orangeViews.getViewDidLoad())" + "\n\n")
@@ -78,8 +95,8 @@ class OrangeViewController: UIViewController {
     
     // 4th life cycle function called
     override func viewDidAppear(_ animated: Bool) {
-        self.view.backgroundColor = UIColor.orange
         super.viewDidAppear(animated)
+        animate(picture: "👻🎃", button: animateBut)
         orangeViews.setViewDidAppear(orangeViews.getViewDidAppear() + 1)
         //        // viewDidAppear is called every time the main view is loaded, hence the navigation bar will be hidden in this instance
         self.navigationController?.setNavigationBarHidden(false, animated: true)

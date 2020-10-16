@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBA257CC2539E891005F0D3D /* CMMotionManager+shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA257CB2539E891005F0D3D /* CMMotionManager+shared.swift */; };
 		D52392EE2536781400B814A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52392ED2536781400B814A2 /* AppDelegate.swift */; };
 		D52392F02536781400B814A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52392EF2536781400B814A2 /* SceneDelegate.swift */; };
 		D52392F22536781400B814A2 /* PedometerMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52392F12536781400B814A2 /* PedometerMainController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BBA257CB2539E891005F0D3D /* CMMotionManager+shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMMotionManager+shared.swift"; sourceTree = "<group>"; };
 		D52392EA2536781400B814A2 /* Pedometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pedometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52392ED2536781400B814A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D52392EF2536781400B814A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				D52392ED2536781400B814A2 /* AppDelegate.swift */,
 				D52392EF2536781400B814A2 /* SceneDelegate.swift */,
 				D52392F12536781400B814A2 /* PedometerMainController.swift */,
+				BBA257CB2539E891005F0D3D /* CMMotionManager+shared.swift */,
 				D5239303253679D600B814A2 /* PedometerGoalController.swift */,
 				D52392F32536781400B814A2 /* Main.storyboard */,
 				D52392F62536781500B814A2 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA257CC2539E891005F0D3D /* CMMotionManager+shared.swift in Sources */,
 				D5239304253679D600B814A2 /* PedometerGoalController.swift in Sources */,
 				D52392F22536781400B814A2 /* PedometerMainController.swift in Sources */,
 				D52392EE2536781400B814A2 /* AppDelegate.swift in Sources */,

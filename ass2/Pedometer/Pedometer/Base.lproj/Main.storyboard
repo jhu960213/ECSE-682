@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dll-1a-k0o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dll-1a-k0o">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,51 +17,130 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="241" translatesAutoresizingMaskIntoConstraints="NO" id="nLc-fs-vpA">
-                                <rect key="frame" x="86" y="88" width="203" height="613"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="j0c-5K-uIw" userLabel="VerticalStackView">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Pedometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjR-iX-flx">
-                                        <rect key="frame" x="0.0" y="0.0" width="203" height="43.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="77.666666666666671"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV2-eP-eFJ">
-                                        <rect key="frame" x="0.0" y="284.66666666666669" width="203" height="43.666666666666686"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KJ-0F-rpS" userLabel="SetGoal">
-                                        <rect key="frame" x="0.0" y="569.33333333333337" width="203" height="43.666666666666629"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MKq-7P-fPb" userLabel="ActivityStackView">
+                                        <rect key="frame" x="0.0" y="112.66666666666666" width="375" height="77.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity State:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c60-kE-rht">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="77.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgQ-s5-pCy">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="77.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.68928835439645786" blue="0.27911401829490357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X2B-71-WXK" userLabel="DistanceView">
+                                        <rect key="frame" x="0.0" y="225.33333333333329" width="375" height="77.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Distance (m):" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-aZ-eVs">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="77.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7Q-gY-y3o">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="77.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jRs-Nx-HYu" userLabel="LabelsView">
+                                        <rect key="frame" x="0.0" y="338" width="375" height="77.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1B-R0-IgE" userLabel="StepsLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="77.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQQ-hA-kFV" userLabel="MyStepCount">
+                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="77.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6Z-wu-sCU" userLabel="GoalLabel">
+                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="77.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyg-9U-I5Q" userLabel="MyGoal">
+                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="77.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-QI-9xB" userLabel="ProgressBarHorView">
+                                        <rect key="frame" x="0.0" y="450.66666666666663" width="375" height="77.666666666666629"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kgq-7N-vnM">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="78.666666666666671"/>
+                                                <color key="progressTintColor" red="0.83337367100000004" green="0.60039799500000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" red="0.099945009390000006" green="0.1182970381" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kgq-7N-vnM" firstAttribute="centerX" secondItem="5rS-QI-9xB" secondAttribute="centerX" id="7LJ-8y-HHS"/>
+                                            <constraint firstItem="kgq-7N-vnM" firstAttribute="centerY" secondItem="5rS-QI-9xB" secondAttribute="centerY" id="LPR-9H-Ldu"/>
+                                            <constraint firstItem="kgq-7N-vnM" firstAttribute="centerY" secondItem="5rS-QI-9xB" secondAttribute="centerY" id="Sxb-WK-vDc"/>
+                                            <constraint firstItem="kgq-7N-vnM" firstAttribute="centerX" secondItem="5rS-QI-9xB" secondAttribute="centerX" id="p9t-xP-3bP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KJ-0F-rpS" userLabel="SetGoal">
+                                        <rect key="frame" x="0.0" y="563.33333333333337" width="375" height="77.666666666666629"/>
                                         <color key="backgroundColor" red="0.83337367101507154" green="0.60039799502689872" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="Set Goal">
+                                        <state key="normal" title="My Goal">
                                             <color key="titleColor" red="0.099945009386175121" green="0.11829703807383851" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="goalButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Msv-ka-Rzv"/>
+                                            <action selector="goalViewButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l9S-oA-Y1U"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nLc-fs-vpA" secondAttribute="trailing" constant="86" id="12e-JQ-h0Y" userLabel="Safe Area.trailing = Superview.TrailingMargin"/>
-                            <constraint firstItem="nLc-fs-vpA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5hm-9T-Xga" userLabel="Stack View.top = Safe Area - 23"/>
-                            <constraint firstItem="nLc-fs-vpA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="xCc-5K-6iC" userLabel="Stack View.leading = Superview.LeadingMargin"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nLc-fs-vpA" secondAttribute="bottomMargin" constant="28" id="xVx-ej-kGD"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.55135238870000003" green="0.64613209419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j0c-5K-uIw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gwa-Np-CZ0" userLabel="Vertical Stack View.top = topMargin"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j0c-5K-uIw" secondAttribute="trailing" id="JsS-Jo-YIH" userLabel="Vertical Stack View.leading = leadingMargin"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j0c-5K-uIw" secondAttribute="bottom" id="XNA-bE-Bg6"/>
+                            <constraint firstItem="j0c-5K-uIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tWf-rf-2do" userLabel="trailingMargin = Vertical Stack View.trailing"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Lb4-3d-E5x">
                         <barButtonItem key="backBarButtonItem" title="Pedometer" id="eEq-0e-pyK">
-                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityType" destination="DgQ-s5-pCy" id="SqM-hX-ubO"/>
+                        <outlet property="distanceMeasure" destination="R7Q-gY-y3o" id="foX-UY-dAW"/>
+                        <outlet property="myGoal" destination="Nyg-9U-I5Q" id="jKb-yu-TQe"/>
+                        <outlet property="myProgressBar" destination="kgq-7N-vnM" id="2Xc-A9-a1U"/>
+                        <outlet property="stepCount" destination="AQQ-hA-kFV" id="DUH-hJ-lvy"/>
                         <segue destination="rOu-Cw-6ph" kind="show" identifier="Goal" id="u1o-eC-0Z2"/>
                     </connections>
                 </viewController>
@@ -74,14 +155,63 @@
                     <view key="view" contentMode="scaleToFill" id="d4I-NY-xDG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="JlI-SZ-t4r" userLabel="VerticalView">
+                                <rect key="frame" x="43" y="282" width="289" height="248"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please set your goal!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAu-GT-zp7">
+                                        <rect key="frame" x="0.0" y="0.0" width="289" height="68"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aLP-ND-EeB" userLabel="InputView">
+                                        <rect key="frame" x="0.0" y="90" width="289" height="68"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input desired number of steps:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YU-vP-jdc">
+                                                <rect key="frame" x="0.0" y="0.0" width="289" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUh-t1-vgz">
+                                                <rect key="frame" x="0.0" y="34" width="289" height="34"/>
+                                                <color key="backgroundColor" red="1" green="0.65200795659999999" blue="0.8114299935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.77761994769999998" green="0.92318322779999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQC-5Y-P6K">
+                                        <rect key="frame" x="0.0" y="180" width="289" height="68"/>
+                                        <color key="backgroundColor" red="1" green="0.65200795659999999" blue="0.8114299935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Set Goal">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="setMyGoalButton:" destination="rOu-Cw-6ph" eventType="touchUpInside" id="W5e-UF-Yba"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7UC-bI-yf8"/>
+                        <color key="backgroundColor" red="0.55135238870000003" green="0.64613209419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JlI-SZ-t4r" firstAttribute="centerY" secondItem="d4I-NY-xDG" secondAttribute="centerY" id="OFn-vY-oI6"/>
+                            <constraint firstItem="JlI-SZ-t4r" firstAttribute="centerX" secondItem="d4I-NY-xDG" secondAttribute="centerX" id="tGG-FQ-nHm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xE6-Q2-eXa"/>
+                    <connections>
+                        <outlet property="userGoalInput" destination="hUh-t1-vgz" id="7WH-tF-cM3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22a-rI-ZEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="119"/>
+            <point key="canvasLocation" x="1618.840579710145" y="118.52678571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eta-hQ-sil">
@@ -102,4 +232,9 @@
             <point key="canvasLocation" x="-197.10144927536234" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

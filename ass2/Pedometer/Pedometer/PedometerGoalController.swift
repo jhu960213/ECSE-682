@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol passDatatoVC {
+protocol passDatatoVC: class {
      func passData(str: String)
 }
 
@@ -24,7 +24,7 @@ class PedometerGoalController: UIViewController, UITextFieldDelegate {
     
     // Local variables for storing the user inputed text field
     var inputText = ""
-    var selectionDelegate: passDatatoVC?
+    weak var selectionDelegate: passDatatoVC? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()

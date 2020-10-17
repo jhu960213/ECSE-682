@@ -31,9 +31,14 @@ class PedometerMainController: UIViewController{
     
     // Adding the goal button so we could switch views and go the goal view
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Goal" {
+            let PedometerGoalController = segue.destination as! PedometerGoalController
+            PedometerGoalController.selectionDelegate = self
+        }
+    }
+    
     @IBAction func goalViewButtonPress(_ sender: UIButton) {
-        let controller = PedometerGoalController()
-        controller.selectionDelegate = self
         performSegue(withIdentifier: "Goal", sender: self)
     }
     
@@ -50,6 +55,7 @@ class PedometerMainController: UIViewController{
         self.activityType.text = ""
         // Set distance traveled on start up to 0
         self.distanceMeasure.text = String(0)
+        
         
         // Setting the goal = to the user inputed goal from the other view controller or
         // 0 from initial startup 

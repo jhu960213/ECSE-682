@@ -9,6 +9,8 @@ import UIKit
 import CoreMotion
 import Foundation
 import Charts
+
+
 // This class will represent our main pedometer UI view controller upon loading up the app
 // In here we will able to see the live step count the user would like to record, progress bar, etc
 class PedometerMainController: UIViewController{
@@ -16,8 +18,10 @@ class PedometerMainController: UIViewController{
     // Local variable to store user input
     var userInputFromTextField = ""
     
+    
     // Connecting the labels and progress bar
     @IBOutlet weak var activityType: UILabel!
+    @IBOutlet weak var goalMessage: UILabel!
     @IBOutlet weak var distanceMeasure: UILabel!
     @IBOutlet weak var stepCount: UILabel!
     @IBOutlet weak var myGoal: UILabel!
@@ -38,41 +42,26 @@ class PedometerMainController: UIViewController{
         }
     }
     
+    // start CMPedometer functionalities
+    @IBAction func startButton(_ sender: UIButton) {
+        start()
+    }
+    
+    // performs reseting of pedometer to initial state
+    @IBAction func resetButton(_ sender: UIButton) {
+        reset()
+    }
+    
+    // performs a segue to the goal view
     @IBAction func goalViewButtonPress(_ sender: UIButton) {
         performSegue(withIdentifier: "Goal", sender: self)
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        // Setting my goal and step count labels to a certain value on start up
-        self.stepCount.text = String(0)
-        // Setting my progress bar to 0 at start up
-        self.myProgressBar.progress = 0.0
-        // Set my default acitivity to null
-        self.activityType.text = ""
-        // Set distance traveled on start up to 0
-        self.distanceMeasure.text = String(0)
-        
-        
-        // Setting the goal = to the user inputed goal from the other view controller or
-        // 0 from initial startup 
-        
-        
-        //MARK: Do we even need this?
-        //        // Setting up the time and date for pedometer data extraction
-        //        let calender = NSCalendar.current
-        //        var calComponents = calender.dateComponents(in: TimeZone.current, from: Date())
-        //        calComponents.hour = 0
-        //        calComponents.minute = 0
-        //        calComponents.second = 0
-        //        let midnightOfToday = calender.date(from: calComponents)!
-        
-        
+    // start function
+    func start() {
         // Starting my step counting activity and getting my current type of activity
         if(CMMotionActivityManager.isActivityAvailable()) {
+            
             // Listener of my acitivity, it will keep give me updates of my actiivity which is store in data
             CMMotionActivityManager.shared.startActivityUpdates(to: OperationQueue.main) { (data) in
                 // Starts the listening of our data
@@ -113,36 +102,79 @@ class PedometerMainController: UIViewController{
                 if (error == nil) { //We don't need this as long as the data is valid.
                     if let response = pedometerData {
                         // starts the listening of the number of steps taken
-                        DispatchQueue.main.async { //Background Thread
-                            // updating the progress bar
+                        DispatchQueue.main.async { // Background main application thread
                             
-                            let sc = self.stepCount.text
-                            let scValue = Int(sc!)
+                            // updating the progress bar if there is goal data
                             let mg = self.myGoal.text
                             let mgValue = Int(mg!)
-                            self.myProgressBar.progress = Float((Float(scValue!)/Float(mgValue!)))
-                            print("My progress: \(self.myProgressBar.progress)\n")
+                            if (mgValue != 0) {
+                                let sc = self.stepCount.text
+                                let scValue = Int(sc!)
+                                self.myProgressBar.progress = Float((Float(scValue!)/Float(mgValue!)))
+                                print("My progress: \(self.myProgressBar.progress)\n")
+                                if (self.myProgressBar.progress == 1.0) {
+                                    self.goalMessage.text = "I ACHIEVED MY GOAL!"
+                                    CMPedometer.shared.stopUpdates()
+                                    CMMotionActivityManager.shared.stopActivityUpdates()
+                                }
+                            }
+                            
+                            // printing steps to console and updating step count and distance count in UI
                             print("Number of Steps: \(response.numberOfSteps)\n")
                             self.stepCount.text = "\(response.numberOfSteps)"
                             print("Distance traveled: \(response.distance!.intValue)")
                             self.distanceMeasure.text = "\(response.distance!.intValue)"
                             
+                            // Timer which updates chart data every so often
+                            let timer = Timer(fire: Date(), interval: (30.0), repeats: true, //everyminute
+                                block: { (timer) in
+                                    stepValues.append(ChartDataEntry(x:-startDate.timeIntervalSinceNow, y: Double(truncating: response.numberOfSteps)))
+                            })
+                            RunLoop.current.add(timer, forMode: RunLoop.Mode.default) //TODO: Testing
+                            
                         }
-                        let timer = Timer(fire: Date(), interval: (60.0), repeats: true, //everyminute
-                            block: { (timer) in
-                                stepValues.append(ChartDataEntry(x:-startDate.timeIntervalSinceNow / 60, y: Double(truncating: response.numberOfSteps)))
-                        })
-                        RunLoop.current.add(timer, forMode: RunLoop.Mode.default) //TODO: Testing
                     }
                 }
             }
         }
+        
+    }
+    
+    // reset function
+    func reset() {
+        CMMotionActivityManager.shared.stopActivityUpdates()
+        CMPedometer.shared.stopUpdates()
+        self.myGoal.text = String(0)
+        self.goalMessage.text = "I'm lazy and I don't have a goal!"
+        self.distanceMeasure.text = String(0)
+        self.activityType.text = ""
+        self.stepCount.text = String(0)
+        self.myProgressBar.progress = 0.0
+    }
+    
+    // On start up we perform the UI initial setups here
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        // Setting my goal and step count labels to a certain value on start up
+        self.stepCount.text = String(0)
+        // Setting my progress bar to 0 at start up
+        self.myProgressBar.progress = 0.0
+        // Set my default acitivity to null
+        self.activityType.text = ""
+        // Set distance traveled on start up to 0
+        self.distanceMeasure.text = String(0)
+        // Set my goal to 0 on start up
+        self.myGoal.text = String(0)
+        // Set my goal message on startup
+        self.goalMessage.text = "I'm lazy and I don't have a goal!"
     }
 }
 extension PedometerMainController: passDatatoVC {
     func passData(str: String) {
-        myGoal.text = str
+        self.goalMessage.text = "I'm less lazy as I have a goal now!"
+        self.myGoal.text = str
         print("This worked")
     }
-    
 }

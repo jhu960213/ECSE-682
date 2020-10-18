@@ -7,5 +7,4 @@ target 'Pedometer' do
 pod 'Charts'
 pod 'TinyConstraints'
   # Pods for Pedometer
-
 end

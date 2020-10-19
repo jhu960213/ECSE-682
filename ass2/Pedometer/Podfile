@@ -6,5 +6,6 @@ target 'Pedometer' do
   use_frameworks!
 pod 'Charts'
 pod 'TinyConstraints'
+pod 'LayoutHelper'
   # Pods for Pedometer
 end

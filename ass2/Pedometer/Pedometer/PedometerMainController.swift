@@ -41,7 +41,6 @@ class PedometerMainController: UIViewController{
             PedometerGoalController.selectionDelegate = self
         }
     }
-    
     // start CMPedometer functionalities
     @IBAction func startButton(_ sender: UIButton) {
         start()
@@ -124,15 +123,8 @@ class PedometerMainController: UIViewController{
                             self.stepCount.text = "\(response.numberOfSteps)"
                             print("Distance traveled: \(response.distance!.intValue)")
                             self.distanceMeasure.text = "\(response.distance!.intValue)"
-                            
-                            // Timer which updates chart data every so often
-                            let dateTim = Date()
-                            let timer = Timer(fire: dateTim, interval: (30.0), repeats: true, //every 30s
-                                block: { (timer) in
-                                    stepValues.append(ChartDataEntry(x:-dateTim.timeIntervalSinceNow/60.0, y: Double(truncating: response.numberOfSteps)))
-                            })
-                            RunLoop.current.add(timer, forMode: RunLoop.Mode.default) //TODO: Testing
-                            
+                                                                          
+                            stepValues.append(ChartDataEntry(x:-startDate.timeIntervalSinceNow/60.0, y: Double(truncating: response.numberOfSteps)))
                         }
                     }
                 }
@@ -151,12 +143,14 @@ class PedometerMainController: UIViewController{
         self.activityType.text = ""
         self.stepCount.text = String(0)
         self.myProgressBar.progress = 0.0
+        stepValues = [ChartDataEntry(x: 0.0, y: 0.0)]
     }
     
     // On start up we perform the UI initial setups here
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         // Setting my goal and step count labels to a certain value on start up
         self.stepCount.text = String(0)

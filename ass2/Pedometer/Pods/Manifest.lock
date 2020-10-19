@@ -2,21 +2,25 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - LayoutHelper (0.1.5)
   - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
   - Charts
+  - LayoutHelper
   - TinyConstraints
 
 SPEC REPOS:
   trunk:
     - Charts
+    - LayoutHelper
     - TinyConstraints
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  LayoutHelper: 54b1e44cf7a5bb5d8256f0ad805fce633454175d
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: a29b5ea13aeca297d86191a2edc5e60d39169573
+PODFILE CHECKSUM: ef847b2ea59b6109dc0b0e8d3eb905c4ec53be4e
 
 COCOAPODS: 1.9.3

@@ -126,7 +126,7 @@ class PedometerMainController: UIViewController{
                             self.distanceMeasure.text = "\(response.distance!.intValue)"
                             
                             // Timer which updates chart data every so often
-                            let timer = Timer(fire: Date(), interval: (30.0), repeats: true, //everyminute
+                            let timer = Timer(fire: Date(), interval: (30.0), repeats: true, //every 30s
                                 block: { (timer) in
                                     stepValues.append(ChartDataEntry(x:-startDate.timeIntervalSinceNow, y: Double(truncating: response.numberOfSteps)))
                             })
@@ -173,8 +173,11 @@ class PedometerMainController: UIViewController{
 }
 extension PedometerMainController: passDatatoVC {
     func passData(str: String) {
-        self.goalMessage.text = "I'm less lazy as I have a goal now!"
-        self.myGoal.text = str
-        print("This worked")
+        if let goal = Double(str){ //unwrapping to confirm we have a valid value
+            print("Valid goal!")
+            self.goalMessage.text = "I'm less lazy as I have a goal now!"
+            self.myGoal.text = str
+            liml = ChartLimitLine(limit: goal, label: "Step Goal") //adding a limit line to the chart
+        }else {print("Invalid Value!")}
     }
 }

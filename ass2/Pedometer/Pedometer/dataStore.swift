@@ -8,7 +8,9 @@
 import Foundation
 import Charts
 
-var stepValues: [ChartDataEntry] = []
+var stepValues: [ChartDataEntry] = [ChartDataEntry(x: 0.0, y: 0.0)]
+var liml: ChartLimitLine?
+
 //
 //protocol stepDelegate{
 //    func onSetGoal (type: Int)

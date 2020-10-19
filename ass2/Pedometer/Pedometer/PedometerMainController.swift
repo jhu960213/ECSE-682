@@ -126,9 +126,10 @@ class PedometerMainController: UIViewController{
                             self.distanceMeasure.text = "\(response.distance!.intValue)"
                             
                             // Timer which updates chart data every so often
-                            let timer = Timer(fire: Date(), interval: (30.0), repeats: true, //every 30s
+                            let dateTim = Date()
+                            let timer = Timer(fire: dateTim, interval: (30.0), repeats: true, //every 30s
                                 block: { (timer) in
-                                    stepValues.append(ChartDataEntry(x:-startDate.timeIntervalSinceNow, y: Double(truncating: response.numberOfSteps)))
+                                    stepValues.append(ChartDataEntry(x:-dateTim.timeIntervalSinceNow/60.0, y: Double(truncating: response.numberOfSteps)))
                             })
                             RunLoop.current.add(timer, forMode: RunLoop.Mode.default) //TODO: Testing
                             

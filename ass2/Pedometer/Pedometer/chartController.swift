@@ -41,6 +41,7 @@ class chartController: UIViewController, ChartViewDelegate{
         chartView.xAxis.axisMinimum = 0
         chartView.animate(xAxisDuration: 2.5)
         chartView.setScaleEnabled(true) //can zoom in
+        chartView.zoom(scaleX: 1.2, scaleY: 1, x: 50, y: 100)
         return chartView
     }()
     
@@ -49,9 +50,11 @@ class chartController: UIViewController, ChartViewDelegate{
         view.addSubview(stepChartView)
         
         stepChartView.centerInSuperview()
-        stepChartView.width(350)
-        stepChartView.height(600)
+//        stepChartView.width(350)
+//        stepChartView.height(550)
+        stepChartView.width(to: view)
 //        stepChartView.heightToWidth(of: view)
+        stepChartView.heightToWidth(of: view, multiplier: 1.45)
         setData()
     }
     

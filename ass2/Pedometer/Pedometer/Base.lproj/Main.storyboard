@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dll-1a-k0o">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,29 +12,29 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PedometerMainController" customModule="Pedometer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="j0c-5K-uIw" userLabel="VerticalStackView">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Pedometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjR-iX-flx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="49.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MKq-7P-fPb" userLabel="ActivityView">
-                                        <rect key="frame" x="0.0" y="84.666666666666657" width="375" height="49.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="95" width="414" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity State:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c60-kE-rht">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="49.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgQ-s5-pCy">
-                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="49.333333333333336"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="1" green="0.68928835439645786" blue="0.27911401829490357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -42,16 +42,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X2B-71-WXK" userLabel="DistanceView">
-                                        <rect key="frame" x="0.0" y="169" width="375" height="49.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="190" width="414" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Distance (m):" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-aZ-eVs">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7Q-gY-y3o">
-                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="49.666666666666664"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -59,28 +59,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jRs-Nx-HYu" userLabel="LabelsView">
-                                        <rect key="frame" x="0.0" y="253.66666666666671" width="375" height="49.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="285" width="414" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1B-R0-IgE" userLabel="StepsLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="49.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQQ-hA-kFV" userLabel="MyStepCount">
-                                                <rect key="frame" x="93.666666666666686" y="0.0" width="94" height="49.333333333333336"/>
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6Z-wu-sCU" userLabel="GoalLabel">
-                                                <rect key="frame" x="187.66666666666666" y="0.0" width="93.666666666666657" height="49.333333333333336"/>
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyg-9U-I5Q" userLabel="MyGoal">
-                                                <rect key="frame" x="281.33333333333331" y="0.0" width="93.666666666666686" height="49.333333333333336"/>
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -88,10 +88,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-QI-9xB" userLabel="ProgressBarHorView">
-                                        <rect key="frame" x="0.0" y="338" width="375" height="49.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="380" width="414" height="60"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kgq-7N-vnM">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="50.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
                                                 <color key="progressTintColor" red="0.83337367100000004" green="0.60039799500000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="trackTintColor" red="0.099945009390000006" green="0.1182970381" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </progressView>
@@ -104,16 +104,16 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6po-BL-Ate" userLabel="GoalMessage">
-                                        <rect key="frame" x="0.0" y="422.66666666666669" width="375" height="49.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="475" width="414" height="60"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eck-cl-Acs" userLabel="ChartAndResetView">
-                                        <rect key="frame" x="0.0" y="507.00000000000006" width="375" height="49.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="570" width="414" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MO-29-eYI">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.66666666666667" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="60"/>
                                                 <color key="backgroundColor" red="0.83337367100000004" green="0.60039799500000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <state key="normal" title="Start">
@@ -124,7 +124,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJY-FK-AAJ">
-                                                <rect key="frame" x="125.66666666666666" y="0.0" width="123.66666666666666" height="49.666666666666664"/>
+                                                <rect key="frame" x="138.5" y="0.0" width="137" height="60"/>
                                                 <color key="backgroundColor" red="0.83337367100000004" green="0.60039799500000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <state key="normal" title="Reset">
@@ -135,7 +135,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KJ-0F-rpS" userLabel="Chart">
-                                                <rect key="frame" x="251.33333333333334" y="0.0" width="123.66666666666666" height="49.666666666666664"/>
+                                                <rect key="frame" x="277.5" y="0.0" width="136.5" height="60"/>
                                                 <color key="backgroundColor" red="0.83337367101507154" green="0.60039799502689872" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <state key="normal" title="Chart">
@@ -148,7 +148,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnS-8l-0aI" userLabel="SetGoal">
-                                        <rect key="frame" x="0.0" y="591.66666666666663" width="375" height="49.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="665" width="414" height="60"/>
                                         <color key="backgroundColor" red="0.83337367100000004" green="0.60039799500000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="My Goal">
@@ -196,10 +196,10 @@
             <objects>
                 <viewController title="chartController" id="dXM-Gu-sqg" customClass="chartController" customModule="Pedometer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ok-kn-lg7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time (30s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDr-QI-msU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time (min)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDr-QI-msU">
                                 <rect key="frame" x="143" y="677" width="116" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -237,29 +237,29 @@
             <objects>
                 <viewController restorationIdentifier="PedometerGoalController" storyboardIdentifier="PedometerGoalController" id="rOu-Cw-6ph" customClass="PedometerGoalController" customModule="Pedometer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d4I-NY-xDG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="JlI-SZ-t4r" userLabel="VerticalView">
-                                <rect key="frame" x="43.333333333333343" y="282" width="288.66666666666663" height="248"/>
+                                <rect key="frame" x="62.5" y="324" width="289" height="248"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please set your goal!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAu-GT-zp7">
-                                        <rect key="frame" x="0.0" y="0.0" width="288.66666666666669" height="68"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="289" height="68"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aLP-ND-EeB" userLabel="InputView">
-                                        <rect key="frame" x="0.0" y="90" width="288.66666666666669" height="68"/>
+                                        <rect key="frame" x="0.0" y="90" width="289" height="68"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input desired number of steps:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YU-vP-jdc">
-                                                <rect key="frame" x="0.0" y="0.0" width="288.66666666666669" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="289" height="34"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUh-t1-vgz">
-                                                <rect key="frame" x="0.0" y="34" width="288.66666666666669" height="34"/>
+                                                <rect key="frame" x="0.0" y="34" width="289" height="34"/>
                                                 <color key="backgroundColor" red="1" green="0.65200795659999999" blue="0.8114299935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -268,7 +268,7 @@
                                         <color key="backgroundColor" red="0.77761994769999998" green="0.92318322779999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQC-5Y-P6K">
-                                        <rect key="frame" x="0.0" y="180" width="288.66666666666669" height="68"/>
+                                        <rect key="frame" x="0.0" y="180" width="289" height="68"/>
                                         <color key="backgroundColor" red="1" green="0.65200795659999999" blue="0.8114299935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Set Goal">
@@ -303,7 +303,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dll-1a-k0o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xGL-OY-wbe">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

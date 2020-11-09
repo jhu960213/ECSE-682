@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBFD8F0B255937820094F547 /* CBUUIDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD8F0A255937820094F547 /* CBUUIDExtensions.swift */; };
+		BBFD8F11255940540094F547 /* ThunderBoardTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD8F10255940540094F547 /* ThunderBoardTypes.swift */; };
+		BBFD8F1525595EEC0094F547 /* BLEdevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD8F1425595EEC0094F547 /* BLEdevice.swift */; };
 		D5E035E0255762FE00406B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E035DF255762FE00406B88 /* AppDelegate.swift */; };
 		D5E035E2255762FE00406B88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E035E1255762FE00406B88 /* SceneDelegate.swift */; };
 		D5E035E4255762FE00406B88 /* ThunderboardMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E035E3255762FE00406B88 /* ThunderboardMainVC.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BBFD8F0A255937820094F547 /* CBUUIDExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBUUIDExtensions.swift; sourceTree = "<group>"; };
+		BBFD8F10255940540094F547 /* ThunderBoardTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThunderBoardTypes.swift; sourceTree = "<group>"; };
+		BBFD8F1425595EEC0094F547 /* BLEdevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEdevice.swift; sourceTree = "<group>"; };
 		D5E035DC255762FE00406B88 /* SoC_Thunderboard_Info_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoC_Thunderboard_Info_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E035DF255762FE00406B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5E035E1255762FE00406B88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 				D5E035E1255762FE00406B88 /* SceneDelegate.swift */,
 				D5E035E3255762FE00406B88 /* ThunderboardMainVC.swift */,
 				D5E035F525576F5C00406B88 /* ThunderboardDataVC.swift */,
+				BBFD8F0A255937820094F547 /* CBUUIDExtensions.swift */,
+				BBFD8F10255940540094F547 /* ThunderBoardTypes.swift */,
+				BBFD8F1425595EEC0094F547 /* BLEdevice.swift */,
 				D5E035E5255762FE00406B88 /* Main.storyboard */,
 				D5E035E8255762FF00406B88 /* Assets.xcassets */,
 				D5E035EA255762FF00406B88 /* LaunchScreen.storyboard */,
@@ -140,9 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFD8F11255940540094F547 /* ThunderBoardTypes.swift in Sources */,
+				BBFD8F1525595EEC0094F547 /* BLEdevice.swift in Sources */,
 				D5E035F625576F5C00406B88 /* ThunderboardDataVC.swift in Sources */,
 				D5E035E4255762FE00406B88 /* ThunderboardMainVC.swift in Sources */,
 				D5E035E0255762FE00406B88 /* AppDelegate.swift in Sources */,
+				BBFD8F0B255937820094F547 /* CBUUIDExtensions.swift in Sources */,
 				D5E035E2255762FE00406B88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

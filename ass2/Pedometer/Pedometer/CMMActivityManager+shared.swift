@@ -14,3 +14,4 @@ extension CMMotionActivityManager{
 extension CMPedometer{
     static var shared = CMPedometer()
 }
+

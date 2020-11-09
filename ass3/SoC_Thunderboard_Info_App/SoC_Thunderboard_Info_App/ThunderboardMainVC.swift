@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 class ThunderboardMainVC: UIViewController {
     

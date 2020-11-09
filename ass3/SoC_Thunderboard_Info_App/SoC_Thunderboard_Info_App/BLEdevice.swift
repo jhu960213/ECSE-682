@@ -6,14 +6,8 @@
 //
 
 import Foundation
-import CoreBluetooth
-
-class BleDevice : NSObject, CBPeripheralDelegate, CBCentralManagerDelegate{
-    func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        <#code#>
-    }
-    var centralManager: CBCentralManager?
-    var peripheralHeartRateMonitor: CBPeripheral?
-    
-    
+struct accelerometer_data{
+    var x : Float?
+    var y: Float?
+    var z : Float?
 }

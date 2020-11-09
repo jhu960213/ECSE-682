@@ -8,7 +8,12 @@
 import Foundation
 import CoreBluetooth
 
-class BleDevice : NSObject, CBPeripheralDelegate {
+class BleDevice : NSObject, CBPeripheralDelegate, CBCentralManagerDelegate{
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        <#code#>
+    }
+    var centralManager: CBCentralManager?
+    var peripheralHeartRateMonitor: CBPeripheral?
     
     
 }

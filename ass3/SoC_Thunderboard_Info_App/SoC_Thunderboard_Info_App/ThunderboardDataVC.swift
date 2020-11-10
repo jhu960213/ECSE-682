@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreBluetooth
+import Foundation
+
 
 class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManagerDelegate{
     
@@ -20,12 +22,19 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     var centralManager: CBCentralManager?
     var peripheralAccelerometer: CBPeripheral?
     @IBOutlet weak var connectingActivityIndicator: UIActivityIndicatorView!
+    var stepCounts: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        connectingActivityIndicator.backgroundColor = UIColor.white
-//        connectingActivityIndicator.isHidden = true
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //        connectingActivityIndicator.isHidden = true
         // Setting the initial acceleration values to be 0
+        connectingActivityIndicator.backgroundColor = UIColor.lightGray
+        connectingActivityIndicator.startAnimating()
+        stepCounts = 0
         self.accelX.text = ""
         self.accelY.text = ""
         self.accelZ.text = ""
@@ -34,7 +43,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
         let centralQueue: DispatchQueue = DispatchQueue(label: "com.iosbrain.centralQueueName", attributes: .concurrent)
         // Central scans for, connects to, manages, and collects data from peripherals
         centralManager = CBCentralManager(delegate: self, queue: centralQueue)
-
+        
     }
     
     //
@@ -80,19 +89,16 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
             return
         }
         print(peripheral.name!)
+        print(peripheral.identifier)
         decodePeripheralState(peripheralState: peripheral.state)
+        if ((peripheral.name?.contains("Thunderboard")) ?? false){
         print("Found my board!")
         self.peripheralAccelerometer = peripheral
         peripheralAccelerometer?.delegate = self
         centralManager?.stopScan()
         centralManager?.connect(peripheralAccelerometer!)
-//        decodePeripheralState(peripheralState: peripheral.state)
-//        // STEP 4.2: MUST store a reference to the peripheral in
-//        // class instance variable
-//        peripheralAccelerometer = peripheral
-//        peripheralAccelerometer?.delegate = self
-//        centralManager?.stopScan()    // re-scan if disconnected
-//        centralManager?.connect(peripheralAccelerometer!)
+            
+        }
         
     } // END func centralManager(... didDiscover peripheral
     
@@ -122,6 +128,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
             self.connectingActivityIndicator.startAnimating()
         }
         centralManager?.scanForPeripherals(withServices: [CBUUID.InertialMeasurement])
+        print("Scanning for Periphs")
     }
     
     //
@@ -166,18 +173,23 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
             // data into human readable format
             let acc_data = tb_vectorValue(using: characteristic)
             DispatchQueue.main.async { () -> Void in
-                UIView.animate(withDuration: 1.0, animations: {
+                UIView.animate(withDuration: 1.0, animations: { [self] in
                     //MARK: Write LABEL Values here.
                     self.accelX.text = String((acc_data?.x)!)
                     self.accelY.text = String((acc_data?.y)!)
                     self.accelZ.text = String((acc_data?.z)!)
-                    self.accelX.alpha = 1.0
-                    self.accelY.alpha = 1.0
-                    self.accelZ.alpha = 1.0
-                }, completion: { (true) in
-                    self.accelX.alpha = 0.0
-                    self.accelY.alpha = 0.0
-                    self.accelZ.alpha = 0.0
+                    print("X is \(self.accelX.text!)")
+                    print("Y is \(self.accelY.text!)")
+                    print("Z is \(self.accelZ.text!)")
+                    let x_data = Double((acc_data?.x)!).magnitude
+                    let y_data = Double((acc_data?.y)!).magnitude
+                    let z_data = Double((acc_data?.z)!).magnitude
+                    
+                    if x_data + y_data + z_data > 2.0 || x_data > 1.4 || y_data > 1.4 || z_data > 1.4{
+                        self.stepCounts  = self.stepCounts + 1
+                        print("stepCounts is \(stepCounts)")
+                        self.stepCount.text = String(stepCounts)
+                    }
                 })
             } // END DispatchQueue.main.async...
         } // END if characteristic.uuid ==...
@@ -220,4 +232,8 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
         
     } // END func decodePeripheralState(peripheralState
     
+    
 }
+
+
+

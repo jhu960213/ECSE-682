@@ -11,3 +11,4 @@ struct accelerometer_data{
     var y: Float?
     var z : Float?
 }
+typealias α = Float

@@ -18,13 +18,10 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-    <!--BluetoothUsageKey-->
-    <!-- Adding client bluetooth usage description key: notifies user that the app needs to access their bluetooth hardware-->
-    <key>NSBluetoothAlwaysUsageDescription</key>
-    <string>Thunderboard info app would like to access your bluetooth hardware to connect with peripheral boards!</string>
-    <!--BluetoothUsageKey-->
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Thunderboard info app would like to access your bluetooth hardware to connect with peripheral boards!</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

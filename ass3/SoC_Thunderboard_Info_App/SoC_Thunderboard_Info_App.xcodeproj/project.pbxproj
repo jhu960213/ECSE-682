@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BBFD8F0B255937820094F547 /* CBUUIDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD8F0A255937820094F547 /* CBUUIDExtensions.swift */; };
-		BBFD8F11255940540094F547 /* ThunderBoardTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD8F10255940540094F547 /* ThunderBoardTypes.swift */; };
 		BBFD8F1525595EEC0094F547 /* BLEdevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD8F1425595EEC0094F547 /* BLEdevice.swift */; };
 		D5E035E0255762FE00406B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E035DF255762FE00406B88 /* AppDelegate.swift */; };
 		D5E035E2255762FE00406B88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E035E1255762FE00406B88 /* SceneDelegate.swift */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		BBFD8F0A255937820094F547 /* CBUUIDExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBUUIDExtensions.swift; sourceTree = "<group>"; };
-		BBFD8F10255940540094F547 /* ThunderBoardTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThunderBoardTypes.swift; sourceTree = "<group>"; };
 		BBFD8F1425595EEC0094F547 /* BLEdevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEdevice.swift; sourceTree = "<group>"; };
 		D5E035DC255762FE00406B88 /* SoC_Thunderboard_Info_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoC_Thunderboard_Info_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E035DF255762FE00406B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				D5E035F525576F5C00406B88 /* ThunderboardDataVC.swift */,
 				D5E035E5255762FE00406B88 /* Main.storyboard */,
 				BBFD8F0A255937820094F547 /* CBUUIDExtensions.swift */,
-				BBFD8F10255940540094F547 /* ThunderBoardTypes.swift */,
 				BBFD8F1425595EEC0094F547 /* BLEdevice.swift */,
 				D5E035E8255762FF00406B88 /* Assets.xcassets */,
 				D5E035EA255762FF00406B88 /* LaunchScreen.storyboard */,
@@ -149,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBFD8F11255940540094F547 /* ThunderBoardTypes.swift in Sources */,
 				BBFD8F1525595EEC0094F547 /* BLEdevice.swift in Sources */,
 				D5E035F625576F5C00406B88 /* ThunderboardDataVC.swift in Sources */,
 				D5E035E4255762FE00406B88 /* ThunderboardMainVC.swift in Sources */,
@@ -303,14 +299,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7ARN6CQ88G;
+				DEVELOPMENT_TEAM = TKHAUW39G6;
 				INFOPLIST_FILE = SoC_Thunderboard_Info_App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jackhu.SoC-Thunderboard-Info-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.SoC-Thunderboard-Info-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,14 +319,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7ARN6CQ88G;
+				DEVELOPMENT_TEAM = TKHAUW39G6;
 				INFOPLIST_FILE = SoC_Thunderboard_Info_App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jackhu.SoC-Thunderboard-Info-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hamza.SoC-Thunderboard-Info-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

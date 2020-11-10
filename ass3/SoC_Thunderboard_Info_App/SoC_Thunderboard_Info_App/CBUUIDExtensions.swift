@@ -138,6 +138,7 @@ extension CBUUID {
     //
     
     /// Acceleration Measurement (custom)
+//    static let AccelerationMeasurement = CBUUID(string: "0xc4c1f6e2-4be5-11e5-885d-feff819cdc9f")
     static let AccelerationMeasurement = CBUUID(string: "0xc4c1f6e2-4be5-11e5-885d-feff819cdc9f")
     
     /// Orientation Measurement (custom)

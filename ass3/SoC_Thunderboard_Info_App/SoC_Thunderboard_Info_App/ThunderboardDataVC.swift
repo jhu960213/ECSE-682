@@ -10,22 +10,36 @@ import CoreBluetooth
 
 class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManagerDelegate{
     
-    // outlets
+    // outlets corebluetooth central and peripherals managers
+    
+    @IBOutlet weak var stepCount: UILabel!
+    @IBOutlet weak var searchingMessage: UILabel!
+    @IBOutlet weak var accelX: UILabel!
+    @IBOutlet weak var accelY: UILabel!
+    @IBOutlet weak var accelZ: UILabel!
     var centralManager: CBCentralManager?
     var peripheralAccelerometer: CBPeripheral?
     @IBOutlet weak var connectingActivityIndicator: UIActivityIndicatorView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         connectingActivityIndicator.backgroundColor = UIColor.white
-        connectingActivityIndicator.startAnimating()
+//        connectingActivityIndicator.isHidden = true
+        // Setting the initial acceleration values to be 0
+        self.accelX.text = ""
+        self.accelY.text = ""
+        self.accelZ.text = ""
         // Do any additional setup after loading the view.
         // create a concurrent background queue for the central
         let centralQueue: DispatchQueue = DispatchQueue(label: "com.iosbrain.centralQueueName", attributes: .concurrent)
         // Central scans for, connects to, manages, and collects data from peripherals
         centralManager = CBCentralManager(delegate: self, queue: centralQueue)
+
     }
+    
+    //
+    // CBCentralManagerDelegate methods
+    //
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
@@ -46,14 +60,12 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
         //                    bluetoothOffLabel.alpha = 1.0
         case .poweredOn:
             print("Bluetooth status is POWERED ON")
-            
             DispatchQueue.main.async { () -> Void in
-                //                        self.bluetoothOffLabel.alpha = 0.0
                 self.connectingActivityIndicator.startAnimating()
+                self.searchingMessage.text = "Searching for my board...."
             }
-            
             // STEP 3.2: scan for peripherals that we're interested in
-            centralManager?.scanForPeripherals(withServices: [CBUUID.AccelerationMeasurement])
+            centralManager?.scanForPeripherals(withServices: nil, options: nil)
             
         @unknown default:
             print("UNKNOWN BLUETOOTH ERROR");
@@ -64,69 +76,83 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     // are available for this app to connect to
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
+        guard peripheral.name != nil else {
+            return
+        }
         print(peripheral.name!)
         decodePeripheralState(peripheralState: peripheral.state)
-        // STEP 4.2: MUST store a reference to the peripheral in
-        // class instance variable
-        peripheralAccelerometer = peripheral
+        print("Found my board!")
+        self.peripheralAccelerometer = peripheral
         peripheralAccelerometer?.delegate = self
-        centralManager?.stopScan()    // re-scan if disconnected
+        centralManager?.stopScan()
         centralManager?.connect(peripheralAccelerometer!)
+//        decodePeripheralState(peripheralState: peripheral.state)
+//        // STEP 4.2: MUST store a reference to the peripheral in
+//        // class instance variable
+//        peripheralAccelerometer = peripheral
+//        peripheralAccelerometer?.delegate = self
+//        centralManager?.stopScan()    // re-scan if disconnected
+//        centralManager?.connect(peripheralAccelerometer!)
         
     } // END func centralManager(... didDiscover peripheral
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print("Connected!");
-        peripheralAccelerometer?.discoverServices(nil)
-        
-    }
-    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        print("disconnected!");
-        
         DispatchQueue.main.async { () -> Void in
-            //TODO: Add Cleared labels here!
+            self.connectingActivityIndicator.stopAnimating()
+            self.searchingMessage.text = "Connected to my board!"
+            self.accelX.text = "0"
+            self.accelY.text = "0"
+            self.accelZ.text = "0"
         }
-        centralManager?.scanForPeripherals(withServices: [CBUUID.AccelerationMeasurement])
+        // discover all services
+        print("Discovering all  services!....");
+        peripheralAccelerometer?.discoverServices([CBUUID.InertialMeasurement])
+        peripheralAccelerometer?.delegate = self
+        
     }
-    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        
-        for service in peripheral.services! {
-            
-            if service.uuid == CBUUID.AccelerationMeasurement {
-                
-                print("Service: \(service)")
-                
-                // STEP 9: look for characteristics of interest
-                // within services of interest
-                peripheral.discoverCharacteristics(nil, for: service)
-                
-            }
-            
+    
+    // In the case the board is disconnected
+    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        print("Disconnected from the board!");
+        DispatchQueue.main.async { () -> Void in
+            self.searchingMessage.text = "Searching for my board...."
+            self.accelX.text = ""
+            self.accelY.text = ""
+            self.accelZ.text = ""
+            self.connectingActivityIndicator.startAnimating()
         }
-        
+        centralManager?.scanForPeripherals(withServices: [CBUUID.InertialMeasurement])
+    }
+    
+    //
+    // CBPeripheralDelegate Methods
+    //
+    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        if let services = peripheral.services {
+            // now to discover characteristics for each service
+            for service in services {
+                // we want only to discover the characteristics of my InertialMeasurement Service
+                if service.uuid == CBUUID.InertialMeasurement {
+                    // by setting it to be nil its going to discover all characteristics
+                    print("My desired service: \(service.description)")
+                    peripheral.discoverCharacteristics(nil, for: service)
+                }
+            }
+        }
     } // END func peripheral(... didDiscoverServices
     
     // STEP 10: confirm we've discovered characteristics
     // of interest within services of interest
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        
-        for characteristic in service.characteristics! {
-            print(characteristic)
-            
-            if characteristic.uuid == CBUUID.AccelerationMeasurement {
-                
-                // STEP 11: subscribe to a single notification
-                // for characteristic of interest;
-                // "When you call this method to read
-                // the value of a characteristic, the peripheral
-                // calls ... peripheral:didUpdateValueForCharacteristic:error:
-                //
-                // Notify    Mandatory
-                //MARK: Add Read value if you must.
-                peripheral.setNotifyValue(true, for: characteristic)
+        if let charac = service.characteristics {
+            for characteristic in charac {
+                if characteristic.uuid == CBUUID.AccelerationMeasurement {
+                    print("My desired characteristic: \(characteristic.description)")
+                    peripheral.setNotifyValue(true, for: characteristic)
+                }
             }
-            
-        } // END for
+        }
         
     } // END func peripheral(... didDiscoverCharacteristicsFor service
     
@@ -135,34 +161,29 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     // decipher the characteristic value(s) that we've
     // subscribed to
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        
         if characteristic.uuid == CBUUID.AccelerationMeasurement {
-            
             // STEP 13: we generally have to decode BLE
             // data into human readable format
             let acc_data = tb_vectorValue(using: characteristic)
-            
             DispatchQueue.main.async { () -> Void in
-                
                 UIView.animate(withDuration: 1.0, animations: {
                     //MARK: Write LABEL Values here.
-                    //                       self.beatsPerMinuteLabel.alpha = 1.0
-                    //                       self.beatsPerMinuteLabel.text = String(heartRate)
+                    self.accelX.text = String((acc_data?.x)!)
+                    self.accelY.text = String((acc_data?.y)!)
+                    self.accelZ.text = String((acc_data?.z)!)
+                    self.accelX.alpha = 1.0
+                    self.accelY.alpha = 1.0
+                    self.accelZ.alpha = 1.0
                 }, completion: { (true) in
-                    //                       self.beatsPerMinuteLabel.alpha = 0.0
+                    self.accelX.alpha = 0.0
+                    self.accelY.alpha = 0.0
+                    self.accelZ.alpha = 0.0
                 })
-                
             } // END DispatchQueue.main.async...
-            
         } // END if characteristic.uuid ==...
-        
-        
     }
     
-    
-    
-    
-    //Adapted from Silabs ThunderBoard App Code.
+    // Adapted from Silabs ThunderBoard App Code.
     func tb_vectorValue(using accelerometerMeasurementCharacteristic: CBCharacteristic) -> accelerometer_data? {
         if let data = accelerometerMeasurementCharacteristic.value{
             if data.count >= 6 {
@@ -178,13 +199,11 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
                 return accelerometer_data(x: xAcceleration, y: yAcceleration, z: zAcceleration)
             }
         }
-        
         return nil
-        
     }
+    
     //MARK: HouseKeeping, in case of disconnects:
     func decodePeripheralState(peripheralState: CBPeripheralState) {
-        
         switch peripheralState {
         case .disconnected:
             print("Peripheral state: disconnected")

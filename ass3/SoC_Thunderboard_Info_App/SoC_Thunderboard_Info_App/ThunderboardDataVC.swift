@@ -19,6 +19,8 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     @IBOutlet weak var accelX: UILabel!
     @IBOutlet weak var accelY: UILabel!
     @IBOutlet weak var accelZ: UILabel!
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var lightSwitch: UISwitch!
     var centralManager: CBCentralManager?
     var peripheralAccelerometer: CBPeripheral?
     @IBOutlet weak var connectingActivityIndicator: UIActivityIndicatorView!
@@ -27,6 +29,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     var lightCharacteristic: CBCharacteristic? = nil
     fileprivate var ledMask: UInt8    = 0
     fileprivate let digitalBits       = 2
+    var isConnected: Bool = false
     
     
     // Adapted from medium Mac O'Clock
@@ -50,6 +53,8 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
         self.searchingMessage.text = "Searching for my board...."
         stepCount.text = ""
         myTemp.text = ""
+        isConnected = false
+        weatherImage.isHidden = true
     }
     
     func connect() {
@@ -79,9 +84,16 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     
     // Turning our light on and off on the board
     @IBAction func lightSwitch(_ sender: UISwitch) {
-        setDigitalOutput(0, sender.isOn, lightCharacteristic!)
+        if (isConnected){
+            setDigitalOutput(0, sender.isOn, lightCharacteristic!)
+        }else{
+            searchingMessage.text = "Please connect to board first!"
+            lightSwitch.isOn = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.viewDidAppear(false)
+            }
+        }
     }
-    
     // lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,6 +172,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     } // END func centralManager(... didDiscover peripheral
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        isConnected = true
         DispatchQueue.main.async { () -> Void in
             self.connectingActivityIndicator.stopAnimating()
             self.searchingMessage.text = "Connected to my board!"
@@ -176,6 +189,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     // In the case the board is disconnected
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         print("Disconnected from my board!");
+        isConnected = false
         DispatchQueue.main.async { () -> Void in
             self.searchingMessage.text = "Searching for my board...."
             self.accelX.text = ""
@@ -285,6 +299,25 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
             print("My current temperature is: \(Double(tempCel!) / 100)")
             DispatchQueue.main.async { () -> Void in
                 self.myTemp.text = String(Double(tempCel!) / 100) + " C"
+                self.weatherImage.isHidden = false
+                self.weatherImage.frame = CGRect(
+                    x: self.weatherImage.frame.origin.x,
+                    y: self.weatherImage.frame.origin.y, width: 1, height: 10)
+
+                if (tempCel!)/100 > 25{
+                    print("HOT!")
+                    self.weatherImage.image =  UIImage(named:"hot")
+                }else if (tempCel!/100)>15 {
+                    print("Normal")
+                    self.weatherImage.image =  UIImage(named:"good")
+                }else if tempCel!/100 > 5{
+                    print("COLD")
+                    self.weatherImage.image =  UIImage(named:"cold")
+                }else{
+                    print("FREEZING")
+                    self.weatherImage.image =  UIImage(named:"freezing")
+                }
+                
             }
         }
     }

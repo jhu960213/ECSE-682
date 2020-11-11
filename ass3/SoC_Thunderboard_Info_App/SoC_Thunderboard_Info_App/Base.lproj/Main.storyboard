@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -162,6 +162,10 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eX-Om-oq1">
+                                        <rect key="frame" x="0.0" y="235.5" width="328.5" height="0.0"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    </imageView>
                                     <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="T8Q-zB-BYR">
                                         <rect key="frame" x="0.0" y="250.5" width="328.5" height="37"/>
                                         <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -235,6 +239,7 @@
                         <outlet property="myTemp" destination="l4K-oE-CFM" id="n6A-g7-xgt"/>
                         <outlet property="searchingMessage" destination="XhW-Iv-P2h" id="its-nJ-6uQ"/>
                         <outlet property="stepCount" destination="gf4-II-4hy" id="6yd-Ab-1BE"/>
+                        <outlet property="weatherImage" destination="3eX-Om-oq1" id="mYS-ee-YaJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2e-lO-BwM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

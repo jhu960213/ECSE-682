@@ -1,0 +1,17 @@
+#CRC Codes for initially generated config files -- do not modify!
+#Sat Nov 07 18:54:52 AST 2020
+nvm3_default_config.h=-1865878923
+sl_bluetooth_config.h=-731579413
+sl_device_init_lfrco_config.h=-1175914260
+mbedtls_config.h=1385501750
+sl_sleeptimer_config.h=1582187036
+sl_device_init_dcdc_config.h=540536968
+sl_device_init_emu_config.h=1238190016
+sl_rail_util_pa_config.h=197428041
+btconf/ota_dfu.xml=-856428549
+sl_rail_util_pti_config.h=280870750
+btconf/gatt_configuration.btconf=1170408657
+sl_app_assert_config.h=1294668113
+sl_device_init_hfxo_config.h=1335716894
+sl_power_manager_config.h=765860105
+sl_memory_config.h=1931432585

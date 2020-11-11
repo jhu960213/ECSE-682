@@ -236,6 +236,7 @@
                         <outlet property="accelY" destination="tZ1-nc-iow" id="ZN3-rs-wrf"/>
                         <outlet property="accelZ" destination="cpC-Cy-je6" id="IFD-AJ-sMr"/>
                         <outlet property="connectingActivityIndicator" destination="T8Q-zB-BYR" id="hes-NE-HUQ"/>
+                        <outlet property="lightSwitch" destination="yiz-3r-VCE" id="Ody-wd-7Vf"/>
                         <outlet property="myTemp" destination="l4K-oE-CFM" id="n6A-g7-xgt"/>
                         <outlet property="searchingMessage" destination="XhW-Iv-P2h" id="its-nJ-6uQ"/>
                         <outlet property="stepCount" destination="gf4-II-4hy" id="6yd-Ab-1BE"/>

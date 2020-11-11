@@ -34,27 +34,35 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     
     // Adapted from medium Mac O'Clock
     func setDigitalOutput(_ index: Int, _ on: Bool, _ characteristic:CBCharacteristic) {
-      let shift = UInt(index) * UInt(digitalBits)
-      var mask = ledMask
-      if on {
-        mask = mask | UInt8(1 << shift)
-      }
+        let shift = UInt(index) * UInt(digitalBits)
+        var mask = ledMask
+        if on {
+            mask = mask | UInt8(1 << shift)
+        }
         else {
-        mask = mask & ~UInt8(1 << shift)
-      }
-      let data = Data(_: [mask])
+            mask = mask & ~UInt8(1 << shift)
+        }
+        let data = Data(_: [mask])
         self.peripheralAccelerometer?.writeValue(data, for: characteristic, type: .withResponse)
-       ledMask = mask
+        ledMask = mask
     }
     
     func disconnect() {
-        centralManager?.cancelPeripheralConnection(peripheralAccelerometer!)
-        self.connectingActivityIndicator.startAnimating()
-        self.searchingMessage.text = "Searching for my board...."
-        stepCount.text = ""
-        myTemp.text = ""
-        isConnected = false
-        weatherImage.isHidden = true
+        if(isConnected){
+            centralManager?.cancelPeripheralConnection(peripheralAccelerometer!)
+            self.connectingActivityIndicator.startAnimating()
+            self.searchingMessage.text = "Searching for my board...."
+            stepCount.text = ""
+            myTemp.text = ""
+            stepCounts = -1
+            isConnected = false
+            weatherImage.isHidden = true
+        }else{
+            searchingMessage.text = "Please connect to board first!"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.viewDidAppear(false)
+            }
+        }
     }
     
     func connect() {
@@ -88,7 +96,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
             setDigitalOutput(0, sender.isOn, lightCharacteristic!)
         }else{
             searchingMessage.text = "Please connect to board first!"
-            lightSwitch.isOn = false
+            self.lightSwitch.isOn = false
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.viewDidAppear(false)
             }
@@ -158,7 +166,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
         guard peripheral.name != nil else {
             return
         }
-        print(peripheral.name!)
+        print((peripheral.name!))
         print(peripheral.identifier)
         decodePeripheralState(peripheralState: peripheral.state)
         if ((peripheral.name?.contains("Thunderboard")) ?? false){
@@ -248,7 +256,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
                 if characteristic.uuid == CBUUID.Temperature {
                     print("My desired characteristic: \(characteristic.description)\n")
                     peripheral.readValue(for: characteristic)
-//                    peripheral.setNotifyValue(true, for: characteristic)
+                    //                    peripheral.setNotifyValue(true, for: characteristic)
                 }
                 
                 if characteristic.uuid == CBUUID.Digital {
@@ -277,13 +285,13 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
                 self.accelX.text = String((acc_data?.x)!) + "g"
                 self.accelY.text = String((acc_data?.y)!) + "g"
                 self.accelZ.text = String((acc_data?.z)!) + "g"
-//                print("X is \(self.accelX.text!)")
-//                print("Y is \(self.accelY.text!)")
-//                print("Z is \(self.accelZ.text!)")
+                //                print("X is \(self.accelX.text!)")
+                //                print("Y is \(self.accelY.text!)")
+                //                print("Z is \(self.accelZ.text!)")
                 let x_data = Double((acc_data?.x)!).magnitude
                 let y_data = Double((acc_data?.y)!).magnitude
                 let z_data = Double((acc_data?.z)!).magnitude
-                    
+                
                 if x_data + y_data + z_data > 2.0 || x_data > 1.4 || y_data > 1.4 || z_data > 1.4{
                     self.stepCounts  = self.stepCounts + 1
                     print("stepCounts is \(self.stepCounts)")
@@ -303,7 +311,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
                 self.weatherImage.frame = CGRect(
                     x: self.weatherImage.frame.origin.x,
                     y: self.weatherImage.frame.origin.y, width: 1, height: 10)
-
+                
                 if (tempCel!)/100 > 25{
                     print("HOT!")
                     self.weatherImage.image =  UIImage(named:"hot")
@@ -323,7 +331,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-            print("WRITE VALUE : \(characteristic)")
+        print("WRITE VALUE : \(characteristic)")
     }
     
     
@@ -366,7 +374,7 @@ class ThunderboardDataVC: UIViewController,CBPeripheralDelegate, CBCentralManage
 }
 
 extension CBCharacteristic  {
-   func tb_int16Value() -> Int16? {
+    func tb_int16Value() -> Int16? {
         if let data = self.value {
             var value: Int16 = 0
             (data as NSData).getBytes(&value, length: 2)

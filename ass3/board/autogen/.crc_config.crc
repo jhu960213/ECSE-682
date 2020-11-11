@@ -1,0 +1,34 @@
+#CRC Codes for initially generated config files -- do not modify!
+#Sat Nov 07 18:44:27 AST 2020
+sl_bluetooth_config.h=-731579413
+btconf/gatt_service_rht.xml=480344331
+sl_device_init_lfrco_config.h=-1175914260
+sl_device_init_lfxo_config.h=-1975987421
+sl_sleeptimer_config.h=1582187036
+sl_mx25_flash_shutdown_config.h=2121367403
+sl_simple_led_led0_config.h=1752610181
+btconf/ota_dfu.xml=-856428549
+btconf/gatt_configuration.btconf=-1150176185
+sl_simple_button_btn0_config.h=-974503450
+sl_device_init_hfxo_config.h=101953940
+btconf/gatt_service_light.xml=453152420
+sl_app_log_config.h=-1573307542
+sl_power_manager_config.h=765860105
+sl_iostream_usart_vcom_config.h=-863789426
+sl_i2cspm_sensor_config.h=1051046828
+nvm3_default_config.h=-1865878923
+sl_icm20648_config.h=1430212522
+mbedtls_config.h=1385501750
+sl_device_init_dcdc_config.h=540536968
+btconf/gatt_service_aio.xml=1162401285
+sl_device_init_emu_config.h=1238190016
+sl_rail_util_pa_config.h=2130461544
+btconf/gatt_service_battery.xml=476438837
+sl_rail_util_pti_config.h=-892938314
+btconf/gatt_service_imu.xml=1768776454
+sl_app_assert_config.h=1294668113
+sl_board_control_config.h=-428747604
+sl_memory_config.h=1931432585
+sl_simple_button_config.h=807681233
+btconf/gatt_service_hall.xml=-1498030057
+btconf/gatt_configuration_brd4184a.btconf=-500666707

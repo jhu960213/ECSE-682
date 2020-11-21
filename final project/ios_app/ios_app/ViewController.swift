@@ -8,8 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
+    @objc func performSegueforSelfreport(_ notification: Notification) {
+        print("OBJC WORKED")
+        performSegue(withIdentifier: "self_report", sender: self)
+    }
+    @objc func performSegueforHelp(_ notification: Notification) {
+        print("OBJC WORKED")
+        performSegue(withIdentifier: "help", sender: self)
+    }
     // Enum for card states
     enum CardState {
         case collapsed
@@ -40,6 +48,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(performSegueforSelfreport(_:)), name: Notification.Name(rawValue: "performSegueforSelf_report"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(performSegueforHelp(_:)), name: Notification.Name(rawValue: "performSegueforHelp"), object: nil)
         // Do any additional setup after loading the view.
         setupCard()
         
@@ -48,7 +59,7 @@ class ViewController: UIViewController {
     func setupCard() {
         // Setup starting and ending card height
         endCardHeight = self.view.frame.height * 0.8
-        startCardHeight = self.view.frame.height * 0.3
+        startCardHeight = self.view.frame.height * 0.2
         
         // Add Visual Effects View
         visualEffectView = UIVisualEffectView()
@@ -189,5 +200,7 @@ class ViewController: UIViewController {
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
     }
-
+    
+    
+    
 }

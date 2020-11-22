@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB3834C3256A3EF300982F72 /* MainView_CARD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3834C2256A3EF300982F72 /* MainView_CARD.swift */; };
+		BB3834C8256A3F2B00982F72 /* mainModel_CARD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3834C7256A3F2B00982F72 /* mainModel_CARD.swift */; };
+		BB3834E1256A4C7800982F72 /* CBUUIDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3834DF256A4C7800982F72 /* CBUUIDExtensions.swift */; };
+		BB3834E2256A4C7800982F72 /* bleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3834E0256A4C7800982F72 /* bleModel.swift */; };
+		BB3834EB256A525D00982F72 /* CoreBLE_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3834EA256A525D00982F72 /* CoreBLE_VM.swift */; };
 		BBE35E332567AB1C0010E38F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE35E322567AB1C0010E38F /* AppDelegate.swift */; };
 		BBE35E352567AB1C0010E38F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE35E342567AB1C0010E38F /* SceneDelegate.swift */; };
 		BBE35E372567AB1C0010E38F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE35E362567AB1C0010E38F /* ViewController.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB3834C2256A3EF300982F72 /* MainView_CARD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView_CARD.swift; sourceTree = "<group>"; };
+		BB3834C7256A3F2B00982F72 /* mainModel_CARD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainModel_CARD.swift; sourceTree = "<group>"; };
+		BB3834DF256A4C7800982F72 /* CBUUIDExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBUUIDExtensions.swift; sourceTree = "<group>"; };
+		BB3834E0256A4C7800982F72 /* bleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bleModel.swift; sourceTree = "<group>"; };
+		BB3834EA256A525D00982F72 /* CoreBLE_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBLE_VM.swift; sourceTree = "<group>"; };
 		BBE35E2F2567AB1C0010E38F /* ios_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE35E322567AB1C0010E38F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE35E342567AB1C0010E38F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +90,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB3834D7256A4B6A00982F72 /* CARD */ = {
+			isa = PBXGroup;
+			children = (
+				BBE35E66256857F60010E38F /* CardViewController.xib */,
+				BB3834C2256A3EF300982F72 /* MainView_CARD.swift */,
+				BB3834C7256A3F2B00982F72 /* mainModel_CARD.swift */,
+				BBE35E65256857F60010E38F /* CardViewController.swift */,
+			);
+			path = CARD;
+			sourceTree = "<group>";
+		};
+		BB3834DC256A4BAD00982F72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB3834E0256A4C7800982F72 /* bleModel.swift */,
+				BB3834DF256A4C7800982F72 /* CBUUIDExtensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB3834DE256A4BC800982F72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBE35E362567AB1C0010E38F /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB3834E9256A522900982F72 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB3834EA256A525D00982F72 /* CoreBLE_VM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BBE35E262567AB1C0010E38F = {
 			isa = PBXGroup;
 			children = (
@@ -103,12 +149,13 @@
 		BBE35E312567AB1C0010E38F /* ios_app */ = {
 			isa = PBXGroup;
 			children = (
+				BB3834D7256A4B6A00982F72 /* CARD */,
+				BB3834DE256A4BC800982F72 /* View */,
+				BB3834DC256A4BAD00982F72 /* Model */,
+				BB3834E9256A522900982F72 /* ViewModel */,
 				BBE35E322567AB1C0010E38F /* AppDelegate.swift */,
 				BBE35E342567AB1C0010E38F /* SceneDelegate.swift */,
-				BBE35E362567AB1C0010E38F /* ViewController.swift */,
 				BBE35E382567AB1C0010E38F /* Main.storyboard */,
-				BBE35E65256857F60010E38F /* CardViewController.swift */,
-				BBE35E66256857F60010E38F /* CardViewController.xib */,
 				BBE35E3B2567AB220010E38F /* Assets.xcassets */,
 				BBE35E3D2567AB220010E38F /* LaunchScreen.storyboard */,
 				BBE35E402567AB220010E38F /* Info.plist */,
@@ -265,9 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB3834C8256A3F2B00982F72 /* mainModel_CARD.swift in Sources */,
+				BB3834C3256A3EF300982F72 /* MainView_CARD.swift in Sources */,
 				BBE35E67256857F60010E38F /* CardViewController.swift in Sources */,
+				BB3834EB256A525D00982F72 /* CoreBLE_VM.swift in Sources */,
 				BBE35E372567AB1C0010E38F /* ViewController.swift in Sources */,
 				BBE35E332567AB1C0010E38F /* AppDelegate.swift in Sources */,
+				BB3834E2256A4C7800982F72 /* bleModel.swift in Sources */,
+				BB3834E1256A4C7800982F72 /* CBUUIDExtensions.swift in Sources */,
 				BBE35E352567AB1C0010E38F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

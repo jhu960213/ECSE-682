@@ -1,61 +1,14 @@
 //
-//  ViewController.swift
-//  Medium-popover
+//  MainViewModel.swift
+//  ios_app
 //
-//  Created by Henry Goodwin on 3/6/19.
-//  Copyright © 2019 Henry Goodwin. All rights reserved.
+//  Created by Hamza Mian on 2020-11-22.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController{
-    
-    @objc func performSegueforSelfreport(_ notification: Notification) {
-        print("OBJC WORKED")
-        performSegue(withIdentifier: "self_report", sender: self)
-    }
-    @objc func performSegueforHelp(_ notification: Notification) {
-        print("OBJC WORKED")
-        performSegue(withIdentifier: "help", sender: self)
-    }
-    // Enum for card states
-    enum CardState {
-        case collapsed
-        case expanded
-    }
-    
-    // Variable determines the next state of the card expressing that the card starts and collapased
-    var nextState:CardState {
-        return cardVisible ? .collapsed : .expanded
-    }
-    
-    // Variable for card view controller
-    var cardViewController:CardViewController!
-    
-    // Variable for effects visual effect view
-    var visualEffectView:UIVisualEffectView!
-    
-    // Starting and end card heights will be determined later
-    var endCardHeight:CGFloat = 0
-    var startCardHeight:CGFloat = 0
-    
-    // Current visible state of the card
-    var cardVisible = false
-    
-    // Empty property animator array
-    var runningAnimations = [UIViewPropertyAnimator]()
-    var animationProgressWhenInterrupted:CGFloat = 0
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(performSegueforSelfreport(_:)), name: Notification.Name(rawValue: "performSegueforSelf_report"), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(performSegueforHelp(_:)), name: Notification.Name(rawValue: "performSegueforHelp"), object: nil)
-        // Do any additional setup after loading the view.
-        setupCard()
-        
-    }
-    
+extension ViewController{
     func setupCard() {
         // Setup starting and ending card height
         endCardHeight = self.view.frame.height * 0.8
@@ -78,40 +31,6 @@ class ViewController: UIViewController{
         
         cardViewController.handleView.addGestureRecognizer(tapGestureRecognizer)
         cardViewController.handleView.addGestureRecognizer(panGestureRecognizer)
-    }
-    
-    // Handle tap gesture recognizer
-    @objc
-    func handleCardTap(recognizer:UITapGestureRecognizer) {
-        switch recognizer.state {
-        // Animate card when tap finishes
-        case .ended:
-            animateTransitionIfNeeded(state: nextState, duration: 0.9)
-        default:
-            break
-        }
-    }
-    
-    // Handle pan gesture recognizer
-    @objc
-    func handleCardPan (recognizer:UIPanGestureRecognizer) {
-        switch recognizer.state {
-        case .began:
-            // Start animation if pan begins
-            startInteractiveTransition(state: nextState, duration: 0.9)
-            
-        case .changed:
-            // Update the translation according to the percentage completed
-            let translation = recognizer.translation(in: self.cardViewController.handleView)
-            var fractionComplete = translation.y / endCardHeight
-            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
-            updateInteractiveTransition(fractionCompleted: fractionComplete)
-        case .ended:
-            // End animation when pan ends
-            continueInteractiveTransition()
-        default:
-            break
-        }
     }
     
     // Animate transistion function
@@ -166,7 +85,39 @@ class ViewController: UIViewController{
             
         }
     }
+    @objc
+    func handleCardTap(recognizer:UITapGestureRecognizer) {
+        switch recognizer.state {
+        // Animate card when tap finishes
+        case .ended:
+            animateTransitionIfNeeded(state: nextState, duration: 0.9)
+        default:
+            break
+        }
+    }
     
+    // Handle pan gesture recognizer
+    @objc
+    func handleCardPan (recognizer:UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            // Start animation if pan begins
+            startInteractiveTransition(state: nextState, duration: 0.9)
+            
+        case .changed:
+            // Update the translation according to the percentage completed
+            let translation = recognizer.translation(in: self.cardViewController.handleView)
+            var fractionComplete = translation.y / endCardHeight
+            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
+            updateInteractiveTransition(fractionCompleted: fractionComplete)
+        case .ended:
+            // End animation when pan ends
+            continueInteractiveTransition()
+        default:
+            break
+        }
+    }
+        
     // Function to start interactive animations when view is dragged
     func startInteractiveTransition(state:CardState, duration:TimeInterval) {
         
@@ -200,7 +151,5 @@ class ViewController: UIViewController{
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
     }
-    
-    
     
 }

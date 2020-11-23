@@ -7,7 +7,67 @@
 
 import Foundation
 import CoreBluetooth
+import CoreLocation
 import UIKit
+
+class beacon_VM: NSObject{
+    let majorValue: CLBeaconMajorValue
+    let minorValue: CLBeaconMinorValue
+    
+    init(name: String, icon: Int, uuid: UUID, majorValue: Int, minorValue: Int) {
+//      self.name = name
+//      self.icon = icon
+//      self.uuid = uuid
+      self.majorValue = CLBeaconMajorValue(majorValue)
+      self.minorValue = CLBeaconMinorValue(minorValue)
+    }
+}
+
+class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate{
+    var locationManager: CLLocationManager!
+    var beaconDistance: Double
+    
+     init(beaconDistance: Double = -1){
+        self.beaconDistance = beaconDistance
+        self.locationManager = CLLocationManager()
+        super.init()
+        self.locationManager.delegate = self
+        self.locationManager.requestAlwaysAuthorization()
+    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways {
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+                if CLLocationManager.isRangingAvailable() {
+                    startScanning()
+                }
+            }
+        }
+    }
+    
+    func startScanning() {
+    //        let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 123, minor: 456, identifier: "MyBeacon")
+        let uuid = UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5")!
+        let beaconCons = CLBeaconIdentityConstraint(uuid: uuid, major: 123, minor: 456)
+        let beaconRegion = CLBeaconRegion(uuid: uuid, major: 123, minor: 456, identifier: "MyBeacon")
+
+        locationManager.startMonitoring(for: beaconRegion)
+        locationManager.startRangingBeacons(satisfying: beaconCons)
+//        locationManager.startRangingBeacons(in: beaconRegion)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
+        beaconDistance = Double(beacons[0].proximity.rawValue)
+        //TODO: Send this to FireBase
+    }
+    //Mark: Error Handling
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+      print("Failed monitoring region: \(error.localizedDescription)")
+    }
+      
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+      print("Location manager failed: \(error.localizedDescription)")
+    }
+}
 
 class coreBLE_VM: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate{
     private(set) var empData : UIdata! {

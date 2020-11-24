@@ -15,19 +15,19 @@ class beacon_VM: NSObject{
     let minorValue: CLBeaconMinorValue
     
     init(name: String, icon: Int, uuid: UUID, majorValue: Int, minorValue: Int) {
-//      self.name = name
-//      self.icon = icon
-//      self.uuid = uuid
-      self.majorValue = CLBeaconMajorValue(majorValue)
-      self.minorValue = CLBeaconMinorValue(minorValue)
+        //      self.name = name
+        //      self.icon = icon
+        //      self.uuid = uuid
+        self.majorValue = CLBeaconMajorValue(majorValue)
+        self.minorValue = CLBeaconMinorValue(minorValue)
     }
 }
 
 class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate{
     var locationManager: CLLocationManager!
-    var beaconDistance: Double
+    var beaconDistance: CLProximity
     
-     init(beaconDistance: Double = -1){
+    init(beaconDistance: CLProximity = .unknown){
         self.beaconDistance = beaconDistance
         self.locationManager = CLLocationManager()
         super.init()
@@ -45,27 +45,40 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate{
     }
     
     func startScanning() {
-    //        let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 123, minor: 456, identifier: "MyBeacon")
+        //        let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 123, minor: 456, identifier: "MyBeacon")
         let uuid = UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5")!
         let beaconCons = CLBeaconIdentityConstraint(uuid: uuid, major: 123, minor: 456)
         let beaconRegion = CLBeaconRegion(uuid: uuid, major: 123, minor: 456, identifier: "MyBeacon")
-
+        
         locationManager.startMonitoring(for: beaconRegion)
         locationManager.startRangingBeacons(satisfying: beaconCons)
-//        locationManager.startRangingBeacons(in: beaconRegion)
+        //        locationManager.startRangingBeacons(in: beaconRegion)
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
-        beaconDistance = Double(beacons[0].proximity.rawValue)
+        for i in 0..<beacons.count{ //iterate through multiple beacons.
+            beaconDistance = (beacons[i].proximity)
+            switch beaconDistance {
+            case .immediate, .near:
+                //add to Firebase
+                //var timestamp: Date(
+                break
+            default:
+                //Do nothing
+                print("Not Close enough")
+            }
+        }
+        
+        
         //TODO: Send this to FireBase
     }
     //Mark: Error Handling
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
-      print("Failed monitoring region: \(error.localizedDescription)")
+        print("Failed monitoring region: \(error.localizedDescription)")
     }
-      
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-      print("Location manager failed: \(error.localizedDescription)")
+        print("Location manager failed: \(error.localizedDescription)")
     }
 }
 
@@ -85,8 +98,8 @@ class coreBLE_VM: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate{
     
     func callFuncToGetEmpData() {
     }
-
-
+    
+    
     var centralManager: CBCentralManager?
     var peripheralTester: CBPeripheral?
     
@@ -105,8 +118,8 @@ class coreBLE_VM: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate{
         case .poweredOn:
             print("Bluetooth status is POWERED ON")
             DispatchQueue.main.async { () -> Void in
-//                self.connectingActivityIndicator.startAnimating()
-//                self.searchingMessage.text = "Searching for my board...."
+                //                self.connectingActivityIndicator.startAnimating()
+                //                self.searchingMessage.text = "Searching for my board...."
             }
             // STEP 3.2: scan for peripherals that we're interested in
             centralManager?.scanForPeripherals(withServices: nil, options: nil)
@@ -124,10 +137,10 @@ class coreBLE_VM: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate{
         }
         print((peripheral.name!))
         print(peripheral.identifier)
-//        decodePeripheralState(peripheralState: peripheral.state)
+        //        decodePeripheralState(peripheralState: peripheral.state)
         if ((peripheral.name?.contains("Thunderboard")) ?? false){
             print("Found my board!")
-//            self.centralManager?.stopScan()
+            //            self.centralManager?.stopScan()
         }
         
     } // END func centralManager(... didDiscover peripheral

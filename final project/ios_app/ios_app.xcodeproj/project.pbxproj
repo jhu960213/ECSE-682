@@ -22,6 +22,12 @@
 		BBE35E552567AB220010E38F /* ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE35E542567AB220010E38F /* ios_appUITests.swift */; };
 		BBE35E67256857F60010E38F /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE35E65256857F60010E38F /* CardViewController.swift */; };
 		BBE35E68256857F60010E38F /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE35E66256857F60010E38F /* CardViewController.xib */; };
+		D5201AF9256C662500AA8863 /* SelfReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AF8256C662500AA8863 /* SelfReportViewController.swift */; };
+		D5201AFA256C662500AA8863 /* SelfReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AF8256C662500AA8863 /* SelfReportViewController.swift */; };
+		D5201AFB256C662500AA8863 /* SelfReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AF8256C662500AA8863 /* SelfReportViewController.swift */; };
+		D5201B00256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
+		D5201B01256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
+		D5201B02256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,8 @@
 		BBE35E562567AB220010E38F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBE35E65256857F60010E38F /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		BBE35E66256857F60010E38F /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		D5201AF8256C662500AA8863 /* SelfReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfReportViewController.swift; sourceTree = "<group>"; };
+		D5201AFF256C96B500AA8863 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 			children = (
 				BB3834E0256A4C7800982F72 /* bleModel.swift */,
 				BB3834DF256A4C7800982F72 /* CBUUIDExtensions.swift */,
+				D5201AFF256C96B500AA8863 /* DataStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				BBE35E362567AB1C0010E38F /* ViewController.swift */,
+				D5201AF8256C662500AA8863 /* SelfReportViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,9 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5201AF9256C662500AA8863 /* SelfReportViewController.swift in Sources */,
 				BB3834C8256A3F2B00982F72 /* mainModel_CARD.swift in Sources */,
 				BB3834C3256A3EF300982F72 /* MainView_CARD.swift in Sources */,
 				BBE35E67256857F60010E38F /* CardViewController.swift in Sources */,
+				D5201B00256C96B500AA8863 /* DataStore.swift in Sources */,
 				BB3834EB256A525D00982F72 /* CoreBLE_VM.swift in Sources */,
 				BBE35E372567AB1C0010E38F /* ViewController.swift in Sources */,
 				BBE35E332567AB1C0010E38F /* AppDelegate.swift in Sources */,
@@ -328,6 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5201AFA256C662500AA8863 /* SelfReportViewController.swift in Sources */,
+				D5201B01256C96B500AA8863 /* DataStore.swift in Sources */,
 				BBE35E4A2567AB220010E38F /* ios_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5201AFB256C662500AA8863 /* SelfReportViewController.swift in Sources */,
+				D5201B02256C96B500AA8863 /* DataStore.swift in Sources */,
 				BBE35E552567AB220010E38F /* ios_appUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,15 +512,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TKHAUW39G6;
+				DEVELOPMENT_TEAM = 7ARN6CQ88G;
 				INFOPLIST_FILE = ios_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hamza.ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hu.eios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,13 +534,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TKHAUW39G6;
+				DEVELOPMENT_TEAM = 7ARN6CQ88G;
 				INFOPLIST_FILE = ios_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hamza.ios-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hu.eios-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -65,7 +65,7 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate{
                 break
             default:
                 //Do nothing
-                print("Not Close enough")
+                print("Not Close enough!")
             }
         }
         

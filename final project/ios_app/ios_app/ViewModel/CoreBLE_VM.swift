@@ -23,7 +23,8 @@ class beacon_VM: NSObject{
     }
 }
 
-class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate{
+class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
+    @Published var notificationRepo = notificationRepository()
     var locationManager: CLLocationManager!
     var beaconDistance: CLProximity
     

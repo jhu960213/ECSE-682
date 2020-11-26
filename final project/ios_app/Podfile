@@ -8,7 +8,9 @@ target 'ios_app' do
   # Pods for ios_app
 
 # add the Firebase pod for Google Analytics
-pod 'Firebase/Analytics'
+pod 'Firebase/Analytics', '~> 6.2'
+pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
   target 'ios_appTests' do

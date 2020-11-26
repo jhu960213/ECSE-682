@@ -17,6 +17,7 @@
 		BB3834EB256A525D00982F72 /* CoreBLE_VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3834EA256A525D00982F72 /* CoreBLE_VM.swift */; };
 		BB383506256FB91F00982F72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB383505256FB91F00982F72 /* GoogleService-Info.plist */; };
 		BB38351B256FCAC300982F72 /* COVID_notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB38351A256FCAC300982F72 /* COVID_notify.swift */; };
+		BB383539257036B900982F72 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB383538257036B900982F72 /* NotificationRepository.swift */; };
 		BBE35E332567AB1C0010E38F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE35E322567AB1C0010E38F /* AppDelegate.swift */; };
 		BBE35E352567AB1C0010E38F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE35E342567AB1C0010E38F /* SceneDelegate.swift */; };
 		BBE35E372567AB1C0010E38F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE35E362567AB1C0010E38F /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		BB3834EA256A525D00982F72 /* CoreBLE_VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBLE_VM.swift; sourceTree = "<group>"; };
 		BB383505256FB91F00982F72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB38351A256FCAC300982F72 /* COVID_notify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID_notify.swift; sourceTree = "<group>"; };
+		BB383538257036B900982F72 /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		BBE35E2F2567AB1C0010E38F /* ios_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE35E322567AB1C0010E38F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE35E342567AB1C0010E38F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BB3835372570369900982F72 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BB383538257036B900982F72 /* NotificationRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		BBE35E262567AB1C0010E38F = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +218,7 @@
 				BB3834DE256A4BC800982F72 /* View */,
 				BB3834DC256A4BAD00982F72 /* Model */,
 				BB3834E9256A522900982F72 /* ViewModel */,
+				BB3835372570369900982F72 /* Repository */,
 				BBE35E322567AB1C0010E38F /* AppDelegate.swift */,
 				BB383505256FB91F00982F72 /* GoogleService-Info.plist */,
 				BBE35E342567AB1C0010E38F /* SceneDelegate.swift */,
@@ -477,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB383539257036B900982F72 /* NotificationRepository.swift in Sources */,
 				D5201AF9256C662500AA8863 /* SelfReportViewController.swift in Sources */,
 				BB3834C8256A3F2B00982F72 /* mainModel_CARD.swift in Sources */,
 				BB3834C3256A3EF300982F72 /* MainView_CARD.swift in Sources */,

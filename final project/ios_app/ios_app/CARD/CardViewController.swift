@@ -14,12 +14,13 @@ class CardViewController: UIViewController {
     @IBOutlet weak var selfReport: UIButton!
     
     @IBAction func helpTouch(_ sender: UIButton) {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "performSegueforHelp"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "performSegueforHelp"), object: nil)
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "performSegueforHelp"), object: nil)
     }
     
     @IBAction func selfReportTouch(_ sender: UIButton) {
         print("SENT DELEGATE")
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "performSegueforSelf_report"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "performSegueforSelf_report"), object: nil)
 
 //        delegate?.performSegue(identifier: "self_report")
     }

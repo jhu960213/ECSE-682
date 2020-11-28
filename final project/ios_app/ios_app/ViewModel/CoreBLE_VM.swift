@@ -29,6 +29,9 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
     var beaconDistance: CLProximity
     
     init(beaconDistance: CLProximity = .unknown){
+//        notificationRepo.$notifications.map { task in
+//            <#code#>
+//        }
         self.beaconDistance = beaconDistance
         self.locationManager = CLLocationManager()
         super.init()

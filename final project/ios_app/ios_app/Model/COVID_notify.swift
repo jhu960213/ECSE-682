@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+
+var phone_id: String = UUID().uuidString //device identifier (Anonymous)
 enum proximity{
     case immediate, near, irrelevant
 }
 struct Notification: Codable, Identifiable{
-    var id: String = UUID().uuidString //device identifier (Anonymous)
+    var id: String = phone_id
     var beacon_UUID: String
     var major: Int
     var minor: Int
     var test_result: Bool
-    var distance: String
+    var distance: Int
+    var created_time: Timestamp?
 }

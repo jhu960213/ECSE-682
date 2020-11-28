@@ -32,20 +32,20 @@ class ViewController: UIViewController{
         var animationProgressWhenInterrupted:CGFloat = 0
     //_____________CARD UI DEPENDENT LOGIC______________________________________
 
-    @objc func performSegueforSelfreport(_ notification: Notification) {
+    @objc func performSegueforSelfreport(_ notification: NSNotification) {
         print("OBJC WORKED")
         performSegue(withIdentifier: "self_report", sender: self)
     }
-    @objc func performSegueforHelp(_ notification: Notification) {
+    @objc func performSegueforHelp(_ notification: NSNotification) {
         print("OBJC WORKED")
         performSegue(withIdentifier: "help", sender: self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(performSegueforSelfreport(_:)), name: Notification.Name(rawValue: "performSegueforSelf_report"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(performSegueforSelfreport(_:)), name: NSNotification.Name(rawValue: "performSegueforSelf_report"), object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(performSegueforHelp(_:)), name: Notification.Name(rawValue: "performSegueforHelp"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(performSegueforHelp(_:)), name: NSNotification.Name(rawValue: "performSegueforHelp"), object: nil)
         // Do any additional setup after loading the view.
         setupCard()
     }

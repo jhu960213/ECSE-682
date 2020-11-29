@@ -12,6 +12,9 @@ pod 'Firebase/Analytics', '~> 6.2'
 pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
 pod 'Firebase/MLVision'
+pod 'Firebase/Core'
+pod 'Firebase/MLVisionTextModel'
+pod 'GoogleMLKit/TextRecognition'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
   target 'ios_appTests' do

@@ -34,6 +34,7 @@ class notificationRepository: ObservableObject{
             fatalError("Unable to encode task: \(error.localizedDescription)")
         }
     }
+    
     func updateNotification(_ notif: Notification){ //MARK: update This during COVID test
         if let notifID = notif.docID {
             do{

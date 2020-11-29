@@ -260,6 +260,7 @@
 				BBE35E2C2567AB1C0010E38F /* Frameworks */,
 				BBE35E2D2567AB1C0010E38F /* Resources */,
 				2919BFB853B52FF3D9864686 /* [CP] Embed Pods Frameworks */,
+				59AD6F723866B71F1F1B733C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,6 +299,7 @@
 				BBE35E4D2567AB220010E38F /* Frameworks */,
 				BBE35E4E2567AB220010E38F /* Resources */,
 				9E6E264560A388B49013F19F /* [CP] Embed Pods Frameworks */,
+				258BB9C2FA6CE5232E555E20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,6 +383,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		258BB9C2FA6CE5232E555E20 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios_app-ios_appUITests/Pods-ios_app-ios_appUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios_app-ios_appUITests/Pods-ios_app-ios_appUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios_app-ios_appUITests/Pods-ios_app-ios_appUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2919BFB853B52FF3D9864686 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,6 +415,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios_app/Pods-ios_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59AD6F723866B71F1F1B733C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios_app/Pods-ios_app-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios_app/Pods-ios_app-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios_app/Pods-ios_app-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7819B7910A67B3EDA58B565D /* [CP] Check Pods Manifest.lock */ = {

@@ -28,6 +28,7 @@ class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
     
     // storing my photo of covid results0
     @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var myResults: UILabel!
     
     // upload/take a photo
     @IBAction func UploadPhotoButtonPress(_ button: UIButton) {
@@ -102,17 +103,54 @@ class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
         alert.view.backgroundColor = UIColor.black
         alert.view.alpha = 0.6
         alert.view.layer.cornerRadius = 15
-
         controller.present(alert, animated: true)
-
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
             alert.dismiss(animated: true)
         }
     }
     
+    // looping through the features to find specific words
+    func processResult(from text: VisionText?, error: Error?) {
+        var notPos = 1 // if the person wasn't infected
+        let features  = text
+        for block in features!.blocks {
+            for line in block.lines {
+                let myWords = line.elements
+                for (index, value) in myWords.enumerated() {
+                    if (value.text.lowercased() == "covid-19" || value.text.lowercased() == "covid") {
+                        if (myWords[index+1].text.lowercased() == "positive") {
+                            self.myResults.text = "You have been exposed!"
+                            notPos = 0 // if person is indeed infected change to 0
+                            
+                            // TODO: Here could be a place where you create the notification and add to firebase documents
+                            
+                        }
+                    }
+                        
+                }
+                
+            }
+        }
+        if (notPos == 1) {
+            self.myResults.text = "You are clean!"
+        }
+    }
+    
+    // function that run text recognizer
+    func runTextRecognition(with image: UIImage) {
+        let visionImage = VisionImage(image: image)
+        // extracting the text features from the images
+        self.textRecognizer!.process(visionImage) { (features, error) in
+            // error handling
+            guard error == nil, let features = features else {
+                print("Couldn't extract any features!")
+                return
+            }
+            self.processResult(from: features, error: error)
+        }
+    }
+    
     // function to process the uploaded image
-    
-    
     override func viewDidLoad() {
         // create the vision instances var in here
         self.vision = Vision.vision()
@@ -120,6 +158,7 @@ class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
         self.options = VisionCloudTextRecognizerOptions()
         self.options!.languageHints = ["en", "hi", "fr", "zh-Hans","de"]
         self.textRecognizer = vision!.cloudTextRecognizer(options: self.options!)
+        self.myResults.text = "Results Unknown!"
     }
 }
 
@@ -162,6 +201,7 @@ extension SelfReportViewController: UIImagePickerControllerDelegate, UINavigatio
         
         // setting my image view as the taken image from my camera
         self.myImageView.image = imageTaken
+        self.runTextRecognition(with: imageTaken)
         results.addExposureResultsImages(imageTaken)
     }
 }

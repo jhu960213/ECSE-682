@@ -8,10 +8,16 @@
 import Foundation
 import UIKit
 import MobileCoreServices
+import Firebase
 
 
 // This class will be the controller behind the self report scene
 class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
+    
+    // Create a Google Firebase vision instance variables
+    var vision:Vision?
+    var textRecognizer:VisionTextRecognizer?
+    var options:VisionCloudTextRecognizerOptions?
     
     // create data store to store the uploaded images or pdfs or docs
     var results = DataStore()
@@ -104,10 +110,17 @@ class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
         }
     }
     
-    override func viewDidLoad() {
-        
-    }
+    // function to process the uploaded image
     
+    
+    override func viewDidLoad() {
+        // create the vision instances var in here
+        self.vision = Vision.vision()
+        self.textRecognizer = self.vision!.cloudTextRecognizer()
+        self.options = VisionCloudTextRecognizerOptions()
+        self.options!.languageHints = ["en", "hi", "fr", "zh-Hans","de"]
+        self.textRecognizer = vision!.cloudTextRecognizer(options: self.options!)
+    }
 }
 
 extension ViewController: UIDocumentMenuDelegate, UIDocumentPickerDelegate{

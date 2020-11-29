@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController{
+
     //MARK:_____________CARD UI DEPENDENT LOGIC______________________________________
         // Variable for card view controller
         var cardViewController:CardViewController!

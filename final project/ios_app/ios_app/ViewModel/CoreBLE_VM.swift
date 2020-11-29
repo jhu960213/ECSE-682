@@ -10,28 +10,12 @@ import CoreBluetooth
 import CoreLocation
 import UIKit
 
-class beacon_VM: NSObject{
-    let majorValue: CLBeaconMajorValue
-    let minorValue: CLBeaconMinorValue
-    
-    init(name: String, icon: Int, uuid: UUID, majorValue: Int, minorValue: Int) {
-        //      self.name = name
-        //      self.icon = icon
-        //      self.uuid = uuid
-        self.majorValue = CLBeaconMajorValue(majorValue)
-        self.minorValue = CLBeaconMinorValue(minorValue)
-    }
-}
-
 class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
     @Published var notificationRepo = notificationRepository()
     var locationManager: CLLocationManager!
     var beaconDistance: CLProximity
 
     init(beaconDistance: CLProximity = .unknown){
-//        notificationRepo.$notifications.map { task in
-//            <#code#>
-//        }
         self.beaconDistance = beaconDistance
         self.locationManager = CLLocationManager()
         super.init()

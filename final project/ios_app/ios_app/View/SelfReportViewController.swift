@@ -13,7 +13,7 @@ import Firebase
 
 // This class will be the controller behind the self report scene
 class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
-    
+    @Published var notificationRepo = notificationRepository()
     // Create a Google Firebase vision instance variables
     var vision:Vision?
     var textRecognizer:VisionTextRecognizer?
@@ -121,8 +121,8 @@ class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
                         if (myWords[index+1].text.lowercased() == "positive") {
                             self.myResults.text = "You have been exposed!"
                             notPos = 0 // if person is indeed infected change to 0
-                            
-                            // TODO: Here could be a place where you create the notification and add to firebase documents
+                            notificationRepo.pos_test()
+                            // MARK: Added Positive Test
                             
                         }
                     }

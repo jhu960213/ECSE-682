@@ -10,7 +10,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class notificationRepository: ObservableObject{
-    
+    var numCalls = -1
     let db = Firestore.firestore()
     @Published var notifications = [Notification]()
     
@@ -28,7 +28,14 @@ class notificationRepository: ObservableObject{
     
     func addNotification(_ notif: Notification){
         do{
-            try db.collection("notifications").addDocument(from: notif)
+            try db.collection("notifications").addDocument(from: notif).addSnapshotListener({ (querySnapshot, error) in
+                if let querySnapshot =  querySnapshot {
+                    self.numCalls += 1
+                    if (self.numCalls>=0){
+                        //TODO: Change UI HERE in MAIN View Controller
+                    }
+                }
+            })
         }
         catch{
             fatalError("Unable to encode task: \(error.localizedDescription)")
@@ -44,4 +51,62 @@ class notificationRepository: ObservableObject{
             }
         }
     }
+    func pos_test(){
+        db.collection("notifications").whereField("device_id", isEqualTo: phone_id).getDocuments() { [self] (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for documenty in querySnapshot!.documents {
+                    //FOR updating this DATA
+                    db.collection("notifications").document(documenty.documentID).updateData([
+                        "test_result": true
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+                    //________________For updating other data___________________
+                    let result = Result {
+                        try documenty.data(as: Notification.self)
+                    }
+                    switch result {
+                        case .success(let notif):
+                            if let notif = notif {
+                                update_others(notifData: notif)
+                            }else {
+                                print("Document does not exist")
+                            }
+                        case .failure(let error):
+                            print("Error decoding Notification: \(error)")
+                    }
+                    
+                }
+            }
+        }
+    }
+    func update_others(notifData: Notification){
+        if let time = notifData.createdTime{
+            let endtime = Timestamp.init(seconds: time.seconds+300, nanoseconds: 0)
+            db.collection("notifications").whereField("createdTime", isGreaterThan: notifData.createdTime!).whereField("createdTime", isLessThan: endtime).whereField("major", isEqualTo: notifData.major).whereField("minor", isEqualTo: notifData.minor).whereField("distance", isGreaterThanOrEqualTo: 1).getDocuments() { [self] (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for documenty in querySnapshot!.documents {
+                        db.collection("notifications").document(documenty.documentID).updateData([
+                            "test_result": true
+                        ]) { err in
+                            if let err = err {
+                                print("Error updating document: \(err)")
+                            } else {
+                                print("Document successfully updated")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }

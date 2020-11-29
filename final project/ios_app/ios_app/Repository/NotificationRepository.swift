@@ -15,9 +15,9 @@ class notificationRepository: ObservableObject{
     @Published var notifications = [Notification]()
     
     func loadData(){ //Don't think we need to load Data, actually just send Notif when Pos test, and addNotification.
-//MARK:Here we can add a listener for a Positive result, that can change the UI.
+        //MARK:Here we can add a listener for a Positive result, that can change the UI.
         
-        db.collection("notifications").whereField("device_id", isEqualTo: phone_id).addSnapshotListener { (querySnapshot, error) in
+        db.collection("notifications").whereField("device_id", isEqualTo: phone_id).order(by: "createdTime").addSnapshotListener { (querySnapshot, error) in
             if let querySnapshot =  querySnapshot {
                 self.notifications = querySnapshot.documents.compactMap{ document in
                     try? document.data(as: Notification.self)
@@ -32,6 +32,15 @@ class notificationRepository: ObservableObject{
         }
         catch{
             fatalError("Unable to encode task: \(error.localizedDescription)")
+        }
+    }
+    func updateNotification(_ notif: Notification){ //MARK: update This during COVID test
+        if let notifID = notif.docID {
+            do{
+                try db.collection("notifications").document(notifID).setData(from: notif)
+            }catch{
+                fatalError("Unable to encode task: \(error.localizedDescription)")
+            }
         }
     }
 }

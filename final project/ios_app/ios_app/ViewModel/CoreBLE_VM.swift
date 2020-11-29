@@ -27,7 +27,7 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
     @Published var notificationRepo = notificationRepository()
     var locationManager: CLLocationManager!
     var beaconDistance: CLProximity
-    
+
     init(beaconDistance: CLProximity = .unknown){
 //        notificationRepo.$notifications.map { task in
 //            <#code#>
@@ -71,10 +71,10 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
                 //Do nothing
                 print("Not Close enough!")
             }
+            //MARK:Sent to Firebase
+            let add = Notification(id: phone_id, beacon_UUID: beaconConstraint.uuid.uuidString, major: Int(beaconConstraint.major!.magnitude), minor: Int(beaconConstraint.minor!.magnitude), test_result: false, distance: beaconDistance.rawValue)
+            notificationRepo.addNotification(add)
         }
-        
-        
-        //TODO: Send this to FireBase
     }
     //Mark: Error Handling
     func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {

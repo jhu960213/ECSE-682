@@ -14,11 +14,12 @@ enum proximity{
     case immediate, near, irrelevant
 }
 struct Notification: Codable, Identifiable{
-    var id: String = phone_id
+    @DocumentID var docID: String?
+    var id: String = phone_id //MARK: See if you need DocumentID
     var beacon_UUID: String
     var major: Int
     var minor: Int
     var test_result: Bool
     var distance: Int
-    var created_time: Timestamp?
+    @ServerTimestamp var createdTime: Timestamp?
 }

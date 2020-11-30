@@ -8,8 +8,16 @@
 
 import UIKit
 import SwiftEventBus
-class ViewController: UIViewController{
+import CoreBluetooth
+import CoreLocation
 
+
+
+class ViewController: UIViewController {
+
+    // phone ble instance
+    var phone_ble_instance:phoneBeaconIF_VM = phoneBeaconIF_VM(beaconDistance: CLProximity.unknown)
+    
     //MARK:_____________CARD UI DEPENDENT LOGIC______________________________________
         // Variable for card view controller
         var cardViewController:CardViewController!
@@ -66,6 +74,7 @@ class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         NotificationCenter.default.addObserver(self, selector: #selector(performSegueforSelfreport(_:)), name: NSNotification.Name(rawValue: "performSegueforSelf_report"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(performSegueforHelp(_:)), name: NSNotification.Name(rawValue: "performSegueforHelp"), object: nil)

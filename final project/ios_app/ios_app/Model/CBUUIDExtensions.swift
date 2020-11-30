@@ -11,6 +11,16 @@ extension CBUUID {
     
     //MARK:- Service Identifiers
     
+    /// iBeacon UUID
+    static let iBeaconUUID = UUID(uuidString: "E2C56DB5-DFFB-48D2-B060-D0F5A71096E0")
+    
+    /// Generic Access Service for iBeacon on thunderboard
+    static let iBeaconGenericAccess = CBUUID(string: "0x1800")
+    
+    /// Device Information Serivce for iBeacon on thunderboard
+    static let iBeaconDeviceInformation = CBUUID(string: "0x180A")
+    
+    
     /// Generic Access Service (org.bluetooth.service.generic_access)
     static let GenericAccess = CBUUID(string: "0x1800")
     
@@ -46,7 +56,15 @@ extension CBUUID {
     //
     // Generic Access Characteristics
     //
-
+    
+    /// Device Name of iBeacon
+    static let iBeaconDeviceName = CBUUID(string: "0x2A00")
+    
+    /// Appearance of iBeacon
+    static let iBeaconAppearance = CBUUID(string: "0x2A01")
+    
+    
+    
     /// Manufacturer Name (org.bluetooth.characteristic.gap.???)
     static let ManufacturerName = CBUUID(string: "0x2A29")
     
@@ -60,6 +78,19 @@ extension CBUUID {
     static let FirmwareRevision = CBUUID(string: "0x2A26")
     
     static let SystemIdentifier = CBUUID(string: "0x2A23")
+    
+    
+    //
+    // iBeacon Device Information Characteristics
+    //
+    
+    /// Manufacture name of iBeacon
+    static let iBeaconManufacturerName = CBUUID(string: "0x2A29")
+    
+    /// System ID of iBeacon
+    static let iBeaconSystemID = CBUUID(string: "0x2A23")
+    
+    
     
     //
     // Battery Characteristics

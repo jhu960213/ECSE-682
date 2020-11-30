@@ -57,7 +57,9 @@ class notificationRepository: ObservableObject{
         }
     }
     func pos_test(){
-        db.collection("notifications").whereField("device_id", isEqualTo: phone_id).getDocuments() { [self] (querySnapshot, err) in
+        print("we are POSSS TESTTTTTT")
+        
+        db.collection("notifications").whereField("id", isEqualTo: phone_id).getDocuments() { [self] (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

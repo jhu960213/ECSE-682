@@ -20,6 +20,7 @@ struct Notification: Codable, Identifiable{
     var major: Int
     var minor: Int
     var test_result: Bool
-    var distance: Int
+    var distance: Double
+    var proximity: Int
     @ServerTimestamp var createdTime: Timestamp?
 }

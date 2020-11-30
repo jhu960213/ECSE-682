@@ -33,6 +33,7 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
         super.init()
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
+        callEvent(true)
         //        startScanning()
     }
     

@@ -16,6 +16,7 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
     var beaconDistance: CLProximity
 
     init(beaconDistance: CLProximity = .unknown){
+        print("We are here!")
         self.beaconDistance = beaconDistance
         self.locationManager = CLLocationManager()
         super.init()
@@ -45,19 +46,19 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
     
     func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
         for i in 0..<beacons.count{ //iterate through multiple beacons.
+            print("Found Location!")
             beaconDistance = (beacons[i].proximity)
             switch beaconDistance {
             case .immediate, .near:
-                //add to Firebase
-                //var timestamp: Date(
+                //MARK:Sent to Firebase
+                let add = Notification(id: phone_id, beacon_UUID: beaconConstraint.uuid.uuidString, major: Int(beaconConstraint.major!.magnitude), minor: Int(beaconConstraint.minor!.magnitude), test_result: false, distance: beaconDistance.rawValue)
+//                notificationRepo.addNotification(add)
                 break
             default:
                 //Do nothing
                 print("Not Close enough!")
             }
-            //MARK:Sent to Firebase
-            let add = Notification(id: phone_id, beacon_UUID: beaconConstraint.uuid.uuidString, major: Int(beaconConstraint.major!.magnitude), minor: Int(beaconConstraint.minor!.magnitude), test_result: false, distance: beaconDistance.rawValue)
-            notificationRepo.addNotification(add)
+
         }
     }
     //Mark: Error Handling

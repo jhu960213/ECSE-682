@@ -33,6 +33,11 @@ class notificationRepository: ObservableObject{
                     self.numCalls += 1
                     if (self.numCalls>=0){
                         //TODO: Change UI HERE in MAIN View Controller
+                        // getting the queried snap shot of the document info
+                        let data = querySnapshot.data()
+                        let result = data!["test_result"]
+                        // updating the UI....not sure if this is the correct way to do it
+                        callEvent(result! as! Bool)
                     }
                 }
             })

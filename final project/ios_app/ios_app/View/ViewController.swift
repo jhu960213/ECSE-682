@@ -17,6 +17,28 @@ class ViewController: UIViewController{
         var nextState:CardState {
             return cardVisible ? .collapsed : .expanded
         }
+    
+    // outlets for the labels and image view
+    @IBOutlet weak var Description: UILabel!
+    @IBOutlet weak var Exposure: UILabel!
+    @IBOutlet weak var stateImage: UIImageView!
+    
+    // called from viewdidload to setup subscribing to event updates from repository
+    func setupEventBusSubscriber() {
+        _ = EventBus.onMainThread(self, name: "UpdateUI") { result in
+            if let updateEvent = result {
+                if (updateEvent.test_result == true) {
+                    self.Exposure.text = "You have been near someone who had reported a positive diagnosis!"
+                    self.stateImage.image = UIImage(named: "caution")
+                } else {
+                    self.Exposure.text = "You are clean! Be mindful of large social gatherings!"
+                    self.stateImage.image = UIImage(named: "thumbsup")
+                }
+            }
+        }
+    }
+        
+    
         
         // Variable for effects visual effect view
         var visualEffectView:UIVisualEffectView!
@@ -49,5 +71,6 @@ class ViewController: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(performSegueforHelp(_:)), name: NSNotification.Name(rawValue: "performSegueforHelp"), object: nil)
         // Do any additional setup after loading the view.
         setupCard()
+        setupEventBusSubscriber()
     }
 }

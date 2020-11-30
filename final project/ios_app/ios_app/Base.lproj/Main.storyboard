@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbsup" translatesAutoresizingMaskIntoConstraints="NO" id="TRR-Zd-9mS">
-                                <rect key="frame" x="0.0" y="126" width="159" height="137"/>
+                                <rect key="frame" x="40" y="119" width="159" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -42,6 +42,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="JoY-2T-6Z4"/>
                     <connections>
+                        <outlet property="description" destination="vTl-wS-3LC" id="BwO-S6-AEO"/>
+                        <outlet property="exposure" destination="LLb-yc-zs9" id="Wyc-eI-A8e"/>
+                        <outlet property="stateImage" destination="TRR-Zd-9mS" id="PQY-Pe-LEc"/>
                         <segue destination="1mQ-Gw-3EV" kind="show" identifier="self_report" id="r3E-62-tdm"/>
                         <segue destination="zN6-K9-Bdo" kind="show" identifier="help" id="AT3-rX-SmV"/>
                     </connections>

@@ -34,6 +34,9 @@
 		D5201B00256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
 		D5201B01256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
 		D5201B02256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
+		D55EF21E25747E22008817D1 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF21D25747E22008817D1 /* EventBus.swift */; };
+		D55EF22325747F0A008817D1 /* ExposureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF22225747F0A008817D1 /* ExposureEvent.swift */; };
+		D55EF22E25748381008817D1 /* EventBusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF22D25748381008817D1 /* EventBusViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		BBE35E66256857F60010E38F /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		D5201AF8256C662500AA8863 /* SelfReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfReportViewController.swift; sourceTree = "<group>"; };
 		D5201AFF256C96B500AA8863 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		D55EF21D25747E22008817D1 /* EventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
+		D55EF22225747F0A008817D1 /* ExposureEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureEvent.swift; sourceTree = "<group>"; };
+		D55EF22D25748381008817D1 /* EventBusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBusViewModel.swift; sourceTree = "<group>"; };
 		E06666F47D0C124021149760 /* Pods_ios_app_ios_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_app_ios_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8081E4FF162CBDEE86CB0E8 /* Pods-ios_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_appTests.debug.xcconfig"; path = "Target Support Files/Pods-ios_appTests/Pods-ios_appTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +166,7 @@
 				BB38351A256FCAC300982F72 /* COVID_notify.swift */,
 				BB3834DF256A4C7800982F72 /* CBUUIDExtensions.swift */,
 				D5201AFF256C96B500AA8863 /* DataStore.swift */,
+				D55EF22225747F0A008817D1 /* ExposureEvent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				BB3834EA256A525D00982F72 /* CoreBLE_VM.swift */,
+				D55EF21D25747E22008817D1 /* EventBus.swift */,
+				D55EF22D25748381008817D1 /* EventBusViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -533,6 +542,9 @@
 				BB3834EB256A525D00982F72 /* CoreBLE_VM.swift in Sources */,
 				BB38351B256FCAC300982F72 /* COVID_notify.swift in Sources */,
 				BBE35E372567AB1C0010E38F /* ViewController.swift in Sources */,
+				D55EF21E25747E22008817D1 /* EventBus.swift in Sources */,
+				D55EF22E25748381008817D1 /* EventBusViewModel.swift in Sources */,
+				D55EF22325747F0A008817D1 /* ExposureEvent.swift in Sources */,
 				BBE35E332567AB1C0010E38F /* AppDelegate.swift in Sources */,
 				BB3834E2256A4C7800982F72 /* bleModel.swift in Sources */,
 				BB3834E1256A4C7800982F72 /* CBUUIDExtensions.swift in Sources */,

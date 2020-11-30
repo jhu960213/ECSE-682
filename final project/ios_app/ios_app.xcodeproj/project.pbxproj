@@ -34,7 +34,6 @@
 		D5201B00256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
 		D5201B01256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
 		D5201B02256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
-		D55EF21E25747E22008817D1 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF21D25747E22008817D1 /* EventBus.swift */; };
 		D55EF22325747F0A008817D1 /* ExposureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF22225747F0A008817D1 /* ExposureEvent.swift */; };
 		D55EF22E25748381008817D1 /* EventBusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF22D25748381008817D1 /* EventBusViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -90,7 +89,6 @@
 		BBE35E66256857F60010E38F /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		D5201AF8256C662500AA8863 /* SelfReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfReportViewController.swift; sourceTree = "<group>"; };
 		D5201AFF256C96B500AA8863 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		D55EF21D25747E22008817D1 /* EventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
 		D55EF22225747F0A008817D1 /* ExposureEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureEvent.swift; sourceTree = "<group>"; };
 		D55EF22D25748381008817D1 /* EventBusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBusViewModel.swift; sourceTree = "<group>"; };
 		E06666F47D0C124021149760 /* Pods_ios_app_ios_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_app_ios_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				BB3834EA256A525D00982F72 /* CoreBLE_VM.swift */,
-				D55EF21D25747E22008817D1 /* EventBus.swift */,
 				D55EF22D25748381008817D1 /* EventBusViewModel.swift */,
 			);
 			path = ViewModel;
@@ -542,7 +539,6 @@
 				BB3834EB256A525D00982F72 /* CoreBLE_VM.swift in Sources */,
 				BB38351B256FCAC300982F72 /* COVID_notify.swift in Sources */,
 				BBE35E372567AB1C0010E38F /* ViewController.swift in Sources */,
-				D55EF21E25747E22008817D1 /* EventBus.swift in Sources */,
 				D55EF22E25748381008817D1 /* EventBusViewModel.swift in Sources */,
 				D55EF22325747F0A008817D1 /* ExposureEvent.swift in Sources */,
 				BBE35E332567AB1C0010E38F /* AppDelegate.swift in Sources */,
@@ -731,7 +727,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7ARN6CQ88G;
+				DEVELOPMENT_TEAM = TKHAUW39G6;
 				INFOPLIST_FILE = ios_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -752,7 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7ARN6CQ88G;
+				DEVELOPMENT_TEAM = TKHAUW39G6;
 				INFOPLIST_FILE = ios_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftEventBus
 class ViewController: UIViewController{
 
     //MARK:_____________CARD UI DEPENDENT LOGIC______________________________________
@@ -25,8 +25,8 @@ class ViewController: UIViewController{
     
     // called from viewdidload to setup subscribing to event updates from repository
     func setupEventBusSubscriber() {
-        _ = EventBus.onMainThread(self, name: "UpdateUI") { result in
-            if let updateEvent = result {
+        _ = SwiftEventBus.onMainThread(self, name: "UpdateUI") { result in
+            if let updateEvent = result?.object as? Notification{
                 if (updateEvent.test_result == true) {
                     self.Exposure.text = "You have been near someone who had reported a positive diagnosis!"
                     self.stateImage.image = UIImage(named: "caution")

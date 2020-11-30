@@ -31,7 +31,7 @@ class notificationRepository: ObservableObject{
             try db.collection("notifications").addDocument(from: notif).addSnapshotListener({ (querySnapshot, error) in
                 if let querySnapshot =  querySnapshot {
                     self.numCalls += 1
-                    if (self.numCalls>=0){
+                    if (self.numCalls>0){
                         //TODO: Change UI HERE in MAIN View Controller
                         // getting the queried snap shot of the document info
                         let data = querySnapshot.data()

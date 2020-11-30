@@ -15,6 +15,7 @@ pod 'Firebase/MLVision'
 pod 'Firebase/Core'
 pod 'Firebase/MLVisionTextModel'
 pod 'GoogleMLKit/TextRecognition'
+pod 'SwiftEventBus', :tag => '5.0.1', :git => 'https://github.com/cesarferreira/SwiftEventBus.git'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
   target 'ios_appTests' do

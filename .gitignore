@@ -1,0 +1,145 @@
+
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Frameworks/FirebaseMLVisionTextModel.framework/FirebaseMLVisionTextModel
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Frameworks/FirebaseMLVisionTextModel.framework/Modules/module.modulemap
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Resources/GoogleMVTextDetectorResources/region_proposal_text_detector_tflite_gray_quantized.bincfg
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Resources/GoogleMVTextDetectorResources/rpn_lstm_engine_tflite_latin.bincfg
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Resources/GoogleMVTextDetectorResources/rpn_text_detector_mobile_space_to_depth_quantized_v2.tflite
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Resources/GoogleMVTextDetectorResources/tflite_lstm_recognizer_latin_0.3.bincfg
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Resources/GoogleMVTextDetectorResources/tflite_lstm_recognizer_latin_0.3.class_lst
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Resources/GoogleMVTextDetectorResources/tflite_lstm_recognizer_latin_0.3.conv_model
+final project/ios_app/Pods/FirebaseMLVisionTextModel/Resources/GoogleMVTextDetectorResources/tflite_lstm_recognizer_latin_0.3.lstm_model
+final project/ios_app/Pods/GoogleMLKit/MLKitCore/NOTICES
+final project/ios_app/Pods/GoogleMLKit/MLKitCore/Sources/MLKit.h
+final project/ios_app/Pods/GoogleMLKit/MLKitCore/Sources/module.modulemap
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/GULCCComponent.m
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/GULCCComponentContainer.m
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/GULCCComponentType.m
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/GULCCDependency.m
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/Private/GULCCComponentContainerInternal.h
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/Public/GULCCComponent.h
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/Public/GULCCComponentContainer.h
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/Public/GULCCComponentType.h
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/Public/GULCCDependency.h
+final project/ios_app/Pods/GoogleUtilitiesComponents/GoogleUtilitiesComponents/Sources/Public/GULCCLibrary.h
+final project/ios_app/Pods/GoogleUtilitiesComponents/LICENSE
+final project/ios_app/Pods/GoogleUtilitiesComponents/README.md
+final project/ios_app/Pods/Headers/Private/GoogleMLKit/MLKit.h
+final project/ios_app/Pods/Headers/Public/GoogleMLKit/MLKit.h
+final project/ios_app/Pods/Local Podspecs/SwiftEventBus.podspec.json
+final project/ios_app/Pods/Manifest.lock
+final project/ios_app/Pods/MLKitCommon/CHANGELOG.md
+final project/ios_app/Pods/MLKitCommon/Frameworks/MLKitCommon.framework/Headers/MLKitCommon.h
+final project/ios_app/Pods/MLKitCommon/Frameworks/MLKitCommon.framework/Headers/MLKLocalModel.h
+final project/ios_app/Pods/MLKitCommon/Frameworks/MLKitCommon.framework/Headers/MLKModelDownloadConditions.h
+final project/ios_app/Pods/MLKitCommon/Frameworks/MLKitCommon.framework/Headers/MLKModelDownloadNotifications.h
+final project/ios_app/Pods/MLKitCommon/Frameworks/MLKitCommon.framework/Headers/MLKModelManager.h
+final project/ios_app/Pods/MLKitCommon/Frameworks/MLKitCommon.framework/Headers/MLKRemoteModel.h
+final project/ios_app/Pods/MLKitCommon/Frameworks/MLKitCommon.framework/MLKitCommon
+final project/ios_app/Pods/MLKitCommon/Frameworks/MLKitCommon.framework/Modules/module.modulemap
+final project/ios_app/Pods/MLKitCommon/NOTICES
+final project/ios_app/Pods/MLKitCommon/README.md
+final project/ios_app/Pods/MLKitTextRecognition/CHANGELOG.md
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/Headers/MLKitTextRecognition.h
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/Headers/MLKText.h
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/Headers/MLKTextBlock.h
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/Headers/MLKTextElement.h
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/Headers/MLKTextLine.h
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/Headers/MLKTextRecognizedLanguage.h
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/Headers/MLKTextRecognizer.h
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/MLKitTextRecognition
+final project/ios_app/Pods/MLKitTextRecognition/Frameworks/MLKitTextRecognition.framework/Modules/module.modulemap
+final project/ios_app/Pods/MLKitTextRecognition/NOTICES
+final project/ios_app/Pods/MLKitTextRecognition/README.md
+final project/ios_app/Pods/MLKitTextRecognition/Resources/GoogleMVTextDetectorResources/region_proposal_text_detector_tflite_gray_quantized.bincfg
+final project/ios_app/Pods/MLKitTextRecognition/Resources/GoogleMVTextDetectorResources/rpn_lstm_engine_tflite_latin.bincfg
+final project/ios_app/Pods/MLKitTextRecognition/Resources/GoogleMVTextDetectorResources/rpn_text_detector_mobile_space_to_depth_quantized_v2.tflite
+final project/ios_app/Pods/MLKitTextRecognition/Resources/GoogleMVTextDetectorResources/tflite_lstm_recognizer_latin_0.3.bincfg
+final project/ios_app/Pods/MLKitTextRecognition/Resources/GoogleMVTextDetectorResources/tflite_lstm_recognizer_latin_0.3.class_lst
+final project/ios_app/Pods/MLKitTextRecognition/Resources/GoogleMVTextDetectorResources/tflite_lstm_recognizer_latin_0.3.conv_model
+final project/ios_app/Pods/MLKitTextRecognition/Resources/GoogleMVTextDetectorResources/tflite_lstm_recognizer_latin_0.3.lstm_model
+final project/ios_app/Pods/MLKitVision/CHANGELOG.md
+final project/ios_app/Pods/MLKitVision/Frameworks/MLKitVision.framework/Headers/MLKitVision.h
+final project/ios_app/Pods/MLKitVision/Frameworks/MLKitVision.framework/Headers/MLKVisionImage.h
+final project/ios_app/Pods/MLKitVision/Frameworks/MLKitVision.framework/Headers/MLKVisionPoint.h
+final project/ios_app/Pods/MLKitVision/Frameworks/MLKitVision.framework/MLKitVision
+final project/ios_app/Pods/MLKitVision/Frameworks/MLKitVision.framework/Modules/module.modulemap
+final project/ios_app/Pods/MLKitVision/NOTICES
+final project/ios_app/Pods/MLKitVision/README.md
+final project/ios_app/Pods/Pods.xcodeproj/project.pbxproj
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/FirebaseMLCommon.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/FirebaseMLVision.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/FirebaseMLVisionTextModel-GoogleMVTextDetectorResources.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/FirebaseMLVisionTextModel.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/GoogleAPIClientForREST.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/GoogleMLKit.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/GoogleToolboxForMac.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/GoogleUtilitiesComponents.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/GTMSessionFetcher.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/MLKitCommon.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/MLKitTextRecognition-GoogleMVTextDetectorResources.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/MLKitTextRecognition.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/MLKitVision.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/Protobuf.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/SwiftEventBus.xcscheme
+final project/ios_app/Pods/Pods.xcodeproj/xcuserdata/hamza.xcuserdatad/xcschemes/xcschememanagement.plist
+final project/ios_app/Pods/SwiftEventBus/LICENSE
+final project/ios_app/Pods/SwiftEventBus/README.md
+final project/ios_app/Pods/SwiftEventBus/SwiftEventBus/SwiftEventBus.swift
+final project/ios_app/Pods/Target Support Files/abseil/abseil.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/abseil/abseil.release.xcconfig
+final project/ios_app/Pods/Target Support Files/BoringSSL-GRPC/BoringSSL-GRPC.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/BoringSSL-GRPC/BoringSSL-GRPC.release.xcconfig
+final project/ios_app/Pods/Target Support Files/Firebase/Firebase.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/Firebase/Firebase.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseCore/FirebaseCore.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseCore/FirebaseCore.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseFirestoreSwift/FirebaseFirestoreSwift.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseFirestoreSwift/FirebaseFirestoreSwift.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseInstallations/FirebaseInstallations.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseMLCommon/FirebaseMLCommon.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseMLCommon/FirebaseMLCommon.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseMLVision/FirebaseMLVision.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseMLVision/FirebaseMLVision.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseMLVisionTextModel/FirebaseMLVisionTextModel.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseMLVisionTextModel/FirebaseMLVisionTextModel.release.xcconfig
+final project/ios_app/Pods/Target Support Files/FirebaseMLVisionTextModel/ResourceBundle-GoogleMVTextDetectorResources-FirebaseMLVisionTextModel-Info.plist
+final project/ios_app/Pods/Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST.release.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement.release.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.release.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleMLKit/GoogleMLKit.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleMLKit/GoogleMLKit.release.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.release.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.release.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents-dummy.m
+final project/ios_app/Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents-Info.plist
+final project/ios_app/Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents-umbrella.h
+final project/ios_app/Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents.modulemap
+final project/ios_app/Pods/Target Support Files/GoogleUtilitiesComponents/GoogleUtilitiesComponents.release.xcconfig
+final project/ios_app/Pods/Target Support Files/gRPC-C++/gRPC-C++.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/gRPC-C++/gRPC-C++.release.xcconfig
+final project/ios_app/Pods/Target Support Files/gRPC-Core/gRPC-Core.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/gRPC-Core/gRPC-Core.release.xcconfig
+final project/ios_app/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.release.xcconfig
+final project/ios_app/Pods/Target Support Files/leveldb-library/leveldb-library.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/leveldb-library/leveldb-library.release.xcconfig
+final project/ios_app/Pods/Target Support Files/MLKitCommon/MLKitCommon.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/MLKitCommon/MLKitCommon.release.xcconfig
+final project/ios_app/Pods/Target Support Files/MLKitTextRecognition/MLKitTextRecognition.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/MLKitTextRecognition/MLKitTextRecognition.release.xcconfig
+final project/ios_app/Pods/Target Support Files/MLKitTextRecognition/ResourceBundle-GoogleMVTextDetectorResources-MLKitTextRecognition-Info.plist
+final project/ios_app/Pods/Target Support Files/MLKitVision/MLKitVision.debug.xcconfig
+final project/ios_app/Pods/Target Support Files/MLKitVision/MLKitVision.release.xcconfig

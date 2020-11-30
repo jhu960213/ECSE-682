@@ -397,6 +397,7 @@ PODS:
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.11)
   - Protobuf (3.13.0)
+  - SwiftEventBus (5.0.0)
 
 DEPENDENCIES:
   - Firebase/Analytics (~> 6.2)
@@ -406,6 +407,7 @@ DEPENDENCIES:
   - Firebase/MLVisionTextModel
   - FirebaseFirestoreSwift
   - GoogleMLKit/TextRecognition
+  - SwiftEventBus (from `https://github.com/cesarferreira/SwiftEventBus.git`, tag `5.0.1`)
 
 SPEC REPOS:
   trunk:
@@ -439,6 +441,16 @@ SPEC REPOS:
     - PromisesObjC
     - Protobuf
 
+EXTERNAL SOURCES:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 5.0.1
+
+CHECKOUT OPTIONS:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 5.0.1
+
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
@@ -469,7 +481,8 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
+  SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
 
-PODFILE CHECKSUM: e6797ebb6f593b32b4d21c2e81560c82aeeac44e
+PODFILE CHECKSUM: ff1739a5d6df7426f3398e7a406d55f11c0ad752
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.9.3

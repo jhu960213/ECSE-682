@@ -34,11 +34,13 @@ class ViewController: UIViewController {
     // called from viewdidload to setup subscribing to event updates from repository
     func setupEventBusSubscriber() {
         _ = SwiftEventBus.onMainThread(self, name: "UpdateUI") { result in
-            if let updateEvent = result?.object as? Notification{
-                if (updateEvent.test_result == true) {
+            if let updateEvent = result?.object as? ExposureEvent{
+                if (updateEvent.exposure_result == true) {
+                    print("\n\nI got to here on main view: I'm infected!!!\n\n")
                     self.Exposure.text = "You have been near someone who had reported a positive diagnosis!"
                     self.stateImage.image = UIImage(named: "caution")
                 } else {
+                    print("\n\nI got to here on main view: I'm still clean!!!\n\n")
                     self.Exposure.text = "You are clean! Be mindful of large social gatherings!"
                     self.stateImage.image = UIImage(named: "thumbsup")
                 }

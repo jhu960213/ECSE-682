@@ -26,14 +26,12 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
     var beaconDistance: CLProximity
     
     init(beaconDistance: CLProximity = .unknown){
-        print("We are here!")
         self.beaconDistance = beaconDistance
         self.locationManager = CLLocationManager()
         self.notifications_list = [Notification]()
         super.init()
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
-        callEvent(true)
         //        startScanning()
     }
     
@@ -41,7 +39,6 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
         if status == .authorizedAlways {
             if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
                 if CLLocationManager.isRangingAvailable() {
-                    print("WE GOT TO HEREREEEEEEEEEEEEEEEE")
                     startScanning()
                 }
             }
@@ -53,7 +50,6 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
         locationManager.startMonitoring(for: beaconRegion)
         locationManager.startRangingBeacons(satisfying: beaconCons)
         //        locationManager.startRangingBeacons(in: beaconRegion)
-        print("WE GOT TO HEREREEEEEEEEEEEEEEEE")
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

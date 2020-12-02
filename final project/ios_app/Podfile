@@ -11,7 +11,6 @@ target 'ios_app' do
 pod 'Firebase/Analytics', '~> 6.2'
 pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift'
-pod 'Firebase/MLVision'
 pod 'Firebase/Core'
 pod 'Firebase/MLVisionTextModel'
 pod 'GoogleMLKit/TextRecognition'

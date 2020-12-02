@@ -36,6 +36,7 @@
 		D5201B02256C96B500AA8863 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5201AFF256C96B500AA8863 /* DataStore.swift */; };
 		D55EF22325747F0A008817D1 /* ExposureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF22225747F0A008817D1 /* ExposureEvent.swift */; };
 		D55EF22E25748381008817D1 /* EventBusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF22D25748381008817D1 /* EventBusViewModel.swift */; };
+		D55EF2F3257834BE008817D1 /* ExposedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EF2F2257834BE008817D1 /* ExposedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		D5201AFF256C96B500AA8863 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		D55EF22225747F0A008817D1 /* ExposureEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureEvent.swift; sourceTree = "<group>"; };
 		D55EF22D25748381008817D1 /* EventBusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBusViewModel.swift; sourceTree = "<group>"; };
+		D55EF2F2257834BE008817D1 /* ExposedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposedViewController.swift; sourceTree = "<group>"; };
 		E06666F47D0C124021149760 /* Pods_ios_app_ios_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_app_ios_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8081E4FF162CBDEE86CB0E8 /* Pods-ios_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_appTests.debug.xcconfig"; path = "Target Support Files/Pods-ios_appTests/Pods-ios_appTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 			children = (
 				BBE35E362567AB1C0010E38F /* ViewController.swift */,
 				D5201AF8256C662500AA8863 /* SelfReportViewController.swift */,
+				D55EF2F2257834BE008817D1 /* ExposedViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				D55EF22325747F0A008817D1 /* ExposureEvent.swift in Sources */,
 				BBE35E332567AB1C0010E38F /* AppDelegate.swift in Sources */,
 				BB3834E2256A4C7800982F72 /* bleModel.swift in Sources */,
+				D55EF2F3257834BE008817D1 /* ExposedViewController.swift in Sources */,
 				BB3834E1256A4C7800982F72 /* CBUUIDExtensions.swift in Sources */,
 				BBE35E352567AB1C0010E38F /* SceneDelegate.swift in Sources */,
 			);
@@ -727,7 +731,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L52J7UVT74;
+				DEVELOPMENT_TEAM = 7ARN6CQ88G;
 				INFOPLIST_FILE = ios_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -749,7 +753,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L52J7UVT74;
+				DEVELOPMENT_TEAM = 7ARN6CQ88G;
 				INFOPLIST_FILE = ios_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -228,9 +228,6 @@ PODS:
   - Firebase/Firestore (6.34.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.19.0)
-  - Firebase/MLVision (6.34.0):
-    - Firebase/CoreOnly
-    - FirebaseMLVision (~> 0.21.0)
   - Firebase/MLVisionTextModel (6.34.0):
     - Firebase/CoreOnly
     - FirebaseMLVisionTextModel (~> 0.21.0)
@@ -403,7 +400,6 @@ DEPENDENCIES:
   - Firebase/Analytics (~> 6.2)
   - Firebase/Core
   - Firebase/Firestore
-  - Firebase/MLVision
   - Firebase/MLVisionTextModel
   - FirebaseFirestoreSwift
   - GoogleMLKit/TextRecognition
@@ -483,6 +479,6 @@ SPEC CHECKSUMS:
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
   SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
 
-PODFILE CHECKSUM: ff1739a5d6df7426f3398e7a406d55f11c0ad752
+PODFILE CHECKSUM: c520c9d89057ef650b64e63b252aeb17a379b6bb
 
 COCOAPODS: 1.10.0

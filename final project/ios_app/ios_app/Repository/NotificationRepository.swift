@@ -15,7 +15,6 @@ class notificationRepository: ObservableObject{
     
     func loadData(){ //Don't think we need to load Data, actually just send Notif when Pos test, and addNotification.
         //MARK:Here we can add a listener for a Positive result, that can change the UI.
-        
         db.collection("notifications").whereField("device_id", isEqualTo: phone_id).order(by: "createdTime").addSnapshotListener { (querySnapshot, error) in
             if let querySnapshot =  querySnapshot {
                 self.notifications = querySnapshot.documents.compactMap{ document in
@@ -29,14 +28,16 @@ class notificationRepository: ObservableObject{
         do{
             try db.collection("notifications").addDocument(from: notif).addSnapshotListener({ (querySnapshot, error) in
                 if let querySnapshot =  querySnapshot {
-                    //TODO: Change UI HERE in MAIN View Controller
+                    
                     // getting the queried snap shot of the document info
                     let data = querySnapshot.data()
-                    //                    let result = data!["test_result"]
-                    print("CALLED LISTENER for \(data)")
-                    // updating the UI....not sure if this is the correct way to do it
-                    //                    callEvent(result! as! Bool)
+                    let result = data!["test_result"]
                     
+                    // if it's a positive test result
+                    if (result as! Bool == true) {
+                        updateUI(result as! Bool)
+                        print("\n\nCALLED LISTENER for \(data)")
+                    }
                 }
             })
         }

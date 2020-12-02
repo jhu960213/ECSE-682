@@ -133,7 +133,7 @@ class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
         }
         if (notPos == 1) {
             self.myResults.text = "You are clean!"
-            notificationRepo.pos_test()
+//            notificationRepo.pos_test()
         }
     }
     
@@ -160,7 +160,7 @@ class SelfReportViewController: UIViewController, UIDocumentPickerDelegate {
         self.options!.languageHints = ["en", "hi", "fr", "zh-Hans","de"]
         self.textRecognizer = vision!.cloudTextRecognizer(options: self.options!)
         self.myResults.text = "Results Unknown!"
-        notificationRepo.pos_test()
+//        notificationRepo.pos_test()
     }
 }
 

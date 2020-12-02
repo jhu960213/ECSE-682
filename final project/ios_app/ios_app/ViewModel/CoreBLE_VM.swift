@@ -84,25 +84,26 @@ class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
     func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
         var count = 0
         for i in 0..<beacons.count{ //iterate through multiple beacons.
-            print("Found Location!")
-            print("Beacons count: \(beacons.count)")
+//            print("Found Location!")
+//            print("Beacons count: \(beacons.count)")
             print("My beacon: \(beacons[i].description)")
             beaconDistance = (beacons[i].proximity)
 //            print("My beacon distance is: \(beacons[i].accuracy)" )
             switch beaconDistance {
             case .immediate, .near, .far:
                 //MARK:Sent to Firebase
-                let add = Notification(id: phone_id, beacon_UUID: beaconConstraint.uuid.uuidString, major: Int(beaconConstraint.major!.magnitude), minor: Int(beaconConstraint.minor!.magnitude), test_result: false, distance: beacons[i].accuracy, proximity: beacons[i].proximity.rawValue)
+                let add = Notification(id: phone_id, beacon_UUID: beaconConstraint.uuid.uuidString, major: Int(beaconConstraint.major!.magnitude), minor: Int(beaconConstraint.minor!.magnitude), test_result: false, distance: Double((beacons[i].accuracy)), proximity: beacons[i].proximity.rawValue)
                 if (notifications_list.count < 1 && add.proximity != 3) {
                     notifications_list.append(add)
                     notificationRepo.addNotification(add)
                 
                     
                 }
-                if (beacons[i].proximity.rawValue != notifications_list.last?.proximity && count<1) {
+                if (beacons[i].proximity.rawValue != notifications_list.last?.proximity && count<1) { 
                     notifications_list.append(add)
                     notificationRepo.addNotification(add)
-                    print("Person left the beacon!")
+                    print("ADDED: \(add)")
+//                    print("Person left the beacon!")
                     count += 1
                 }
                 break

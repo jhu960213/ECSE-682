@@ -10,7 +10,6 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class notificationRepository: ObservableObject{
-    var numCalls = -1
     let db = Firestore.firestore()
     @Published var notifications = [Notification]()
     
@@ -30,15 +29,14 @@ class notificationRepository: ObservableObject{
         do{
             try db.collection("notifications").addDocument(from: notif).addSnapshotListener({ (querySnapshot, error) in
                 if let querySnapshot =  querySnapshot {
-                    self.numCalls += 1
-                    if (self.numCalls>0){
-                        //TODO: Change UI HERE in MAIN View Controller
-                        // getting the queried snap shot of the document info
-                        let data = querySnapshot.data()
-                        let result = data!["test_result"]
-                        // updating the UI....not sure if this is the correct way to do it
-                        callEvent(result! as! Bool)
-                    }
+                    //TODO: Change UI HERE in MAIN View Controller
+                    // getting the queried snap shot of the document info
+                    let data = querySnapshot.data()
+                    //                    let result = data!["test_result"]
+                    print("CALLED LISTENER for \(data)")
+                    // updating the UI....not sure if this is the correct way to do it
+                    //                    callEvent(result! as! Bool)
+                    
                 }
             })
         }
@@ -93,23 +91,36 @@ class notificationRepository: ObservableObject{
             }
         }
     }
+    //UPDATING OTHER DATA:
     func update_others(notifData: Notification){
+        print("INIT TIME IS: \(String(describing: notifData.createdTime))")
         if let time = notifData.createdTime{
-            let endtime = Timestamp.init(seconds: time.seconds+300, nanoseconds: 0)
-            db.collection("notifications").whereField("createdTime", isGreaterThan: notifData.createdTime!).whereField("createdTime", isLessThan: endtime).whereField("major", isEqualTo: notifData.major).whereField("minor", isEqualTo: notifData.minor).whereField("distance", isGreaterThanOrEqualTo: 1).getDocuments() { [self] (querySnapshot, err) in
+            let endTime = Timestamp.init(date: (time.dateValue()) + 500)
+            print("TIME IS: \(endTime)")
+            db.collection("notifications").whereField("id", isNotEqualTo: notifData.id).getDocuments { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
-                    for documenty in querySnapshot!.documents {
-                        db.collection("notifications").document(documenty.documentID).updateData([
-                            "test_result": true
-                        ]) { err in
-                            if let err = err {
-                                print("Error updating document: \(err)")
-                            } else {
-                                print("Document successfully updated")
-                            }
+                    for document in querySnapshot!.documents {
+                        print("STUFF: \(document.documentID) => \(document.data())")
+                        let result = Result {
+                            try document.data(as: Notification.self)
                         }
+                        switch result {
+                            case .success(let otherData):
+                                if let otherData = otherData {
+                                    if((abs((otherData.createdTime?.compare(time).rawValue)!))<300 && otherData.major == notifData.major && otherData.minor == notifData.minor){
+                                        self.db.collection("notifications").document(document.documentID).updateData(["test_result": true]) { (err) in
+                                            fatalError("Encountered Error \(String(describing: err?.localizedDescription))")
+                                        }
+                                    }
+                                }else {
+                                    print("Document does not exist")
+                                }
+                            case .failure(let error):
+                                print("Error decoding Notification: \(error)")
+                        }
+                        
                     }
                 }
             }
@@ -117,3 +128,4 @@ class notificationRepository: ObservableObject{
     }
     
 }
+

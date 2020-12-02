@@ -91,7 +91,6 @@ class notificationRepository: ObservableObject{
             }
         }
     }
-    //UPDATING OTHER DATA:
     func update_others(notifData: Notification){
         print("INIT TIME IS: \(String(describing: notifData.createdTime))")
         if let time = notifData.createdTime{
@@ -109,9 +108,9 @@ class notificationRepository: ObservableObject{
                         switch result {
                             case .success(let otherData):
                                 if let otherData = otherData {
-                                    if((abs((otherData.createdTime?.compare(time).rawValue)!))<300 && otherData.major == notifData.major && otherData.minor == notifData.minor){
+                                    if((abs((otherData.createdTime?.compare(time).rawValue)!))<300 && otherData.major == notifData.major && otherData.minor == notifData.minor && otherData.test_result == false){
                                         self.db.collection("notifications").document(document.documentID).updateData(["test_result": true]) { (err) in
-                                            fatalError("Encountered Error \(String(describing: err?.localizedDescription))")
+                                            print("Encountered Error \(String(describing: err?.localizedDescription))")
                                         }
                                     }
                                 }else {

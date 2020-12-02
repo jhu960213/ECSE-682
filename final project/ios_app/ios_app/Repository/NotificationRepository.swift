@@ -108,7 +108,7 @@ class notificationRepository: ObservableObject{
                         switch result {
                             case .success(let otherData):
                                 if let otherData = otherData {
-                                    if((abs((otherData.createdTime?.compare(time).rawValue)!))<300 && otherData.major == notifData.major && otherData.minor == notifData.minor && otherData.test_result == false){
+                                    if((abs((otherData.createdTime?.compare(time).rawValue)!))<300 && otherData.major == notifData.major && otherData.minor == notifData.minor && otherData.test_result == false && otherData.proximity<3){
                                         self.db.collection("notifications").document(document.documentID).updateData(["test_result": true]) { (err) in
                                             print("Encountered Error \(String(describing: err?.localizedDescription))")
                                         }

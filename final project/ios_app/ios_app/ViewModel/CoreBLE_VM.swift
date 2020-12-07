@@ -13,8 +13,10 @@ import UIKit
 
 // global beacon constraint variables
 let uuid = UUID(uuidString: CBUUID.iBeaconUUID!.uuidString)
-let beaconCons = CLBeaconIdentityConstraint(uuid: uuid!, major: 34987, minor:1025)
-let beaconRegion = CLBeaconRegion(uuid: uuid!, major: 34987, minor: 1025, identifier: "MyBeacon")
+//let beaconCons = CLBeaconIdentityCxonstraint(uuid: uuid!, major: 34987, minor:1025)
+let beaconCons = CLBeaconIdentityConstraint(uuid: uuid!)
+let beaconRegion = CLBeaconRegion(uuid: uuid!, identifier: "MyBeacon")
+//let beaconRegion = CLBeaconRegion(uuid: uuid!, major: 34987, minor: 1025, identifier: "MyBeacon")
 
 class phoneBeaconIF_VM: NSObject, CLLocationManagerDelegate, ObservableObject{
     

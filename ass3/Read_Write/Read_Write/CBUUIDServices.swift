@@ -11,6 +11,9 @@ extension CBUUID {
     
     //MARK:- Service Identifiers
     
+    /// OTA Service
+    static let otaService = CBUUID(string: "1D14D6EE-FD63-4FA1-BFA4-8F47B42119F0")
+    
     /// Generic Access Service (org.bluetooth.service.generic_access)
     static let GenericAccess = CBUUID(string: "0x1800")
     
@@ -42,6 +45,15 @@ extension CBUUID {
     // ---------------------------------------------------------------------------------------
     // MARK:- Characteristic Identifiers
     // ---------------------------------------------------------------------------------------
+    
+    
+    //
+    // OTA Service Characteristics
+    //
+    
+    /// OTA Data
+    static let otaData = CBUUID(string: "984227F3-34FC-4045-A5D0-2C581F81A153")
+    
     
     //
     // Generic Access Characteristics

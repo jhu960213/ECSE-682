@@ -14,6 +14,7 @@ import Foundation
 class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDelegate {
     
     // peripherals and central managers
+    var isConnected: Bool = false
     var centralManager: CBCentralManager?
     var peripheralAccelerometer: CBPeripheral?
     @IBOutlet weak var searchingMessage: UILabel!
@@ -54,14 +55,16 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     
     @IBAction func buttonClick(_ sender: UIButton) {
         // I'm writing
-        if sender.tag == 0 {
-            // the input text must be 5 characters or less
-            let input = self.writeText.text!
-            writeToBoard(input, otaDataCharacteristic!)
-            self.writeText.text = ""
-        // I'm reading
-        } else {
-            readFromBoard(otaDataCharacteristic!)
+        if isConnected{
+            if sender.tag == 0{
+                // the input text must be 5 characters or less
+                let input = self.writeText.text!
+                writeToBoard(input, otaDataCharacteristic!)
+                self.writeText.text = ""
+            // I'm reading
+            } else {
+                readFromBoard(otaDataCharacteristic!)
+            }
         }
     }
     
@@ -125,6 +128,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
             self.searchingMessage.text = "Connected to my board!"
         } // END DispatchQueue.main.async...
         // discover all services
+        isConnected = true
         print("Discovering the OTA Service!....");
         self.peripheralAccelerometer?.discoverServices([CBUUID.otaService])
         self.peripheralAccelerometer?.delegate = self
@@ -132,6 +136,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     
     // In the case the board is disconnected
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        isConnected = false
         print("Disconnected from my board!");
         DispatchQueue.main.async { () -> Void in
             self.searchingMessage.text = "Searching for my board...."

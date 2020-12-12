@@ -67,7 +67,7 @@
     <!--Silicon Labs OTA Control-->
     <characteristic const="false" id="ota_control" name="Silicon Labs OTA Control" sourceId="com.silabs.characteristic.ota_control" uuid="F7BF3564-FB6D-4E53-88A4-5E37E0326063">
       <informativeText>Abstract: Silicon Labs OTA Control. </informativeText>
-      <value length="20" type="utf-8" variable_length="false"/>
+      <value length="0" type="user" variable_length="false"/>
       <properties>
         <write authenticated="false" bonded="false" encrypted="false"/>
       </properties>

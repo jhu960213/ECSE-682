@@ -69,7 +69,7 @@ gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_gpio.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/radio/rail_lib/common/rail_features.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/radio/rail_lib/common/rail_types.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_rail_util_pa_config.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_rail_util_pa_config.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0/platform/radio/rail_lib/plugin/pa-conversions/efr32xg22/sl_rail_util_pa_curves.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0/platform/radio/rail_lib/plugin/pa-conversions/pa_curve_types_efr32.h \
@@ -215,7 +215,7 @@ gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/radio/rail_lib/common/rail_types.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_rail_util_pa_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_rail_util_pa_config.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.h:
 

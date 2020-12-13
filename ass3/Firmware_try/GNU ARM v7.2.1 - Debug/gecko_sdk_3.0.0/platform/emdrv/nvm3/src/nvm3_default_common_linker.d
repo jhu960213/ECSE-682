@@ -66,7 +66,7 @@ gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o: \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emdrv/nvm3/inc/nvm3_default.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emdrv/nvm3/inc/nvm3.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emdrv/nvm3/inc/nvm3_hal_flash.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/nvm3_default_config.h
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/nvm3_default_config.h
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/toolchain/inc/sl_gcc_preinclude.h:
 
@@ -200,4 +200,4 @@ gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o: \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emdrv/nvm3/inc/nvm3_hal_flash.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/nvm3_default_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/nvm3_default_config.h:

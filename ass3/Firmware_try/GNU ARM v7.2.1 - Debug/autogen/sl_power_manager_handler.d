@@ -64,11 +64,11 @@ autogen/sl_power_manager_handler.o: ../autogen/sl_power_manager_handler.c \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_assert.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/inc/sl_status.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/service/sleeptimer/inc/sl_sleeptimer.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_sleeptimer_config.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_sleeptimer_config.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/inc/sl_enum.h \
  ../autogen/sl_bluetooth.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_bluetooth_config.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_bluetooth_config.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/inc/sl_bt_stack_config.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/inc/sl_bt_ll_config.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/inc/sl_bt_api.h \
@@ -204,15 +204,15 @@ autogen/sl_power_manager_handler.o: ../autogen/sl_power_manager_handler.c \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/service/sleeptimer/inc/sl_sleeptimer.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_sleeptimer_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_sleeptimer_config.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/inc/sl_enum.h:
 
 ../autogen/sl_bluetooth.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_bluetooth_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_bluetooth_config.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/inc/sl_bt_stack_config.h:
 

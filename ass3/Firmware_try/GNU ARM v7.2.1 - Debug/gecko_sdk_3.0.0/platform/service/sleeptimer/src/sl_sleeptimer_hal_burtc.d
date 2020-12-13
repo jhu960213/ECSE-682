@@ -2,7 +2,7 @@ gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_burtc.o: \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_burtc.c \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/toolchain/inc/sl_gcc_preinclude.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/service/sleeptimer/inc/sl_sleeptimer.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_sleeptimer_config.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_sleeptimer_config.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/em_device.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/efr32bg22c224f512im40.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/CMSIS/Include/core_cm33.h \
@@ -74,7 +74,7 @@ gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_burtc.o: \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/service/sleeptimer/inc/sl_sleeptimer.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_sleeptimer_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_sleeptimer_config.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/em_device.h:
 

@@ -27171,250 +27171,246 @@ LOAD /Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/g
  .bss.bg_gattdb_data_attribute_field_17_data
                 0x0000000020000b44        0x8 ./autogen/gatt_db.o
                 0x0000000020000b44                bg_gattdb_data_attribute_field_17_data
- .bss.bg_gattdb_data_attribute_field_24_data
-                0x0000000020000b4c       0x14 ./autogen/gatt_db.o
-                0x0000000020000b4c                bg_gattdb_data_attribute_field_24_data
  .bss.bg_gattdb_data_attribute_field_26_data
-                0x0000000020000b60       0x3c ./autogen/gatt_db.o
-                0x0000000020000b60                bg_gattdb_data_attribute_field_26_data
+                0x0000000020000b4c       0x3e ./autogen/gatt_db.o
+                0x0000000020000b4c                bg_gattdb_data_attribute_field_26_data
  .bss.bg_gattdb_data_attribute_field_2_data
-                0x0000000020000b9c        0x4 ./autogen/gatt_db.o
-                0x0000000020000b9c                bg_gattdb_data_attribute_field_2_data
+                0x0000000020000b8a        0x4 ./autogen/gatt_db.o
+                0x0000000020000b8a                bg_gattdb_data_attribute_field_2_data
  .bss.bg_gattdb_data_attribute_field_5_data
-                0x0000000020000ba0       0x10 ./autogen/gatt_db.o
-                0x0000000020000ba0                bg_gattdb_data_attribute_field_5_data
+                0x0000000020000b8e       0x10 ./autogen/gatt_db.o
+                0x0000000020000b8e                bg_gattdb_data_attribute_field_5_data
  .bss.bg_gattdb_data_attribute_field_7_data
-                0x0000000020000bb0        0x1 ./autogen/gatt_db.o
-                0x0000000020000bb0                bg_gattdb_data_attribute_field_7_data
+                0x0000000020000b9e        0x1 ./autogen/gatt_db.o
+                0x0000000020000b9e                bg_gattdb_data_attribute_field_7_data
  .bss.boot_to_dfu
-                0x0000000020000bb1        0x1 ./gecko_sdk_3.0.0/app/bluetooth/common/ota_dfu/sl_ota_dfu.o
- *fill*         0x0000000020000bb2        0x2 
+                0x0000000020000b9f        0x1 ./gecko_sdk_3.0.0/app/bluetooth/common/ota_dfu/sl_ota_dfu.o
  .bss.defaultCache
-                0x0000000020000bb4      0x640 ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
+                0x0000000020000ba0      0x640 ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
  .bss.dpllRefClk.11846
-                0x00000000200011f4        0x4 ./gecko_sdk_3.0.0/platform/emlib/src/em_emu.o
+                0x00000000200011e0        0x4 ./gecko_sdk_3.0.0/platform/emlib/src/em_emu.o
  .bss.vScaleEM01Config
-                0x00000000200011f8        0x1 ./gecko_sdk_3.0.0/platform/emlib/src/em_emu.o
- *fill*         0x00000000200011f9        0x3 
+                0x00000000200011e4        0x1 ./gecko_sdk_3.0.0/platform/emlib/src/em_emu.o
+ *fill*         0x00000000200011e5        0x3 
  .bss.powerCurvesState
-                0x00000000200011fc       0x18 ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+                0x00000000200011e8       0x18 ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
  .bss.region_nbr
-                0x0000000020001214        0x4 ./gecko_sdk_3.0.0/platform/service/mpu/src/sl_mpu.o
+                0x0000000020001200        0x4 ./gecko_sdk_3.0.0/platform/service/mpu/src/sl_mpu.o
  .bss.clock_wakeup_timer_handle
-                0x0000000020001218       0x18 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x0000000020001204       0x18 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
  .bss.current_em
-                0x0000000020001230        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
- *fill*         0x0000000020001231        0x3 
+                0x000000002000121c        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+ *fill*         0x000000002000121d        0x3 
  .bss.high_frequency_min_offtime_tick
-                0x0000000020001234        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
-                0x0000000020001234                high_frequency_min_offtime_tick
+                0x0000000020001220        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x0000000020001220                high_frequency_min_offtime_tick
  .bss.is_hf_x_oscillator_not_preserved
-                0x0000000020001238        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x0000000020001224        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
  .bss.is_initialized
-                0x0000000020001239        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x0000000020001225        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
  .bss.is_states_saved
-                0x000000002000123a        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
- *fill*         0x000000002000123b        0x1 
+                0x0000000020001226        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+ *fill*         0x0000000020001227        0x1 
  .bss.power_manager_em_transition_event_list
-                0x000000002000123c        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x0000000020001228        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
  .bss.requirement_em_table
-                0x0000000020001240        0x2 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x000000002000122c        0x2 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
  .bss.requirement_high_accuracy_hf_clock_counter
-                0x0000000020001242        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
-                0x0000000020001242                requirement_high_accuracy_hf_clock_counter
+                0x000000002000122e        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x000000002000122e                requirement_high_accuracy_hf_clock_counter
  .bss.requirement_on_em1_added
-                0x0000000020001243        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x000000002000122f        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
  .bss.sleeptimer_frequency
-                0x0000000020001244        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x0000000020001230        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
  .bss.wakeup_time_config_overhead_tick
-                0x0000000020001248        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
-                0x0000000020001248                wakeup_time_config_overhead_tick
+                0x0000000020001234        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+                0x0000000020001234                wakeup_time_config_overhead_tick
  .bss.hf_x_oscillator_wakeup_time_tc_inital
-                0x000000002000124c        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x0000000020001238        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.hfxo_wakeup_time_sum_average
-                0x0000000020001250        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x000000002000123c        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.hfxo_wakeup_time_table
-                0x0000000020001254       0x28 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x0000000020001240       0x28 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.hfxo_wakeup_time_table_index
-                0x000000002000127c        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
- *fill*         0x000000002000127d        0x3 
+                0x0000000020001268        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+ *fill*         0x0000000020001269        0x3 
  .bss.hfxo_wakeup_time_tick
-                0x0000000020001280        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x000000002000126c        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.is_dpll_used
-                0x0000000020001284        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x0000000020001270        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.is_entering_deepsleep
-                0x0000000020001285        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x0000000020001271        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.is_hf_x_oscillator_already_started
-                0x0000000020001286        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x0000000020001272        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.is_hf_x_oscillator_used
-                0x0000000020001287        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x0000000020001273        0x1 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.process_wakeup_overhead_tick
-                0x0000000020001288        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+                0x0000000020001274        0x4 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
  .bss.is_sleeptimer_initialized
-                0x000000002000128c        0x1 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
- *fill*         0x000000002000128d        0x3 
+                0x0000000020001278        0x1 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+ *fill*         0x0000000020001279        0x3 
  .bss.last_delta_update_count
-                0x0000000020001290        0x4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x000000002000127c        0x4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
  .bss.max_millisecond_conversion
-                0x0000000020001294        0x4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000000020001280        0x4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
  .bss.next_timer_to_expire_is_power_manager
-                0x0000000020001298        0x1 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
- *fill*         0x0000000020001299        0x1 
+                0x0000000020001284        0x1 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+ *fill*         0x0000000020001285        0x1 
  .bss.overflow_counter
-                0x000000002000129a        0x2 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000000020001286        0x2 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
  .bss.sleep_on_isr_exit
-                0x000000002000129c        0x1 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
- *fill*         0x000000002000129d        0x3 
+                0x0000000020001288        0x1 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+ *fill*         0x0000000020001289        0x3 
  .bss.timer_frequency
-                0x00000000200012a0        0x4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x000000002000128c        0x4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
  .bss.timer_head
-                0x00000000200012a4        0x4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+                0x0000000020001290        0x4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
  .bss.rng_needs_startup_chk
-                0x00000000200012a8        0x1 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_trng.o
+                0x0000000020001294        0x1 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_trng.o
  .bss.rng_startup_failed
-                0x00000000200012a9        0x1 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_trng.o
+                0x0000000020001295        0x1 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_trng.o
  .bss.trng_initialized
-                0x00000000200012aa        0x1 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o
- *fill*         0x00000000200012ab        0x1 
+                0x0000000020001296        0x1 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o
+ *fill*         0x0000000020001297        0x1 
  .bss.cfgEraseCnt
-                0x00000000200012ac        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emdrv/nvm3/lib/libnvm3_CM33_gcc.a(nvm3.o)
+                0x0000000020001298        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emdrv/nvm3/lib/libnvm3_CM33_gcc.a(nvm3.o)
  .bss.bt_update_requested
-                0x00000000200012b0        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
- *fill*         0x00000000200012b1        0x3 
- .bss.counter   0x00000000200012b4        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
+                0x000000002000129c        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
+ *fill*         0x000000002000129d        0x3 
+ .bss.counter   0x00000000200012a0        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
  .bss.init_heap
-                0x00000000200012b8        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
+                0x00000000200012a4        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
  .bss.init_heap_end
-                0x00000000200012bc        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
+                0x00000000200012a8        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
  .bss.os_support
-                0x00000000200012c0        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
- *fill*         0x00000000200012c1        0x3 
+                0x00000000200012ac        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
+ *fill*         0x00000000200012ad        0x3 
  .bss.sleep_timer_handle
-                0x00000000200012c4       0x18 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
+                0x00000000200012b0       0x18 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
  .bss.stack_update_callback
-                0x00000000200012dc        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
-                0x00000000200012dc                stack_update_callback
+                0x00000000200012c8        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bglib.c.obj)
+                0x00000000200012c8                stack_update_callback
  .bss.ll_to_hci_buf
-                0x00000000200012e0        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_to_hci.c.obj)
-                0x00000000200012e0                ll_to_hci_buf
+                0x00000000200012cc        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_to_hci.c.obj)
+                0x00000000200012cc                ll_to_hci_buf
  .bss.ll_config
-                0x00000000200012e4       0x1c /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_init.c.obj)
+                0x00000000200012d0       0x1c /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_init.c.obj)
  .bss.ll_channelmapAllowed
-                0x0000000020001300        0x5 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_channelmap.c.obj)
- *fill*         0x0000000020001305        0x3 
+                0x00000000200012ec        0x5 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_channelmap.c.obj)
+ *fill*         0x00000000200012f1        0x3 
  .bss.ll_encLongBuffer
-                0x0000000020001308      0x10d /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_conn_enc.c.obj)
- *fill*         0x0000000020001415        0x3 
+                0x00000000200012f4      0x10d /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_conn_enc.c.obj)
+ *fill*         0x0000000020001401        0x3 
  .bss.llcp_features
-                0x0000000020001418        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_llcp.c.obj)
-                0x0000000020001418                llcp_features
+                0x0000000020001404        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_llcp.c.obj)
+                0x0000000020001404                llcp_features
  .bss.llcp_common
-                0x000000002000141c        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_llcp_common.c.obj)
- .bss.llcp_enc  0x0000000020001424        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_llcp_enc.c.obj)
- .bss.llcp_len  0x000000002000142c        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_llcp_len.c.obj)
+                0x0000000020001408        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_llcp_common.c.obj)
+ .bss.llcp_enc  0x0000000020001410        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_llcp_enc.c.obj)
+ .bss.llcp_len  0x0000000020001418        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_llcp_len.c.obj)
  .bss.assert_callback
-                0x0000000020001434        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
+                0x0000000020001420        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
  .bss.ll_radioTxBuffer
-                0x0000000020001438      0x200 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
+                0x0000000020001424      0x200 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
  .bss.railBleState
-                0x0000000020001638        0xc /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
+                0x0000000020001624        0xc /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
  .bss.railConfig
-                0x0000000020001644      0x1ac /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
+                0x0000000020001630      0x1ac /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
  .bss.railTimer
-                0x00000000200017f0       0x18 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
+                0x00000000200017dc       0x18 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio.c.obj)
  .bss.ll_radio_pa
-                0x0000000020001808        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio_pa.c.obj)
+                0x00000000200017f4        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio_pa.c.obj)
  .bss.railScheduler
-                0x0000000020001810       0x68 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio_multiprotocol.c.obj)
+                0x00000000200017fc       0x68 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio_multiprotocol.c.obj)
  .bss.schedulerInfo.14922
-                0x0000000020001878        0xc /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio_multiprotocol.c.obj)
+                0x0000000020001864        0xc /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_radio_multiprotocol.c.obj)
  .bss.ll_aesRand
-                0x0000000020001884       0x21 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_random.c.obj)
- *fill*         0x00000000200018a5        0x3 
- .bss.bg_event  0x00000000200018a8        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_event.c.obj)
- .bss.i.13063   0x00000000200018b0        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_event.c.obj)
- *fill*         0x00000000200018b1        0x3 
+                0x0000000020001870       0x21 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ll_random.c.obj)
+ *fill*         0x0000000020001891        0x3 
+ .bss.bg_event  0x0000000020001894        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_event.c.obj)
+ .bss.i.13063   0x000000002000189c        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_event.c.obj)
+ *fill*         0x000000002000189d        0x3 
  .bss.bg_message_current_run
-                0x00000000200018b4        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
+                0x00000000200018a0        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
  .bss.bg_message_queue_head
-                0x00000000200018b8        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
+                0x00000000200018a4        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
  .bss.bg_message_ticks
-                0x00000000200018bc        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
+                0x00000000200018a8        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
  .bss.get_timer_counter
-                0x00000000200018c0        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
+                0x00000000200018ac        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
  .bss.ms_to_tick
-                0x00000000200018c4        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
- .bss.bg_pool   0x00000000200018c8        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_pool.c.obj)
+                0x00000000200018b0        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_message.c.obj)
+ .bss.bg_pool   0x00000000200018b4        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_pool.c.obj)
  .bss.bgbuf_callbacks
-                0x00000000200018d0        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
+                0x00000000200018bc        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
  .bss.bgbuf_out_of_memory
-                0x00000000200018d4        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
- *fill*         0x00000000200018d5        0x1 
+                0x00000000200018c0        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
+ *fill*         0x00000000200018c1        0x1 
  .bss.buf_allocations
-                0x00000000200018d6        0xc /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
+                0x00000000200018c2        0xc /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
  .bss.num_registered_bgbuf_queues
-                0x00000000200018e2        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
- *fill*         0x00000000200018e3        0x1 
+                0x00000000200018ce        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
+ *fill*         0x00000000200018cf        0x1 
  .bss.registered_bgbuf_queues
-                0x00000000200018e4       0x10 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
+                0x00000000200018d0       0x10 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgbuf.c.obj)
  .bss.ctr_drbg_ctx
-                0x00000000200018f4        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_random_aes.c.obj)
+                0x00000000200018e0        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_random_aes.c.obj)
  .bss.entropy_ctx
-                0x00000000200018f8        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_random_aes.c.obj)
+                0x00000000200018e4        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_random_aes.c.obj)
  .bss.initialized
-                0x00000000200018fc        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_random_aes.c.obj)
+                0x00000000200018e8        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bg_random_aes.c.obj)
  .bss.bonding_priorities
-                0x00000000200018fd       0x20 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bondingdb.c.obj)
- *fill*         0x000000002000191d        0x3 
+                0x00000000200018e9       0x20 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bondingdb.c.obj)
+ *fill*         0x0000000020001909        0x3 
  .bss.bondingdb
-                0x0000000020001920        0xc /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bondingdb.c.obj)
+                0x000000002000190c        0xc /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bondingdb.c.obj)
  .bss.num_frequent_bondings
-                0x000000002000192c        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bondingdb.c.obj)
+                0x0000000020001918        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bondingdb.c.obj)
  .bss.data.17218
-                0x000000002000192d        0x2 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(gatt_db_minimal.c.obj)
- *fill*         0x000000002000192f        0x1 
+                0x0000000020001919        0x2 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(gatt_db_minimal.c.obj)
+ *fill*         0x000000002000191b        0x1 
  .bss.gattdb_config_flags
-                0x0000000020001930        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(gatt_db_minimal.c.obj)
+                0x000000002000191c        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(gatt_db_minimal.c.obj)
  .bss.gattdb_enabled_caps
-                0x0000000020001934        0x2 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(gatt_db_minimal.c.obj)
- *fill*         0x0000000020001936        0x2 
+                0x0000000020001920        0x2 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(gatt_db_minimal.c.obj)
+ *fill*         0x0000000020001922        0x2 
  .bss.hci_acl_packet_handler
-                0x0000000020001938        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(hci.c.obj)
- .bss.sm        0x000000002000193c        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(sm.c.obj)
+                0x0000000020001924        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(hci.c.obj)
+ .bss.sm        0x0000000020001928        0x8 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(sm.c.obj)
  .bss.smp_ltk_request_handle_func
-                0x0000000020001944        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(smp.c.obj)
+                0x0000000020001930        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(smp.c.obj)
  .bss.smp_packet_handle_func
-                0x0000000020001948        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(smp.c.obj)
+                0x0000000020001934        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(smp.c.obj)
  .bss.smp_sender
-                0x000000002000194c        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(smp.c.obj)
+                0x0000000020001938        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(smp.c.obj)
  .bss.smp_state_handle_func
-                0x0000000020001950        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(smp.c.obj)
+                0x000000002000193c        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(smp.c.obj)
  .bss.bg_features
-                0x0000000020001954        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt.c.obj)
+                0x0000000020001940        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt.c.obj)
  .bss.system_max_tx_power
-                0x0000000020001958        0x2 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt.c.obj)
- *fill*         0x000000002000195a        0x2 
+                0x0000000020001944        0x2 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt.c.obj)
+ *fill*         0x0000000020001946        0x2 
  .bss.ubt_callback
-                0x000000002000195c        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt.c.obj)
-                0x000000002000195c                ubt_callback
- .bss.queue     0x0000000020001960        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt_message.c.obj)
+                0x0000000020001948        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt.c.obj)
+                0x0000000020001948                ubt_callback
+ .bss.queue     0x000000002000194c        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt_message.c.obj)
  .bss.ubt_message_event_sender
-                0x0000000020001964        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt_message.c.obj)
- *fill*         0x0000000020001965        0x3 
+                0x0000000020001950        0x1 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt_message.c.obj)
+ *fill*         0x0000000020001951        0x3 
  .bss.ubt_message_handlers
-                0x0000000020001968       0x18 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt_message.c.obj)
+                0x0000000020001954       0x18 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(ubt_message.c.obj)
  .bss.gecko_evt_msgs
-                0x0000000020001980        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgapi.c.obj)
-                0x0000000020001980                gecko_evt_msgs
+                0x000000002000196c        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgapi.c.obj)
+                0x000000002000196c                gecko_evt_msgs
  .bss.registered_bgapi_libs
-                0x0000000020001984        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgapi.c.obj)
+                0x0000000020001970        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgapi.c.obj)
  .bss.sl_bt_cmd_msg_buf
-                0x0000000020001988        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgapi.c.obj)
-                0x0000000020001988                sl_bt_cmd_msg_buf
+                0x0000000020001974        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgapi.c.obj)
+                0x0000000020001974                sl_bt_cmd_msg_buf
  .bss.sl_bt_rsp_msg_buf
-                0x000000002000198c        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgapi.c.obj)
-                0x000000002000198c                sl_bt_rsp_msg_buf
- *fill*         0x0000000020001990       0x70 
+                0x0000000020001978        0x4 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(bgapi.c.obj)
+                0x0000000020001978                sl_bt_rsp_msg_buf
+ *fill*         0x000000002000197c       0x84 
  .bss.gecko_vector_table
                 0x0000000020001a00      0x140 /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//protocol/bluetooth/lib/EFR32BG22/GCC/libbluetooth.a(vectors_efr32xg2x.c.obj)
                 0x0000000020001a00                gecko_vector_table
@@ -28397,83 +28393,83 @@ OUTPUT(Firmware_try.axf elf32-littlearm)
  .comment       0x000000000000007e       0x7f /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg22_gcc_release.a(rail_zwave_rf_hal.o)
  .comment       0x000000000000007e       0x7f /Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/radio/rail_lib/autogen/librail_release/librail_efr32xg22_gcc_release.a(rfhal_thermistor.o)
 
-.debug_info     0x0000000000000000    0x67a7e
+.debug_info     0x0000000000000000    0x67a4c
  .debug_info    0x0000000000000000     0x2229 ./app.o
  .debug_info    0x0000000000002229      0x20b ./app_properties.o
  .debug_info    0x0000000000002434      0xaa9 ./main.o
- .debug_info    0x0000000000002edd      0x717 ./autogen/gatt_db.o
- .debug_info    0x00000000000035f4     0x23da ./autogen/sl_bluetooth.o
- .debug_info    0x00000000000059ce      0x3df ./autogen/sl_device_init_clocks.o
- .debug_info    0x0000000000005dad     0x2321 ./autogen/sl_event_handler.o
- .debug_info    0x00000000000080ce      0xb80 ./autogen/sl_power_manager_handler.o
- .debug_info    0x0000000000008c4e     0x20f5 ./gecko_sdk_3.0.0/app/bluetooth/common/ota_dfu/sl_ota_dfu.o
- .debug_info    0x000000000000ad43      0x275 ./gecko_sdk_3.0.0/platform/Device/SiliconLabs/EFR32BG22/Source/GCC/startup_efr32bg22.o
- .debug_info    0x000000000000afb8     0x127a ./gecko_sdk_3.0.0/platform/Device/SiliconLabs/EFR32BG22/Source/system_efr32bg22.o
- .debug_info    0x000000000000c232     0x13c3 ./gecko_sdk_3.0.0/platform/bootloader/api/btl_interface.o
- .debug_info    0x000000000000d5f5      0xc60 ./gecko_sdk_3.0.0/platform/common/src/sl_slist.o
- .debug_info    0x000000000000e255      0x1e6 ./gecko_sdk_3.0.0/platform/common/toolchain/src/sl_memory.o
- .debug_info    0x000000000000e43b     0x1117 ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
- .debug_info    0x000000000000f552     0x18d3 ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_hal_flash.o
- .debug_info    0x0000000000010e25     0x1147 ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_lock.o
- .debug_info    0x0000000000011f6c     0x5a8c ./gecko_sdk_3.0.0/platform/emlib/src/em_cmu.o
- .debug_info    0x00000000000179f8     0x1019 ./gecko_sdk_3.0.0/platform/emlib/src/em_core.o
- .debug_info    0x0000000000018a11     0x32b4 ./gecko_sdk_3.0.0/platform/emlib/src/em_emu.o
- .debug_info    0x000000000001bcc5     0x1f55 ./gecko_sdk_3.0.0/platform/emlib/src/em_gpio.o
- .debug_info    0x000000000001dc1a     0x27ed ./gecko_sdk_3.0.0/platform/emlib/src/em_msc.o
- .debug_info    0x0000000000020407     0x1d96 ./gecko_sdk_3.0.0/platform/emlib/src/em_rtcc.o
- .debug_info    0x000000000002219d     0x1894 ./gecko_sdk_3.0.0/platform/emlib/src/em_system.o
- .debug_info    0x0000000000023a31     0x139e ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
- .debug_info    0x0000000000024dcf      0x38c ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
- .debug_info    0x000000000002515b      0xbb4 ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
- .debug_info    0x0000000000025d0f      0x32c ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_dcdc_s2.o
- .debug_info    0x000000000002603b      0x9ba ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_emu_s2.o
- .debug_info    0x00000000000269f5      0x493 ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_hfxo_s2.o
- .debug_info    0x0000000000026e88      0x18d ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_lfrco.o
- .debug_info    0x0000000000027015     0x14e3 ./gecko_sdk_3.0.0/platform/service/mpu/src/sl_mpu.o
- .debug_info    0x00000000000284f8     0x1635 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
- .debug_info    0x0000000000029b2d     0x2590 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
- .debug_info    0x000000000002c0bd     0x1bd4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
- .debug_info    0x000000000002dc91     0x12df ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
- .debug_info    0x000000000002ef70       0xb8 ./gecko_sdk_3.0.0/platform/service/system/src/sl_system_init.o
- .debug_info    0x000000000002f028       0xa2 ./gecko_sdk_3.0.0/platform/service/system/src/sl_system_process_action.o
- .debug_info    0x000000000002f0ca      0x19c ./gecko_sdk_3.0.0/protocol/bluetooth/src/sl_bt_mbedtls_context.o
- .debug_info    0x000000000002f266      0xc72 ./gecko_sdk_3.0.0/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
- .debug_info    0x000000000002fed8      0xded ./gecko_sdk_3.0.0/util/third_party/crypto/sl_component/se_manager/src/sl_se_manager.o
- .debug_info    0x0000000000030cc5     0x431c ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/bignum.o
- .debug_info    0x0000000000034fe1     0x1bea ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/cipher.o
- .debug_info    0x0000000000036bcb     0x1722 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/cipher_wrap.o
- .debug_info    0x00000000000382ed     0x18c5 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ctr_drbg.o
- .debug_info    0x0000000000039bb2     0x56aa ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ecp.o
- .debug_info    0x000000000003f25c     0x19fc ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ecp_curves.o
- .debug_info    0x0000000000040c58     0x12ca ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/entropy.o
- .debug_info    0x0000000000041f22      0xacc ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/platform_util.o
- .debug_info    0x00000000000429ee      0xc80 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/sha256.o
- .debug_info    0x000000000004366e     0x189f ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/ba414ep_config.o
- .debug_info    0x0000000000044f0d     0x11c7 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/ba431_config.o
- .debug_info    0x00000000000460d4     0x119d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/cryptodma_internal.o
- .debug_info    0x0000000000047271      0xb81 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/cryptolib_types.o
- .debug_info    0x0000000000047df2     0x3e22 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_aes.o
- .debug_info    0x000000000004bc14     0x3e3d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_blk_cipher.o
- .debug_info    0x000000000004fa51      0xe70 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_dh_alg.o
- .debug_info    0x00000000000508c1     0x12b9 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_ecc_curves.o
- .debug_info    0x0000000000051b7a     0x1128 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_ecc_keygen_alg.o
- .debug_info    0x0000000000052ca2     0x199c ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_hash.o
- .debug_info    0x000000000005463e      0xefc ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_math.o
- .debug_info    0x000000000005553a      0xf7a ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_memcpy.o
- .debug_info    0x00000000000564b4      0xd84 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_rng.o
- .debug_info    0x0000000000057238     0x1778 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_trng.o
- .debug_info    0x00000000000589b0     0x1528 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_aes.o
- .debug_info    0x0000000000059ed8     0x1118 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ccm.o
- .debug_info    0x000000000005aff0     0x1b12 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_cmac.o
- .debug_info    0x000000000005cb02     0x1d1e ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ecp.o
- .debug_info    0x000000000005e820     0x178f ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o
- .debug_info    0x000000000005ffaf      0xc9a ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_sha.o
- .debug_info    0x0000000000060c49      0xc42 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_trng.o
- .debug_info    0x000000000006188b     0x1c01 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes.o
- .debug_info    0x000000000006348c     0x1093 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_aes.o
- .debug_info    0x000000000006451f     0x1338 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_ble.o
- .debug_info    0x0000000000065857     0x17bd ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/shax.o
- .debug_info    0x0000000000067014      0xa6a ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/sl_mbedtls.o
+ .debug_info    0x0000000000002edd      0x6e5 ./autogen/gatt_db.o
+ .debug_info    0x00000000000035c2     0x23da ./autogen/sl_bluetooth.o
+ .debug_info    0x000000000000599c      0x3df ./autogen/sl_device_init_clocks.o
+ .debug_info    0x0000000000005d7b     0x2321 ./autogen/sl_event_handler.o
+ .debug_info    0x000000000000809c      0xb80 ./autogen/sl_power_manager_handler.o
+ .debug_info    0x0000000000008c1c     0x20f5 ./gecko_sdk_3.0.0/app/bluetooth/common/ota_dfu/sl_ota_dfu.o
+ .debug_info    0x000000000000ad11      0x275 ./gecko_sdk_3.0.0/platform/Device/SiliconLabs/EFR32BG22/Source/GCC/startup_efr32bg22.o
+ .debug_info    0x000000000000af86     0x127a ./gecko_sdk_3.0.0/platform/Device/SiliconLabs/EFR32BG22/Source/system_efr32bg22.o
+ .debug_info    0x000000000000c200     0x13c3 ./gecko_sdk_3.0.0/platform/bootloader/api/btl_interface.o
+ .debug_info    0x000000000000d5c3      0xc60 ./gecko_sdk_3.0.0/platform/common/src/sl_slist.o
+ .debug_info    0x000000000000e223      0x1e6 ./gecko_sdk_3.0.0/platform/common/toolchain/src/sl_memory.o
+ .debug_info    0x000000000000e409     0x1117 ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
+ .debug_info    0x000000000000f520     0x18d3 ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_hal_flash.o
+ .debug_info    0x0000000000010df3     0x1147 ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_lock.o
+ .debug_info    0x0000000000011f3a     0x5a8c ./gecko_sdk_3.0.0/platform/emlib/src/em_cmu.o
+ .debug_info    0x00000000000179c6     0x1019 ./gecko_sdk_3.0.0/platform/emlib/src/em_core.o
+ .debug_info    0x00000000000189df     0x32b4 ./gecko_sdk_3.0.0/platform/emlib/src/em_emu.o
+ .debug_info    0x000000000001bc93     0x1f55 ./gecko_sdk_3.0.0/platform/emlib/src/em_gpio.o
+ .debug_info    0x000000000001dbe8     0x27ed ./gecko_sdk_3.0.0/platform/emlib/src/em_msc.o
+ .debug_info    0x00000000000203d5     0x1d96 ./gecko_sdk_3.0.0/platform/emlib/src/em_rtcc.o
+ .debug_info    0x000000000002216b     0x1894 ./gecko_sdk_3.0.0/platform/emlib/src/em_system.o
+ .debug_info    0x00000000000239ff     0x139e ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+ .debug_info    0x0000000000024d9d      0x38c ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+ .debug_info    0x0000000000025129      0xbb4 ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
+ .debug_info    0x0000000000025cdd      0x32c ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_dcdc_s2.o
+ .debug_info    0x0000000000026009      0x9ba ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_emu_s2.o
+ .debug_info    0x00000000000269c3      0x493 ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_hfxo_s2.o
+ .debug_info    0x0000000000026e56      0x18d ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_lfrco.o
+ .debug_info    0x0000000000026fe3     0x14e3 ./gecko_sdk_3.0.0/platform/service/mpu/src/sl_mpu.o
+ .debug_info    0x00000000000284c6     0x1635 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+ .debug_info    0x0000000000029afb     0x2590 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+ .debug_info    0x000000000002c08b     0x1bd4 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+ .debug_info    0x000000000002dc5f     0x12df ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+ .debug_info    0x000000000002ef3e       0xb8 ./gecko_sdk_3.0.0/platform/service/system/src/sl_system_init.o
+ .debug_info    0x000000000002eff6       0xa2 ./gecko_sdk_3.0.0/platform/service/system/src/sl_system_process_action.o
+ .debug_info    0x000000000002f098      0x19c ./gecko_sdk_3.0.0/protocol/bluetooth/src/sl_bt_mbedtls_context.o
+ .debug_info    0x000000000002f234      0xc72 ./gecko_sdk_3.0.0/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
+ .debug_info    0x000000000002fea6      0xded ./gecko_sdk_3.0.0/util/third_party/crypto/sl_component/se_manager/src/sl_se_manager.o
+ .debug_info    0x0000000000030c93     0x431c ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/bignum.o
+ .debug_info    0x0000000000034faf     0x1bea ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/cipher.o
+ .debug_info    0x0000000000036b99     0x1722 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/cipher_wrap.o
+ .debug_info    0x00000000000382bb     0x18c5 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ctr_drbg.o
+ .debug_info    0x0000000000039b80     0x56aa ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ecp.o
+ .debug_info    0x000000000003f22a     0x19fc ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ecp_curves.o
+ .debug_info    0x0000000000040c26     0x12ca ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/entropy.o
+ .debug_info    0x0000000000041ef0      0xacc ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/platform_util.o
+ .debug_info    0x00000000000429bc      0xc80 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/sha256.o
+ .debug_info    0x000000000004363c     0x189f ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/ba414ep_config.o
+ .debug_info    0x0000000000044edb     0x11c7 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/ba431_config.o
+ .debug_info    0x00000000000460a2     0x119d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/cryptodma_internal.o
+ .debug_info    0x000000000004723f      0xb81 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/cryptolib_types.o
+ .debug_info    0x0000000000047dc0     0x3e22 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_aes.o
+ .debug_info    0x000000000004bbe2     0x3e3d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_blk_cipher.o
+ .debug_info    0x000000000004fa1f      0xe70 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_dh_alg.o
+ .debug_info    0x000000000005088f     0x12b9 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_ecc_curves.o
+ .debug_info    0x0000000000051b48     0x1128 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_ecc_keygen_alg.o
+ .debug_info    0x0000000000052c70     0x199c ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_hash.o
+ .debug_info    0x000000000005460c      0xefc ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_math.o
+ .debug_info    0x0000000000055508      0xf7a ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_memcpy.o
+ .debug_info    0x0000000000056482      0xd84 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_rng.o
+ .debug_info    0x0000000000057206     0x1778 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_trng.o
+ .debug_info    0x000000000005897e     0x1528 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_aes.o
+ .debug_info    0x0000000000059ea6     0x1118 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ccm.o
+ .debug_info    0x000000000005afbe     0x1b12 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_cmac.o
+ .debug_info    0x000000000005cad0     0x1d1e ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ecp.o
+ .debug_info    0x000000000005e7ee     0x178f ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o
+ .debug_info    0x000000000005ff7d      0xc9a ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_sha.o
+ .debug_info    0x0000000000060c17      0xc42 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_trng.o
+ .debug_info    0x0000000000061859     0x1c01 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes.o
+ .debug_info    0x000000000006345a     0x1093 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_aes.o
+ .debug_info    0x00000000000644ed     0x1338 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_ble.o
+ .debug_info    0x0000000000065825     0x17bd ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/shax.o
+ .debug_info    0x0000000000066fe2      0xa6a ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/sl_mbedtls.o
 
 .debug_abbrev   0x0000000000000000     0xd215
  .debug_abbrev  0x0000000000000000      0x275 ./app.o
@@ -29219,158 +29215,158 @@ OUTPUT(Firmware_try.axf elf32-littlearm)
  .debug_line    0x000000000003d4b1      0xffc ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/shax.o
  .debug_line    0x000000000003e4ad     0x1002 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/sl_mbedtls.o
 
-.debug_str      0x0000000000000000   0x1ad3ba
+.debug_str      0x0000000000000000   0x1ad393
  .debug_str     0x0000000000000000   0x182dc4 ./app.o
                                      0x183496 (size before relaxing)
  .debug_str     0x0000000000182dc4      0x629 ./app_properties.o
                                        0x4280 (size before relaxing)
  .debug_str     0x00000000001833ed       0x77 ./main.o
                                      0x17d0be (size before relaxing)
- .debug_str     0x0000000000183464      0x605 ./autogen/gatt_db.o
-                                       0x472e (size before relaxing)
- .debug_str     0x0000000000183a69      0x4f6 ./autogen/sl_bluetooth.o
+ .debug_str     0x0000000000183464      0x5de ./autogen/gatt_db.o
+                                       0x4707 (size before relaxing)
+ .debug_str     0x0000000000183a42      0x4f6 ./autogen/sl_bluetooth.o
                                      0x18346c (size before relaxing)
- .debug_str     0x0000000000183f5f     0x1616 ./autogen/sl_device_init_clocks.o
+ .debug_str     0x0000000000183f38     0x1616 ./autogen/sl_device_init_clocks.o
                                      0x17a84e (size before relaxing)
- .debug_str     0x0000000000185575     0x80d3 ./autogen/sl_event_handler.o
+ .debug_str     0x000000000018554e     0x80d3 ./autogen/sl_event_handler.o
                                      0x18a312 (size before relaxing)
- .debug_str     0x000000000018d648      0x19c ./autogen/sl_power_manager_handler.o
+ .debug_str     0x000000000018d621      0x19c ./autogen/sl_power_manager_handler.o
                                      0x181b62 (size before relaxing)
- .debug_str     0x000000000018d7e4       0xe4 ./gecko_sdk_3.0.0/app/bluetooth/common/ota_dfu/sl_ota_dfu.o
+ .debug_str     0x000000000018d7bd       0xe4 ./gecko_sdk_3.0.0/app/bluetooth/common/ota_dfu/sl_ota_dfu.o
                                      0x183384 (size before relaxing)
- .debug_str     0x000000000018d8c8      0x181 ./gecko_sdk_3.0.0/platform/Device/SiliconLabs/EFR32BG22/Source/GCC/startup_efr32bg22.o
+ .debug_str     0x000000000018d8a1      0x181 ./gecko_sdk_3.0.0/platform/Device/SiliconLabs/EFR32BG22/Source/GCC/startup_efr32bg22.o
                                      0x1756b1 (size before relaxing)
- .debug_str     0x000000000018da49      0x3ac ./gecko_sdk_3.0.0/platform/Device/SiliconLabs/EFR32BG22/Source/system_efr32bg22.o
+ .debug_str     0x000000000018da22      0x3ac ./gecko_sdk_3.0.0/platform/Device/SiliconLabs/EFR32BG22/Source/system_efr32bg22.o
                                      0x1761a0 (size before relaxing)
- .debug_str     0x000000000018ddf5     0x245b ./gecko_sdk_3.0.0/platform/bootloader/api/btl_interface.o
+ .debug_str     0x000000000018ddce     0x245b ./gecko_sdk_3.0.0/platform/bootloader/api/btl_interface.o
                                      0x178d74 (size before relaxing)
- .debug_str     0x0000000000190250      0x140 ./gecko_sdk_3.0.0/platform/common/src/sl_slist.o
+ .debug_str     0x0000000000190229      0x140 ./gecko_sdk_3.0.0/platform/common/src/sl_slist.o
                                      0x17920b (size before relaxing)
- .debug_str     0x0000000000190390      0x166 ./gecko_sdk_3.0.0/platform/common/toolchain/src/sl_memory.o
+ .debug_str     0x0000000000190369      0x166 ./gecko_sdk_3.0.0/platform/common/toolchain/src/sl_memory.o
                                        0x40a4 (size before relaxing)
- .debug_str     0x00000000001904f6      0x1fb ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
+ .debug_str     0x00000000001904cf      0x1fb ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o
                                      0x179f8f (size before relaxing)
- .debug_str     0x00000000001906f1      0x46b ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_hal_flash.o
+ .debug_str     0x00000000001906ca      0x46b ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_hal_flash.o
                                      0x17a545 (size before relaxing)
- .debug_str     0x0000000000190b5c       0xfa ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_lock.o
+ .debug_str     0x0000000000190b35       0xfa ./gecko_sdk_3.0.0/platform/emdrv/nvm3/src/nvm3_lock.o
                                      0x17dfd6 (size before relaxing)
- .debug_str     0x0000000000190c56     0x2542 ./gecko_sdk_3.0.0/platform/emlib/src/em_cmu.o
+ .debug_str     0x0000000000190c2f     0x2542 ./gecko_sdk_3.0.0/platform/emlib/src/em_cmu.o
                                      0x17b998 (size before relaxing)
- .debug_str     0x0000000000193198      0x730 ./gecko_sdk_3.0.0/platform/emlib/src/em_core.o
+ .debug_str     0x0000000000193171      0x730 ./gecko_sdk_3.0.0/platform/emlib/src/em_core.o
                                      0x17674c (size before relaxing)
- .debug_str     0x00000000001938c8      0xc58 ./gecko_sdk_3.0.0/platform/emlib/src/em_emu.o
+ .debug_str     0x00000000001938a1      0xc58 ./gecko_sdk_3.0.0/platform/emlib/src/em_emu.o
                                      0x17ad93 (size before relaxing)
- .debug_str     0x0000000000194520      0x22f ./gecko_sdk_3.0.0/platform/emlib/src/em_gpio.o
+ .debug_str     0x00000000001944f9      0x22f ./gecko_sdk_3.0.0/platform/emlib/src/em_gpio.o
                                      0x176ec0 (size before relaxing)
- .debug_str     0x000000000019474f      0x849 ./gecko_sdk_3.0.0/platform/emlib/src/em_msc.o
+ .debug_str     0x0000000000194728      0x849 ./gecko_sdk_3.0.0/platform/emlib/src/em_msc.o
                                      0x17891c (size before relaxing)
- .debug_str     0x0000000000194f98     0x2294 ./gecko_sdk_3.0.0/platform/emlib/src/em_rtcc.o
+ .debug_str     0x0000000000194f71     0x2294 ./gecko_sdk_3.0.0/platform/emlib/src/em_rtcc.o
                                      0x177a9a (size before relaxing)
- .debug_str     0x000000000019722c      0x25c ./gecko_sdk_3.0.0/platform/emlib/src/em_system.o
+ .debug_str     0x0000000000197205      0x25c ./gecko_sdk_3.0.0/platform/emlib/src/em_system.o
                                      0x176933 (size before relaxing)
- .debug_str     0x0000000000197488     0x29f6 ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
+ .debug_str     0x0000000000197461     0x29f6 ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conversions_efr32.o
                                      0x1822df (size before relaxing)
- .debug_str     0x0000000000199e7e       0xc2 ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
+ .debug_str     0x0000000000199e57       0xc2 ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.o
                                      0x17c2ef (size before relaxing)
- .debug_str     0x0000000000199f40      0x22e ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
+ .debug_str     0x0000000000199f19      0x22e ./gecko_sdk_3.0.0/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.o
                                      0x18086d (size before relaxing)
- .debug_str     0x000000000019a16e       0xeb ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_dcdc_s2.o
+ .debug_str     0x000000000019a147       0xeb ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_dcdc_s2.o
                                      0x17961c (size before relaxing)
- .debug_str     0x000000000019a259      0x11f ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_emu_s2.o
+ .debug_str     0x000000000019a232      0x11f ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_emu_s2.o
                                      0x17985e (size before relaxing)
- .debug_str     0x000000000019a378      0x16e ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_hfxo_s2.o
+ .debug_str     0x000000000019a351      0x16e ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_hfxo_s2.o
                                      0x17aae7 (size before relaxing)
- .debug_str     0x000000000019a4e6       0xe0 ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_lfrco.o
+ .debug_str     0x000000000019a4bf       0xe0 ./gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_lfrco.o
                                      0x17a424 (size before relaxing)
- .debug_str     0x000000000019a5c6      0x830 ./gecko_sdk_3.0.0/platform/service/mpu/src/sl_mpu.o
+ .debug_str     0x000000000019a59f      0x830 ./gecko_sdk_3.0.0/platform/service/mpu/src/sl_mpu.o
                                      0x17d37e (size before relaxing)
- .debug_str     0x000000000019adf6      0xb3d ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
+ .debug_str     0x000000000019adcf      0xb3d ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager.o
                                      0x17dca4 (size before relaxing)
- .debug_str     0x000000000019b933      0x508 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
+ .debug_str     0x000000000019b90c      0x508 ./gecko_sdk_3.0.0/platform/service/power_manager/src/sl_power_manager_hal_s2.o
                                      0x17f751 (size before relaxing)
- .debug_str     0x000000000019be3b      0xba3 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
+ .debug_str     0x000000000019be14      0xba3 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer.o
                                      0x17dacc (size before relaxing)
- .debug_str     0x000000000019c9de      0x215 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
+ .debug_str     0x000000000019c9b7      0x215 ./gecko_sdk_3.0.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_rtcc.o
                                      0x17c20a (size before relaxing)
- .debug_str     0x000000000019cbf3       0x86 ./gecko_sdk_3.0.0/platform/service/system/src/sl_system_init.o
+ .debug_str     0x000000000019cbcc       0x86 ./gecko_sdk_3.0.0/platform/service/system/src/sl_system_init.o
                                        0x2eb2 (size before relaxing)
- .debug_str     0x000000000019cc79       0x90 ./gecko_sdk_3.0.0/platform/service/system/src/sl_system_process_action.o
+ .debug_str     0x000000000019cc52       0x90 ./gecko_sdk_3.0.0/platform/service/system/src/sl_system_process_action.o
                                        0x2edf (size before relaxing)
- .debug_str     0x000000000019cd09     0x104f ./gecko_sdk_3.0.0/protocol/bluetooth/src/sl_bt_mbedtls_context.o
+ .debug_str     0x000000000019cce2     0x104f ./gecko_sdk_3.0.0/protocol/bluetooth/src/sl_bt_mbedtls_context.o
                                      0x17810d (size before relaxing)
- .debug_str     0x000000000019dd58       0xad ./gecko_sdk_3.0.0/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
+ .debug_str     0x000000000019dd31       0xad ./gecko_sdk_3.0.0/util/silicon_labs/silabs_core/memory_manager/sl_malloc.o
                                      0x17900a (size before relaxing)
- .debug_str     0x000000000019de05      0xbee ./gecko_sdk_3.0.0/util/third_party/crypto/sl_component/se_manager/src/sl_se_manager.o
+ .debug_str     0x000000000019ddde      0xbee ./gecko_sdk_3.0.0/util/third_party/crypto/sl_component/se_manager/src/sl_se_manager.o
                                      0x17d963 (size before relaxing)
- .debug_str     0x000000000019e9f3     0x131b ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/bignum.o
+ .debug_str     0x000000000019e9cc     0x131b ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/bignum.o
                                      0x17a6b2 (size before relaxing)
- .debug_str     0x000000000019fd0e     0x119c ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/cipher.o
+ .debug_str     0x000000000019fce7     0x119c ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/cipher.o
                                      0x17aedb (size before relaxing)
- .debug_str     0x00000000001a0eaa      0x3ec ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/cipher_wrap.o
+ .debug_str     0x00000000001a0e83      0x3ec ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/cipher_wrap.o
                                      0x17ae6d (size before relaxing)
- .debug_str     0x00000000001a1296      0x299 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ctr_drbg.o
+ .debug_str     0x00000000001a126f      0x299 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ctr_drbg.o
                                      0x179670 (size before relaxing)
- .debug_str     0x00000000001a152f      0xe75 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ecp.o
+ .debug_str     0x00000000001a1508      0xe75 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ecp.o
                                      0x17af3f (size before relaxing)
- .debug_str     0x00000000001a23a4      0x720 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ecp_curves.o
+ .debug_str     0x00000000001a237d      0x720 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/ecp_curves.o
                                      0x179f0c (size before relaxing)
- .debug_str     0x00000000001a2ac4      0x343 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/entropy.o
+ .debug_str     0x00000000001a2a9d      0x343 ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/entropy.o
                                      0x1795b6 (size before relaxing)
- .debug_str     0x00000000001a2e07      0x28a ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/platform_util.o
+ .debug_str     0x00000000001a2de0      0x28a ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/platform_util.o
                                      0x179dcf (size before relaxing)
- .debug_str     0x00000000001a3091      0x12d ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/sha256.o
+ .debug_str     0x00000000001a306a      0x12d ./gecko_sdk_3.0.0/util/third_party/mbedtls/library/sha256.o
                                      0x179207 (size before relaxing)
- .debug_str     0x00000000001a31be     0x41fd ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/ba414ep_config.o
+ .debug_str     0x00000000001a3197     0x41fd ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/ba414ep_config.o
                                      0x17c8a7 (size before relaxing)
- .debug_str     0x00000000001a73bb      0xb0d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/ba431_config.o
+ .debug_str     0x00000000001a7394      0xb0d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/ba431_config.o
                                      0x17a21f (size before relaxing)
- .debug_str     0x00000000001a7ec8      0x238 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/cryptodma_internal.o
+ .debug_str     0x00000000001a7ea1      0x238 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/cryptodma_internal.o
                                      0x17a68d (size before relaxing)
- .debug_str     0x00000000001a8100       0xa0 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/cryptolib_types.o
+ .debug_str     0x00000000001a80d9       0xa0 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/cryptolib_types.o
                                      0x179ffa (size before relaxing)
- .debug_str     0x00000000001a81a0     0x199c ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_aes.o
+ .debug_str     0x00000000001a8179     0x199c ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_aes.o
                                      0x17bddd (size before relaxing)
- .debug_str     0x00000000001a9b3c      0x2d8 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_blk_cipher.o
+ .debug_str     0x00000000001a9b15      0x2d8 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_blk_cipher.o
                                      0x17ba34 (size before relaxing)
- .debug_str     0x00000000001a9e14       0xfa ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_dh_alg.o
+ .debug_str     0x00000000001a9ded       0xfa ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_dh_alg.o
                                      0x17b47d (size before relaxing)
- .debug_str     0x00000000001a9f0e      0x5b7 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_ecc_curves.o
+ .debug_str     0x00000000001a9ee7      0x5b7 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_ecc_curves.o
                                      0x17b84c (size before relaxing)
- .debug_str     0x00000000001aa4c5      0x197 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_ecc_keygen_alg.o
+ .debug_str     0x00000000001aa49e      0x197 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_ecc_keygen_alg.o
                                      0x17b511 (size before relaxing)
- .debug_str     0x00000000001aa65c      0xab8 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_hash.o
+ .debug_str     0x00000000001aa635      0xab8 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_hash.o
                                      0x17b656 (size before relaxing)
- .debug_str     0x00000000001ab114      0x116 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_math.o
+ .debug_str     0x00000000001ab0ed      0x116 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_math.o
                                      0x17992a (size before relaxing)
- .debug_str     0x00000000001ab22a       0xd4 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_memcpy.o
+ .debug_str     0x00000000001ab203       0xd4 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_memcpy.o
                                      0x17a2e6 (size before relaxing)
- .debug_str     0x00000000001ab2fe       0xc2 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_rng.o
+ .debug_str     0x00000000001ab2d7       0xc2 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_rng.o
                                      0x1798b0 (size before relaxing)
- .debug_str     0x00000000001ab3c0      0x333 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_trng.o
+ .debug_str     0x00000000001ab399      0x333 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc/src/sx_trng.o
                                      0x17c04c (size before relaxing)
- .debug_str     0x00000000001ab6f3      0x2c9 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_aes.o
+ .debug_str     0x00000000001ab6cc      0x2c9 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_aes.o
                                      0x17b47d (size before relaxing)
- .debug_str     0x00000000001ab9bc      0x131 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ccm.o
+ .debug_str     0x00000000001ab995      0x131 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ccm.o
                                      0x17ac45 (size before relaxing)
- .debug_str     0x00000000001abaed      0x20d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_cmac.o
+ .debug_str     0x00000000001abac6      0x20d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_cmac.o
                                      0x17c014 (size before relaxing)
- .debug_str     0x00000000001abcfa      0x47c ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ecp.o
+ .debug_str     0x00000000001abcd3      0x47c ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ecp.o
                                      0x17cff1 (size before relaxing)
- .debug_str     0x00000000001ac176       0xbe ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o
+ .debug_str     0x00000000001ac14f       0xbe ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o
                                      0x17f6f0 (size before relaxing)
- .debug_str     0x00000000001ac234      0x1c3 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_sha.o
+ .debug_str     0x00000000001ac20d      0x1c3 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_sha.o
                                      0x1799f9 (size before relaxing)
- .debug_str     0x00000000001ac3f7       0xda ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_trng.o
+ .debug_str     0x00000000001ac3d0       0xda ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_trng.o
                                      0x179548 (size before relaxing)
- .debug_str     0x00000000001ac4d1      0x4b9 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes.o
+ .debug_str     0x00000000001ac4aa      0x4b9 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes.o
                                      0x17aa55 (size before relaxing)
- .debug_str     0x00000000001ac98a      0x1e0 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_aes.o
+ .debug_str     0x00000000001ac963      0x1e0 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_aes.o
                                      0x17b0b4 (size before relaxing)
- .debug_str     0x00000000001acb6a      0x3b9 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_ble.o
+ .debug_str     0x00000000001acb43      0x3b9 ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_ble.o
                                      0x179e66 (size before relaxing)
- .debug_str     0x00000000001acf23      0x40a ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/shax.o
+ .debug_str     0x00000000001acefc      0x40a ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/shax.o
                                      0x1797b7 (size before relaxing)
- .debug_str     0x00000000001ad32d       0x8d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/sl_mbedtls.o
+ .debug_str     0x00000000001ad306       0x8d ./gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/sl_mbedtls.o
                                      0x17d5a3 (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x5508

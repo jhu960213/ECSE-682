@@ -2,8 +2,8 @@ gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o: \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.c \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/toolchain/inc/sl_gcc_preinclude.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/sl_crypto/include/cryptoacc_management.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/configs/config-device-acceleration.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/em_device.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/efr32bg22c224f512im40.h \
@@ -84,7 +84,7 @@ gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o: \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_types.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_defines.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_config.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_check_config.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_cipher.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/include/mbedtls/threading.h
@@ -93,9 +93,9 @@ gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o: \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/sl_crypto/include/cryptoacc_management.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/configs/config-device-acceleration.h:
 
@@ -257,7 +257,7 @@ gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_management.o: \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_config.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_check_config.h:
 

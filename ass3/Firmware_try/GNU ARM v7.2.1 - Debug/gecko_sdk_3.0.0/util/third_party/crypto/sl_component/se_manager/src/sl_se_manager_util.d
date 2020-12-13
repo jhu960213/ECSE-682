@@ -62,7 +62,7 @@ gecko_sdk_3.0.0/util/third_party/crypto/sl_component/se_manager/src/sl_se_manage
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_types.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_defines.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_config.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_check_config.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_se.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_common.h \
@@ -199,7 +199,7 @@ gecko_sdk_3.0.0/util/third_party/crypto/sl_component/se_manager/src/sl_se_manage
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_config.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/sl_component_catalog.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/crypto/sl_component/se_manager/inc/sl_se_manager_check_config.h:
 

@@ -57,8 +57,8 @@ gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ecp.o: \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/efr32bg22_prs_signals.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/efr32bg22_dma_descriptor.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/efr32bg22_ldmaxbar_defines.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/configs/config-device-acceleration.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/silicon_labs/silabs_core/memory_manager/sl_malloc.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/include/mbedtls/check_config.h \
@@ -204,9 +204,9 @@ gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/cryptoacc_ecp.o: \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/efr32bg22_ldmaxbar_defines.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/configs/config-device-acceleration.h:
 

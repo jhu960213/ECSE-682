@@ -61,8 +61,8 @@ gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_aes.o: \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_common.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_assert.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/sl_crypto/include/radioaes.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/configs/config-device-acceleration.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/silicon_labs/silabs_core/memory_manager/sl_malloc.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/include/mbedtls/check_config.h \
@@ -197,9 +197,9 @@ gecko_sdk_3.0.0/util/third_party/mbedtls/sl_crypto/src/radioaes_aes.o: \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/sl_crypto/include/radioaes.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/mbedtls_config.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/autogen/mbedtls_config_autogen.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//util/third_party/mbedtls/configs/config-device-acceleration.h:
 

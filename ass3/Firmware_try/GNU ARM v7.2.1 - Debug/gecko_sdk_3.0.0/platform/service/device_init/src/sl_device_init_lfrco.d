@@ -64,7 +64,7 @@ gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_lfrco.o: \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_bus.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_gpio.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_common.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_device_init_lfrco_config.h
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_device_init_lfrco_config.h
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/toolchain/inc/sl_gcc_preinclude.h:
 
@@ -194,4 +194,4 @@ gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_lfrco.o: \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_common.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_device_init_lfrco_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_device_init_lfrco_config.h:

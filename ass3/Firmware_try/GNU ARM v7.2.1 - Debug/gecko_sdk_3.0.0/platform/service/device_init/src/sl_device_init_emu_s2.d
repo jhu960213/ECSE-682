@@ -3,7 +3,7 @@ gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_emu_s2.o: \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/toolchain/inc/sl_gcc_preinclude.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/service/device_init/inc/sl_device_init_emu.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/inc/sl_status.h \
- /Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_device_init_emu_config.h \
+ /Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_device_init_emu_config.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_emu.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/em_device.h \
  /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/Device/SiliconLabs/EFR32BG22/Include/efr32bg22c224f512im40.h \
@@ -69,7 +69,7 @@ gecko_sdk_3.0.0/platform/service/device_init/src/sl_device_init_emu_s2.o: \
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/common/inc/sl_status.h:
 
-/Users/hamza/SimplicityStudio/v5_workspace/Firmware_try/config/sl_device_init_emu_config.h:
+/Users/jhu69/SimplicityStudio/v5_workspace/Firmware_try/config/sl_device_init_emu_config.h:
 
 /Applications/Simplicity\ Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v3.0//platform/emlib/inc/em_emu.h:
 
